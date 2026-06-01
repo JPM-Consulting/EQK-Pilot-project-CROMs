@@ -1,0 +1,999 @@
+archetype (adl_version=1.4; uid=4019024a-9920-4638-82c3-1c1dc950e0dc)
+	openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-06-01">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a structured clinician-reported orthopaedic follow-up assessment of the hip, particularly before or after hip arthroplasty, including Harris Hip Score items, supplementary follow-up items, range of motion, limb length comparison, physical condition and optional modified Harris Hip Score totals.">
+			use = <"Use to document a point-in-time clinical assessment of the operated or assessed hip. The archetype may be used for preoperative assessment and postoperative follow-up intervals such as 6 weeks, 3 months, 6 months, 1 year, 2 years or later annual follow-up.">
+			misuse = <"Not to be used as the primary record of the surgical procedure, implant registry, prosthesis inventory or medication/procedure documentation. Detailed prosthesis components should preferably be documented using dedicated procedure, device or implant archetypes if required.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Includes item structure and scoring concepts based on the Harris Hip Score and the openEHR CKM Harris Hip Score archetype.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"19c95862447640d74bef2485f55924de">
+		["build_uid"] = <"ecf0b17b-8af3-300c-aa74-bafd914c33f5">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Orthopaedic hip clinical follow-up
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0015] occurrences matches {0..1} matches {    -- Hip arthroplasty context
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0031] occurrences matches {0..1} matches {    -- Prosthesis summary
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0032] occurrences matches {0..1} matches {    -- Cup / acetabular component
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0033] occurrences matches {0..1} matches {    -- Head
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0034] occurrences matches {0..1} matches {    -- Stem
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Side operated or to be operated
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0029,    -- Right
+															at0030]    -- Left
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0036] occurrences matches {0..1} matches {    -- Pain assessment
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0043] occurrences matches {0..1} matches {    -- Pain
+												value matches {
+													44|[local::at0044],
+													40|[local::at0045],
+													30|[local::at0046],
+													20|[local::at0047],
+													10|[local::at0048],
+													0|[local::at0049]
+												}
+											}
+											ELEMENT[at0050] occurrences matches {0..*} matches {    -- Pain location
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0051,    -- Groin
+															at0052,    -- Anterior thigh
+															at0053,    -- Lateral thigh
+															at0054,    -- Trochanter
+															at0055,    -- Knee
+															at0056,    -- Lumbar / lower back
+															at0057,    -- Sacroiliac
+															at0058]    -- Other
+														}
+													}
+												}
+											}
+											ELEMENT[at0059] occurrences matches {0..1} matches {    -- Other pain location
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0037] occurrences matches {0..1} matches {    -- Functional assessment
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0060] occurrences matches {0..1} matches {    -- Limp
+												value matches {
+													11|[local::at0061],
+													8|[local::at0062],
+													5|[local::at0063],
+													0|[local::at0064]
+												}
+											}
+											ELEMENT[at0065] occurrences matches {0..1} matches {    -- Support devices
+												value matches {
+													11|[local::at0066],
+													7|[local::at0067],
+													5|[local::at0068],
+													3|[local::at0069],
+													2|[local::at0070],
+													0|[local::at0071]
+												}
+											}
+											ELEMENT[at0072] occurrences matches {0..1} matches {    -- Distance walked
+												value matches {
+													11|[local::at0073],
+													8|[local::at0074],
+													5|[local::at0075],
+													2|[local::at0076],
+													0|[local::at0077]
+												}
+											}
+											ELEMENT[at0078] occurrences matches {0..1} matches {    -- Stairs
+												value matches {
+													4|[local::at0079],
+													2|[local::at0080],
+													1|[local::at0081],
+													0|[local::at0082]
+												}
+											}
+											ELEMENT[at0083] occurrences matches {0..1} matches {    -- Shoes and socks
+												value matches {
+													4|[local::at0084],
+													2|[local::at0085],
+													0|[local::at0086]
+												}
+											}
+											ELEMENT[at0087] occurrences matches {0..1} matches {    -- Sitting
+												value matches {
+													5|[local::at0088],
+													3|[local::at0089],
+													0|[local::at0090]
+												}
+											}
+											ELEMENT[at0091] occurrences matches {0..1} matches {    -- Public transportation
+												value matches {
+													1|[local::at0092],
+													0|[local::at0093]
+												}
+											}
+											ELEMENT[at0094] occurrences matches {0..1} matches {    -- Single-leg stance
+												value matches {
+													4|[local::at0095],
+													3|[local::at0096],
+													2|[local::at0097],
+													1|[local::at0098]
+												}
+											}
+											ELEMENT[at0131] occurrences matches {0..1} matches {    -- Activity
+												value matches {
+													4|[local::at0132],
+													3|[local::at0133],
+													2|[local::at0134],
+													1|[local::at0135]
+												}
+											}
+										}
+									}
+									CLUSTER[at0038] occurrences matches {0..1} matches {    -- Deformity assessment
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0136] occurrences matches {0..1} matches {    -- No fixed adduction ≥ 10°
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0137] occurrences matches {0..1} matches {    -- No fixed internal rotation ≥ 10°
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0138] occurrences matches {0..1} matches {    -- No limb length difference ≥ 3.2 cm
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0139] occurrences matches {0..1} matches {    -- No fixed flexion contracture ≥ 30°
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0128] occurrences matches {0..1} matches {    -- Absence of deformity
+												value matches {
+													0|[local::at0129],
+													4|[local::at0130]
+												}
+											}
+										}
+									}
+									CLUSTER[at0039] occurrences matches {0..1} matches {    -- Range of motion
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0104] occurrences matches {0..1} matches {    -- Flexion
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::497]>
+														list = <
+															["1"] = <
+																units = <"deg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"°">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0105] occurrences matches {0..1} matches {    -- Extension
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::497]>
+														list = <
+															["1"] = <
+																units = <"deg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"°">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0106] occurrences matches {0..1} matches {    -- Abduction
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::497]>
+														list = <
+															["1"] = <
+																units = <"deg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"°">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0107] occurrences matches {0..1} matches {    -- Adduction
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::497]>
+														list = <
+															["1"] = <
+																units = <"deg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"°">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0108] occurrences matches {0..1} matches {    -- External rotation
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::497]>
+														list = <
+															["1"] = <
+																units = <"deg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"°">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0109] occurrences matches {0..1} matches {    -- Internal rotation
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::497]>
+														list = <
+															["1"] = <
+																units = <"deg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"°">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0140] occurrences matches {0..1} matches {    -- Total range of motion score
+												value matches {
+													5|[local::at0141],
+													4|[local::at0142],
+													3|[local::at0143],
+													2|[local::at0144],
+													1|[local::at0145],
+													0|[local::at0146]
+												}
+											}
+										}
+									}
+									CLUSTER[at0040] occurrences matches {0..1} matches {    -- Limb length assessment
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0110] occurrences matches {0..1} matches {    -- Operated limb length compared with the other limb
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0111,    -- Same
+															at0112,    -- Longer
+															at0113]    -- Shorter
+														}
+													}
+												}
+											}
+											ELEMENT[at0114] occurrences matches {0..1} matches {    -- Limb length difference (mm)
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"mm">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0041] occurrences matches {0..1} matches {    -- Physical condition
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0115] occurrences matches {0..1} matches {    -- Physical condition relative to age
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0116,    -- Excellent
+															at0117,    -- Good
+															at0118,    -- Average
+															at0119]    -- Poor
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0042] occurrences matches {0..1} matches {    -- Score summary
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0120] occurrences matches {0..1} matches {    -- HHS total
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																magnitude = <|0.0..100.0|>
+																precision = <|2|>
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0121] occurrences matches {0..1} matches {    -- mHHS raw total
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																magnitude = <|0.0..91.0|>
+																precision = <|2|>
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0122] occurrences matches {0..1} matches {    -- mHHS normalised total
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																magnitude = <|0.0..100.0|>
+																precision = <|2|>
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0123] occurrences matches {0..1} matches {    -- Grading
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0124,    -- Poor
+															at0125,    -- Fair
+															at0126,    -- Good
+															at0127]    -- Excellent
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Consulting clinician name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Follow-up timing
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007,    -- Preoperative
+									at0008,    -- 6 weeks
+									at0009,    -- 3 months
+									at0010,    -- 6 months
+									at0011,    -- 1 year
+									at0012,    -- 2 years
+									at0013]    -- Other number of years
+								}
+							}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Other follow-up interval in years
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Orthopaedic hip clinical follow-up">
+					description = <"A structured clinician-reported assessment of hip function and clinical outcome before or after hip arthroplasty or hip surgery, including optional recording of Harris Hip Score items and total score.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Consulting clinician name">
+					description = <"Name of the clinician responsible for, or performing, the clinical follow-up assessment, as recorded on the form.">
+				>
+				["at0006"] = <
+					text = <"Follow-up timing">
+					description = <"Timing of the follow-up assessment in relation to surgery, baseline assessment or the planned follow-up schedule.">
+				>
+				["at0007"] = <
+					text = <"Preoperative">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"6 weeks">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3 months">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"6 months">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"1 year">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"2 years">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Other number of years">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Other follow-up interval in years">
+					description = <"Number of years after surgery or baseline assessment for the follow-up timing, used when 'Other number of years' is selected.">
+				>
+				["at0015"] = <
+					text = <"Hip arthroplasty context">
+					description = <"Contextual information about the hip arthroplasty or hip prosthesis relevant to this clinical follow-up assessment.">
+				>
+				["at0028"] = <
+					text = <"Side operated or to be operated">
+					description = <"Laterality of the hip being assessed, including the hip that has been operated on or is planned for operation.">
+				>
+				["at0029"] = <
+					text = <"Right">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Left">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Prosthesis summary">
+					description = <"Summary information about the hip prosthesis components relevant to the follow-up assessment. This is not intended as the primary implant registry or device documentation.">
+				>
+				["at0032"] = <
+					text = <"Cup / acetabular component">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Head">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Stem">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Pain assessment">
+					description = <"Assessment of pain severity and pain location related to the assessed hip.">
+				>
+				["at0037"] = <
+					text = <"Functional assessment">
+					description = <"Assessment of functional limitations related to the assessed hip, including gait, use of walking aids, walking distance, stair climbing, sitting, use of public transport and selected activities of daily living.">
+				>
+				["at0038"] = <
+					text = <"Deformity assessment">
+					description = <"Assessment of deformity criteria of the assessed hip relevant to the Harris Hip Score, including fixed deformities and limb length discrepancy.">
+				>
+				["at0039"] = <
+					text = <"Range of motion">
+					description = <"Assessment of the range of motion of the assessed hip, including flexion, extension, abduction, adduction, external rotation and internal rotation.">
+				>
+				["at0040"] = <
+					text = <"Limb length assessment">
+					description = <"Assessment of the length of the operated or assessed limb compared with the contralateral limb.">
+				>
+				["at0041"] = <
+					text = <"Physical condition">
+					description = <"Clinical assessment of the patient's overall physical condition in relation to age.">
+				>
+				["at0042"] = <
+					text = <"Score summary">
+					description = <"Summary of calculated or recorded score results for the hip clinical follow-up assessment, including Harris Hip Score and, where applicable, modified Harris Hip Score totals and grading.">
+				>
+				["at0043"] = <
+					text = <"Pain">
+					description = <"Severity or impact of pain related to the assessed hip.">
+				>
+				["at0044"] = <
+					text = <"None, or ignores it">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Slight, occasional, no compromise in activity">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Mild pain, no effect on average activities, rarely moderate pain with unusual activity, may take aspirin">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Moderate pain, tolerable but makes concessions to pain. Some limitations of ordinary activity or work. May require occasional pain medication stronger than aspirin">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Marked pain, serious limitation of activities">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Totally disabled, crippled, pain in bed, bedridden">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Pain location">
+					description = <"Anatomical location of pain related to the assessed hip. Multiple locations may be recorded.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0051"] = <
+					text = <"Groin">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Anterior thigh">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Lateral thigh">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Trochanter">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Knee">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Lumbar / lower back">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Sacroiliac">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Other">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Other pain location">
+					description = <"Narrative description of another pain location, used when 'Other' is selected.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0060"] = <
+					text = <"Limp">
+					description = <"Degree of limping during walking.">
+				>
+				["at0061"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Slight">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Support devices">
+					description = <"Use of walking aids or support devices for ambulation.">
+				>
+				["at0066"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Cane/walking stick for long walks">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Cane/walking stick most of the time">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"One crutch">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Two canes/walking sticks">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Two crutches or not able to walk">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Distance walked">
+					description = <"Maximum walking distance or walking capacity.">
+				>
+				["at0073"] = <
+					text = <"Unlimited">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Six blocks">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Two or three blocks">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Indoors only">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Bed and chair only">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Stairs">
+					description = <"Ability to climb or descend stairs.">
+				>
+				["at0079"] = <
+					text = <"Normally without using a railing">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Normally using a railing">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"In any manner">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Unable to do stairs">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Shoes and socks">
+					description = <"Ability to put on shoes and socks.">
+				>
+				["at0084"] = <
+					text = <"With ease">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"With difficulty">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Unable">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Sitting">
+					description = <"Ability to sit comfortably on a chair for a defined duration.">
+				>
+				["at0088"] = <
+					text = <"Comfortably in ordinary chair for one hour">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"On a high chair for 30 minutes">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Unable to sit comfortably in any chair">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Public transportation">
+					description = <"Ability to use public transportation.">
+				>
+				["at0092"] = <
+					text = <"Able to use transportation (bus)">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Unable to use public transportation (bus)">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Single-leg stance">
+					description = <"Supplementary assessment of the patient's ability to stand on the assessed leg.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0095"] = <
+					text = <"No difficulty">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Minor difficulty">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Major difficulty">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Flexion">
+					description = <"Range of hip flexion measured in degrees.">
+				>
+				["at0105"] = <
+					text = <"Extension">
+					description = <"Range of hip extension measured in degrees.">
+				>
+				["at0106"] = <
+					text = <"Abduction">
+					description = <"Range of hip abduction measured in degrees.">
+				>
+				["at0107"] = <
+					text = <"Adduction">
+					description = <"Range of hip adduction measured in degrees.">
+				>
+				["at0108"] = <
+					text = <"External rotation">
+					description = <"Range of hip external rotation measured in degrees.">
+				>
+				["at0109"] = <
+					text = <"Internal rotation">
+					description = <"Range of hip internal rotation measured in degrees.">
+				>
+				["at0110"] = <
+					text = <"Operated limb length compared with the other limb">
+					description = <"Qualitative comparison of the length of the operated or assessed limb with the contralateral limb.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0111"] = <
+					text = <"Same">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"Longer">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"Shorter">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"Limb length difference (mm)">
+					description = <"Measured or estimated difference in length between the operated or assessed limb and the contralateral limb, recorded in millimetres.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0115"] = <
+					text = <"Physical condition relative to age">
+					description = <"Overall physical condition of the patient compared with the expected physical condition for their age. This is a supplementary item recorded in addition to the Harris Hip Score.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0116"] = <
+					text = <"Excellent">
+					description = <"">
+				>
+				["at0117"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"Average">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"HHS total">
+					description = <"Total Harris Hip Score, recorded as the sum of points from the assessment.">
+				>
+				["at0121"] = <
+					text = <"mHHS raw total">
+					description = <"Raw total score for the modified Harris Hip Score, recorded as the sum of points from the modified assessment.">
+				>
+				["at0122"] = <
+					text = <"mHHS normalised total">
+					description = <"Normalised modified Harris Hip Score, representing the raw score expressed on a 0–100 scale for comparability with the original Harris Hip Score.">
+				>
+				["at0123"] = <
+					text = <"Grading">
+					description = <"Categorical grading derived from the Harris Hip Score total.">
+				>
+				["at0124"] = <
+					text = <"Poor">
+					description = <"Less than 70.">
+				>
+				["at0125"] = <
+					text = <"Fair">
+					description = <"70-79.">
+				>
+				["at0126"] = <
+					text = <"Good">
+					description = <"80-89.">
+				>
+				["at0127"] = <
+					text = <"Excellent">
+					description = <"90-100.">
+				>
+				["at0128"] = <
+					text = <"Absence of deformity">
+					description = <"Score component indicating whether all criteria for absence of deformity are met: less than 30 degrees of fixed flexion contracture, less than 10 degrees of fixed internal rotation in extension, less than 10 degrees of fixed adduction, and limb length discrepancy less than 3.2 cm.">
+				>
+				["at0129"] = <
+					text = <"One or more criteria are not met.">
+					description = <"One or more criteria for absence of deformity are not met.">
+				>
+				["at0130"] = <
+					text = <"All four criteria are met.">
+					description = <"All four criteria for absence of deformity are met.">
+				>
+				["at0131"] = <
+					text = <"Activity">
+					description = <"Supplementary assessment of the patient's activity level or independence in activity, recorded in addition to the Harris Hip Score items.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0132"] = <
+					text = <"Significant / high">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"Daily">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"Independent">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"Not independent">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"No fixed adduction ≥ 10°">
+					description = <"Indicates whether there is no fixed adduction deformity of 10 degrees or more. A value of true means that this criterion for absence of deformity is met.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0137"] = <
+					text = <"No fixed internal rotation ≥ 10°">
+					description = <"Indicates whether there is no fixed internal rotation deformity of 10 degrees or more. A value of true means that this criterion for absence of deformity is met.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0138"] = <
+					text = <"No limb length difference ≥ 3.2 cm">
+					description = <"Indicates whether there is no limb length difference of 3.2 cm or more. A value of true means that this criterion for absence of deformity is met.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0139"] = <
+					text = <"No fixed flexion contracture ≥ 30°">
+					description = <"Indicates whether there is no fixed flexion contracture of 30 degrees or more. A value of true means that this criterion for absence of deformity is met.">
+					comment = <"Supplementary question regarding HHS.">
+				>
+				["at0140"] = <
+					text = <"Total range of motion score">
+					description = <"Ordinal score component derived from the categorised total range of motion of the assessed hip.">
+				>
+				["at0141"] = <
+					text = <"211°–300°">
+					description = <"">
+				>
+				["at0142"] = <
+					text = <"161°–210°">
+					description = <"">
+				>
+				["at0143"] = <
+					text = <"101°–160°">
+					description = <"">
+				>
+				["at0144"] = <
+					text = <"61°–100°">
+					description = <"">
+				>
+				["at0145"] = <
+					text = <"31°–60°">
+					description = <"">
+				>
+				["at0146"] = <
+					text = <"0°–30°">
+					description = <"">
+				>
+			>
+		>
+	>

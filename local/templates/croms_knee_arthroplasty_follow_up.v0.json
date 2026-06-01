@@ -1,0 +1,4902 @@
+{
+  "templateId" : "croms_knee_arthroplasty_follow_up.v0",
+  "semVer" : "0.8.0",
+  "version" : "2.3",
+  "defaultLanguage" : "en",
+  "languages" : [ "en" ],
+  "tree" : {
+    "id" : "croms_knee_arthroplasty_follow_up",
+    "name" : "CROMS knee arthroplasty follow up",
+    "localizedName" : "CROMS knee arthroplasty follow up",
+    "rmType" : "COMPOSITION",
+    "nodeId" : "openEHR-EHR-COMPOSITION.report.v1",
+    "min" : 1,
+    "max" : 1,
+    "localizedNames" : {
+      "en" : "CROMS knee arthroplasty follow up"
+    },
+    "localizedDescriptions" : {
+      "en" : "Document to communicate information to others, commonly in response to a request from another party."
+    },
+    "aqlPath" : "",
+    "children" : [ {
+      "id" : "context",
+      "rmType" : "EVENT_CONTEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/context",
+      "children" : [ {
+        "id" : "report_id",
+        "name" : "Report ID",
+        "localizedName" : "Report ID",
+        "rmType" : "DV_TEXT",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Report ID"
+        },
+        "localizedDescriptions" : {
+          "en" : "Identification information about the report."
+        },
+        "aqlPath" : "/context/other_context[at0001]/items[at0002]/value",
+        "inputs" : [ {
+          "type" : "TEXT"
+        } ]
+      }, {
+        "id" : "status",
+        "name" : "Status",
+        "localizedName" : "Status",
+        "rmType" : "DV_TEXT",
+        "nodeId" : "at0005",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Status"
+        },
+        "localizedDescriptions" : {
+          "en" : "The status of the entire report. Note: This is not the status of any of the report components."
+        },
+        "aqlPath" : "/context/other_context[at0001]/items[at0005]/value",
+        "inputs" : [ {
+          "type" : "TEXT"
+        } ]
+      }, {
+        "id" : "start_time",
+        "name" : "Start_time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/start_time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "setting",
+        "name" : "Setting",
+        "rmType" : "DV_CODED_TEXT",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/setting",
+        "inputs" : [ {
+          "suffix" : "code",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "value",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "knee_clinical_follow-up",
+      "name" : "Knee clinical follow-up",
+      "localizedName" : "Knee clinical follow-up",
+      "rmType" : "EVALUATION",
+      "nodeId" : "openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "Knee clinical follow-up"
+      },
+      "localizedDescriptions" : {
+        "en" : "A structured clinician-reported assessment for orthopaedic knee follow-up, including knee arthroplasty context, pain, range of motion, stability, flexion contracture, extension lag, clinical alignment, functional ability and the patient's physical condition in relation to age."
+      },
+      "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']",
+      "children" : [ {
+        "id" : "knee_arthroplasty_context",
+        "name" : "Knee arthroplasty context",
+        "localizedName" : "Knee arthroplasty context",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0005",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Knee arthroplasty context"
+        },
+        "localizedDescriptions" : {
+          "en" : "Contextual information about the knee arthroplasty or knee prosthesis relevant to this clinical follow-up assessment."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]",
+        "children" : [ {
+          "id" : "type_of_prosthesis",
+          "name" : "Type of prosthesis",
+          "localizedName" : "Type of prosthesis",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0018",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Type of prosthesis"
+          },
+          "localizedDescriptions" : {
+            "en" : "Type or product family of the knee prosthesis relevant to this follow-up assessment."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]/items[at0018]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0019",
+              "label" : "First",
+              "localizedLabels" : {
+                "en" : "First"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0020",
+              "label" : "First Evolution",
+              "localizedLabels" : {
+                "en" : "First Evolution"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0021",
+              "label" : "First Sensitive",
+              "localizedLabels" : {
+                "en" : "First Sensitive"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0022",
+              "label" : "Origin",
+              "localizedLabels" : {
+                "en" : "Origin"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0023",
+              "label" : "NexGen LCCK",
+              "localizedLabels" : {
+                "en" : "NexGen LCCK"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0024",
+              "label" : "NexGen standard",
+              "localizedLabels" : {
+                "en" : "NexGen standard"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0025",
+              "label" : "Triathlon",
+              "localizedLabels" : {
+                "en" : "Triathlon"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0026",
+              "label" : "PUC",
+              "localizedLabels" : {
+                "en" : "PUC"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0027",
+              "label" : "PFJ",
+              "localizedLabels" : {
+                "en" : "PFJ"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0028",
+              "label" : "Other",
+              "localizedLabels" : {
+                "en" : "Other"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "other_prosthesis_type",
+          "name" : "Other prosthesis type",
+          "localizedName" : "Other prosthesis type",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0029",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Other prosthesis type"
+          },
+          "localizedDescriptions" : {
+            "en" : "Free-text description of the prosthesis type when the coded value \"Other\" is selected."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]/items[at0029]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "side_operated_or_to_be_operated",
+          "name" : "Side operated or to be operated",
+          "localizedName" : "Side operated or to be operated",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0030",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Side operated or to be operated"
+          },
+          "localizedDescriptions" : {
+            "en" : "Laterality of the knee that has been operated on or is planned for operation."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]/items[at0030]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0031",
+              "label" : "Right",
+              "localizedLabels" : {
+                "en" : "Right"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0032",
+              "label" : "Left",
+              "localizedLabels" : {
+                "en" : "Left"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "knee_score",
+        "name" : "Knee score",
+        "localizedName" : "Knee score",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0006",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Knee score"
+        },
+        "localizedDescriptions" : {
+          "en" : "Clinician-reported assessment of pain, mobility, stability, flexion contracture, extension lag and clinical alignment of the operated or assessed knee."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]",
+        "children" : [ {
+          "id" : "pain_while_walking",
+          "name" : "Pain while walking",
+          "localizedName" : "Pain while walking",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0033",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Pain while walking"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported assessment of knee pain experienced while walking."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0033]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0034",
+              "label" : "None",
+              "localizedLabels" : {
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0035",
+              "label" : "Mild or occasional",
+              "localizedLabels" : {
+                "en" : "Mild or occasional"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0036",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0037",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "pain_on_stairs",
+          "name" : "Pain on stairs",
+          "localizedName" : "Pain on stairs",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0038",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Pain on stairs"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported assessment of knee pain experienced when using stairs."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0038]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0039",
+              "label" : "None",
+              "localizedLabels" : {
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0040",
+              "label" : "Mild or occasional",
+              "localizedLabels" : {
+                "en" : "Mild or occasional"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0041",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0042",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "pain_at_rest",
+          "name" : "Pain at rest",
+          "localizedName" : "Pain at rest",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0043",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Pain at rest"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported assessment of knee pain experienced at rest."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0043]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0044",
+              "label" : "None",
+              "localizedLabels" : {
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0045",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0046",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0047",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "flexion-neutral-extension_range_of_motion",
+          "name" : "Flexion-neutral-extension range of motion",
+          "localizedName" : "Flexion-neutral-extension range of motion",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0048",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Flexion-neutral-extension range of motion"
+          },
+          "localizedDescriptions" : {
+            "en" : "Range of motion of the knee documented using the neutral-zero method."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]",
+          "children" : [ {
+            "id" : "maximum_flexion_angle",
+            "name" : "Maximum flexion angle",
+            "localizedName" : "Maximum flexion angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0049",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Maximum flexion angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Maximum flexion angle of the assessed knee, expressed in degrees."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]/items[at0049]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "neutral_position_angle",
+            "name" : "Neutral position angle",
+            "localizedName" : "Neutral position angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0050",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Neutral position angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Neutral-zero reference position of the assessed knee, usually documented as 0 degrees."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]/items[at0050]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "maximum_extension_angle",
+            "name" : "Maximum extension angle",
+            "localizedName" : "Maximum extension angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0051",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Maximum extension angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Maximum extension angle or extension deficit of the assessed knee, expressed in degrees."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]/items[at0051]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "medial-lateral_stability_in_valgus_varus",
+          "name" : "Medial-lateral stability in valgus/varus",
+          "localizedName" : "Medial-lateral stability in valgus/varus",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0052",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Medial-lateral stability in valgus/varus"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-assessed medial-lateral stability of the knee during valgus and varus stress testing."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0052]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0053",
+              "label" : "5 degrees or less",
+              "localizedLabels" : {
+                "en" : "5 degrees or less"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0054",
+              "label" : "6 to 10 degrees",
+              "localizedLabels" : {
+                "en" : "6 to 10 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0055",
+              "label" : "More than 10 degrees",
+              "localizedLabels" : {
+                "en" : "More than 10 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "anterior-posterior_stability",
+          "name" : "Anterior-posterior stability",
+          "localizedName" : "Anterior-posterior stability",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0056",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Anterior-posterior stability"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-assessed anterior-posterior stability of the knee, expressed as a categorical range in millimetres."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0056]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0057",
+              "label" : "0 to 5 mm",
+              "localizedLabels" : {
+                "en" : "0 to 5 mm"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0058",
+              "label" : "6 to 10 mm",
+              "localizedLabels" : {
+                "en" : "6 to 10 mm"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0059",
+              "label" : "More than 10 mm",
+              "localizedLabels" : {
+                "en" : "More than 10 mm"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "passive_flexion_contracture",
+          "name" : "Passive flexion contracture",
+          "localizedName" : "Passive flexion contracture",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0060",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Passive flexion contracture"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-assessed passive flexion contracture of the knee, expressed as a categorical angular range."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0060]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0061",
+              "label" : "5 degrees or less",
+              "localizedLabels" : {
+                "en" : "5 degrees or less"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0062",
+              "label" : "6 to 10 degrees",
+              "localizedLabels" : {
+                "en" : "6 to 10 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0063",
+              "label" : "11 to 20 degrees",
+              "localizedLabels" : {
+                "en" : "11 to 20 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0064",
+              "label" : "More than 20 degrees",
+              "localizedLabels" : {
+                "en" : "More than 20 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "active_extension_lag",
+          "name" : "Active extension lag",
+          "localizedName" : "Active extension lag",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0065",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Active extension lag"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-assessed difference between passive and active knee extension, expressed as a categorical angular range."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0065]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0066",
+              "label" : "None",
+              "localizedLabels" : {
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0067",
+              "label" : "Less than 4 degrees",
+              "localizedLabels" : {
+                "en" : "Less than 4 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0068",
+              "label" : "5 to 10 degrees",
+              "localizedLabels" : {
+                "en" : "5 to 10 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0069",
+              "label" : "More than 11 degrees",
+              "localizedLabels" : {
+                "en" : "More than 11 degrees"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "clinical_alignment",
+          "name" : "Clinical alignment",
+          "localizedName" : "Clinical alignment",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0070",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Clinical alignment"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported coronal plane alignment of the assessed knee, documented as valgus or varus angle."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0070]",
+          "children" : [ {
+            "id" : "valgus_angle",
+            "name" : "Valgus angle",
+            "localizedName" : "Valgus angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0071",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Valgus angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Clinical valgus alignment angle of the assessed knee, expressed in degrees."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0070]/items[at0071]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "varus_angle",
+            "name" : "Varus angle",
+            "localizedName" : "Varus angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0072",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Varus angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Clinical varus alignment angle of the assessed knee, expressed in degrees."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0070]/items[at0072]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "knee_score_total",
+          "name" : "Knee score total",
+          "localizedName" : "Knee score total",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0101",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Knee score total"
+          },
+          "localizedDescriptions" : {
+            "en" : "Calculated total knee score derived from the knee score items according to the configured scoring algorithm."
+          },
+          "annotations" : {
+            "comment" : "The scoring algorithm is not defined by this archetype. Implementations must define the calculation logic, score range and interpretation in the template, application logic or implementation guide."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0101]/value",
+          "inputs" : [ {
+            "type" : "INTEGER"
+          } ]
+        } ]
+      }, {
+        "id" : "function_score",
+        "name" : "Function score",
+        "localizedName" : "Function score",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0007",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Function score"
+        },
+        "localizedDescriptions" : {
+          "en" : "Clinician-reported assessment of functional ability related to walking, stair use, assistive device use and activity level."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]",
+        "children" : [ {
+          "id" : "walking_ability",
+          "name" : "Walking ability",
+          "localizedName" : "Walking ability",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0078",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Walking ability"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported assessment of the patient's walking capacity, based on distance or duration."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0078]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0079",
+              "label" : "Unlimited or more than 1 hour",
+              "localizedLabels" : {
+                "en" : "Unlimited or more than 1 hour"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0080",
+              "label" : "More than 1000 m",
+              "localizedLabels" : {
+                "en" : "More than 1000 m"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0081",
+              "label" : "500 to 1000 m or more than 30 minutes",
+              "localizedLabels" : {
+                "en" : "500 to 1000 m or more than 30 minutes"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0082",
+              "label" : "Less than 500 m or 15 minutes or less",
+              "localizedLabels" : {
+                "en" : "Less than 500 m or 15 minutes or less"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0083",
+              "label" : "At home only",
+              "localizedLabels" : {
+                "en" : "At home only"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0084",
+              "label" : "Impossible",
+              "localizedLabels" : {
+                "en" : "Impossible"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "stairs",
+          "name" : "Stairs",
+          "localizedName" : "Stairs",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0085",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Stairs"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported assessment of the patient's ability to ascend and descend stairs."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0085]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0086",
+              "label" : "Up and down stairs normally",
+              "localizedLabels" : {
+                "en" : "Up and down stairs normally"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0087",
+              "label" : "Up normally, down with handrail",
+              "localizedLabels" : {
+                "en" : "Up normally, down with handrail"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0088",
+              "label" : "Up and down with handrail",
+              "localizedLabels" : {
+                "en" : "Up and down with handrail"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0089",
+              "label" : "Up with handrail, down impossible",
+              "localizedLabels" : {
+                "en" : "Up with handrail, down impossible"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "assistive_devices",
+          "name" : "Assistive devices",
+          "localizedName" : "Assistive devices",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0090",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Assistive devices"
+          },
+          "localizedDescriptions" : {
+            "en" : "Assistive walking devices used by the patient for mobility."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0090]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0091",
+              "label" : "None",
+              "localizedLabels" : {
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0092",
+              "label" : "One cane",
+              "localizedLabels" : {
+                "en" : "One cane"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0093",
+              "label" : "Two canes",
+              "localizedLabels" : {
+                "en" : "Two canes"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0094",
+              "label" : "Two Canadian crutches or walker",
+              "localizedLabels" : {
+                "en" : "Two Canadian crutches or walker"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "activity_level",
+          "name" : "Activity level",
+          "localizedName" : "Activity level",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0095",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Activity level"
+          },
+          "localizedDescriptions" : {
+            "en" : "Clinician-reported assessment of the patient's general activity and independence level."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0095]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0096",
+              "label" : "High",
+              "localizedLabels" : {
+                "en" : "High"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0097",
+              "label" : "Daily activity",
+              "localizedLabels" : {
+                "en" : "Daily activity"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0098",
+              "label" : "Independent",
+              "localizedLabels" : {
+                "en" : "Independent"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0099",
+              "label" : "Not independent",
+              "localizedLabels" : {
+                "en" : "Not independent"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "function_score_total",
+          "name" : "Function score total",
+          "localizedName" : "Function score total",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0102",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Function score total"
+          },
+          "localizedDescriptions" : {
+            "en" : "Calculated total function score derived from the function score items according to the configured scoring algorithm."
+          },
+          "annotations" : {
+            "comment" : "The scoring algorithm is not defined by this archetype. Implementations must define the calculation logic, score range and interpretation in the template, application logic or implementation guide."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0102]/value",
+          "inputs" : [ {
+            "type" : "INTEGER"
+          } ]
+        } ]
+      }, {
+        "id" : "patient_physical_condition",
+        "name" : "Patient physical condition",
+        "localizedName" : "Patient physical condition",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0100",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Patient physical condition"
+        },
+        "localizedDescriptions" : {
+          "en" : "Clinician-reported assessment of the patient's overall physical condition in relation to age."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0100]",
+        "children" : [ {
+          "id" : "condition_depending_on_age",
+          "name" : "Condition depending on age",
+          "localizedName" : "Condition depending on age",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0073",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Condition depending on age"
+          },
+          "localizedDescriptions" : {
+            "en" : "Overall physical condition assessed in relation to the patient's age."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0100]/items[at0073]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0074",
+              "label" : "Excellent",
+              "localizedLabels" : {
+                "en" : "Excellent"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0075",
+              "label" : "Good",
+              "localizedLabels" : {
+                "en" : "Good"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0076",
+              "label" : "Average",
+              "localizedLabels" : {
+                "en" : "Average"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0077",
+              "label" : "Poor",
+              "localizedLabels" : {
+                "en" : "Poor"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "consulting_clinician_name",
+        "name" : "Consulting clinician name",
+        "localizedName" : "Consulting clinician name",
+        "rmType" : "DV_TEXT",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "dependsOn" : [ "knee_score", "function_score", "patient_physical_condition", "knee_arthroplasty_context" ],
+        "localizedNames" : {
+          "en" : "Consulting clinician name"
+        },
+        "localizedDescriptions" : {
+          "en" : "Name of the clinician responsible for, or performing, the clinical follow-up assessment."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/protocol[at0003]/items[at0004]/value",
+        "inputs" : [ {
+          "type" : "TEXT"
+        } ]
+      }, {
+        "id" : "follow-up_timing",
+        "name" : "Follow-up timing",
+        "localizedName" : "Follow-up timing",
+        "rmType" : "DV_CODED_TEXT",
+        "nodeId" : "at0009",
+        "min" : 0,
+        "max" : 1,
+        "dependsOn" : [ "knee_score", "function_score", "patient_physical_condition", "knee_arthroplasty_context" ],
+        "localizedNames" : {
+          "en" : "Follow-up timing"
+        },
+        "localizedDescriptions" : {
+          "en" : "Timing of the follow-up assessment in relation to surgery, baseline assessment or the planned follow-up schedule."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/protocol[at0003]/items[at0009]/value",
+        "inputs" : [ {
+          "suffix" : "code",
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0010",
+            "label" : "Preoperative",
+            "localizedLabels" : {
+              "en" : "Preoperative"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          }, {
+            "value" : "at0011",
+            "label" : "6 weeks",
+            "localizedLabels" : {
+              "en" : "6 weeks"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          }, {
+            "value" : "at0012",
+            "label" : "3 months",
+            "localizedLabels" : {
+              "en" : "3 months"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          }, {
+            "value" : "at0013",
+            "label" : "6 months",
+            "localizedLabels" : {
+              "en" : "6 months"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          }, {
+            "value" : "at0014",
+            "label" : "1 year",
+            "localizedLabels" : {
+              "en" : "1 year"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          }, {
+            "value" : "at0015",
+            "label" : "2 years",
+            "localizedLabels" : {
+              "en" : "2 years"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          }, {
+            "value" : "at0016",
+            "label" : "Other number of years",
+            "localizedLabels" : {
+              "en" : "Other number of years"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            }
+          } ]
+        } ]
+      }, {
+        "id" : "other_follow-up_interval_in_years",
+        "name" : "Other follow-up interval in years",
+        "localizedName" : "Other follow-up interval in years",
+        "rmType" : "DV_COUNT",
+        "nodeId" : "at0017",
+        "min" : 0,
+        "max" : 1,
+        "dependsOn" : [ "knee_score", "function_score", "patient_physical_condition", "knee_arthroplasty_context" ],
+        "localizedNames" : {
+          "en" : "Other follow-up interval in years"
+        },
+        "localizedDescriptions" : {
+          "en" : "Number of years after surgery or baseline assessment for follow-up timing, used when \"Other number of years\" is selected."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/protocol[at0003]/items[at0017]/value",
+        "inputs" : [ {
+          "type" : "INTEGER"
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "orthopaedic_clinical_background_and_follow-up",
+      "name" : "Orthopaedic clinical background and follow-up",
+      "localizedName" : "Orthopaedic clinical background and follow-up",
+      "rmType" : "EVALUATION",
+      "nodeId" : "openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "Orthopaedic clinical background and follow-up"
+      },
+      "localizedDescriptions" : {
+        "en" : "Structured assessment of orthopaedic clinical follow-up information, including known conditions, complications and associated orthopaedic conditions."
+      },
+      "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']",
+      "children" : [ {
+        "id" : "other_known_conditions",
+        "name" : "Other known conditions",
+        "localizedName" : "Other known conditions",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Other known conditions"
+        },
+        "localizedDescriptions" : {
+          "en" : "Other known pathologies, comorbidities or body system-related conditions recorded at clinical follow-up."
+        },
+        "annotations" : {
+          "comment" : "If status is Present, at least one Other known condition should be recorded.\n\nIf status is None known, no Other known condition should be recorded.\n\nIf Other is selected, Other known condition description should be recorded."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0004]",
+        "children" : [ {
+          "id" : "other_known_condition_status",
+          "name" : "Other known condition status",
+          "localizedName" : "Other known condition status",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0008",
+          "min" : 1,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Other known condition status"
+          },
+          "localizedDescriptions" : {
+            "en" : "Status indicating whether other known conditions are recorded at this follow-up."
+          },
+          "annotations" : {
+            "comment" : "Use when the presence of other known conditions is unknown or was not assessed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0004]/items[at0008]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0015",
+              "label" : "None known",
+              "localizedLabels" : {
+                "en" : "None known"
+              },
+              "localizedDescriptions" : {
+                "en" : "No other known conditions are recorded at this follow-up."
+              }
+            }, {
+              "value" : "at0016",
+              "label" : "Present",
+              "localizedLabels" : {
+                "en" : "Present"
+              },
+              "localizedDescriptions" : {
+                "en" : "One or more other known conditions are recorded."
+              }
+            }, {
+              "value" : "at0017",
+              "label" : "Unknown or not assessed",
+              "localizedLabels" : {
+                "en" : "Unknown or not assessed"
+              },
+              "localizedDescriptions" : {
+                "en" : "It is unknown or was not assessed whether other conditions are present."
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "other_known_condition",
+          "name" : "Other known condition",
+          "localizedName" : "Other known condition",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0009",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "en" : "Other known condition"
+          },
+          "localizedDescriptions" : {
+            "en" : "Category or specific type of other known condition recorded at clinical follow-up."
+          },
+          "annotations" : {
+            "comment" : "Repeatable element for multiselect use. Record each selected option as a separate instance. Do not record a value when the status is None known."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0004]/items[at0009]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0018",
+              "label" : "Nervous system",
+              "localizedLabels" : {
+                "en" : "Nervous system"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known condition related to the nervous system."
+              }
+            }, {
+              "value" : "at0019",
+              "label" : "Gastrointestinal system",
+              "localizedLabels" : {
+                "en" : "Gastrointestinal system"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known condition related to the gastrointestinal system."
+              }
+            }, {
+              "value" : "at0020",
+              "label" : "Osteoporosis",
+              "localizedLabels" : {
+                "en" : "Osteoporosis"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known osteoporosis."
+              }
+            }, {
+              "value" : "at0021",
+              "label" : "Respiratory tract",
+              "localizedLabels" : {
+                "en" : "Respiratory tract"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known condition related to the respiratory tract."
+              }
+            }, {
+              "value" : "at0022",
+              "label" : "Urogenital system",
+              "localizedLabels" : {
+                "en" : "Urogenital system"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known condition related to the urogenital system."
+              }
+            }, {
+              "value" : "at0023",
+              "label" : "Endocrine system",
+              "localizedLabels" : {
+                "en" : "Endocrine system"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known condition related to the endocrine system."
+              }
+            }, {
+              "value" : "at0024",
+              "label" : "Cardiovascular system",
+              "localizedLabels" : {
+                "en" : "Cardiovascular system"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known condition related to the cardiovascular system."
+              }
+            }, {
+              "value" : "at0025",
+              "label" : "Diabetes",
+              "localizedLabels" : {
+                "en" : "Diabetes"
+              },
+              "localizedDescriptions" : {
+                "en" : "Known diabetes mellitus."
+              }
+            }, {
+              "value" : "at0026",
+              "label" : "Other",
+              "localizedLabels" : {
+                "en" : "Other"
+              },
+              "localizedDescriptions" : {
+                "en" : "Other known condition not represented by the listed options."
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "other_known_condition_description",
+          "name" : "Other known condition description",
+          "localizedName" : "Other known condition description",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0010",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Other known condition description"
+          },
+          "localizedDescriptions" : {
+            "en" : "Free-text description of another known condition not represented by the coded options."
+          },
+          "annotations" : {
+            "comment" : "Use when Other is selected, or to provide additional clarification about a selected condition."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0004]/items[at0010]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        } ]
+      }, {
+        "id" : "systemic_complications",
+        "name" : "Systemic complications",
+        "localizedName" : "Systemic complications",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0005",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Systemic complications"
+        },
+        "localizedDescriptions" : {
+          "en" : "Systemic complications occurring since implantation of this prosthesis."
+        },
+        "annotations" : {
+          "comment" : "If status is Present, at least one systemic complication should be recorded.\n\nIf status is None known, no systemic complication should be recorded.\n\nRecord each selected complication as a separate Systemic complication instance.\n\nIf Other is selected, Other systemic complication description should be recorded.\n\nRecord the complication date when available."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0005]",
+        "children" : [ {
+          "id" : "systemic_complication_status",
+          "name" : "Systemic complication status",
+          "localizedName" : "Systemic complication status",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0027",
+          "min" : 1,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Systemic complication status"
+          },
+          "localizedDescriptions" : {
+            "en" : "Status indicating whether systemic complications are recorded since prosthesis implantation."
+          },
+          "annotations" : {
+            "comment" : "Use Present when one or more systemic complications are recorded. Use None known only when no systemic complications are recorded. Use Unknown or not assessed when this information is unavailable or was not assessed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0005]/items[at0027]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0028",
+              "label" : "None known",
+              "localizedLabels" : {
+                "en" : "None known"
+              },
+              "localizedDescriptions" : {
+                "en" : "No systemic complications are recorded since prosthesis implantation."
+              }
+            }, {
+              "value" : "at0029",
+              "label" : "Present",
+              "localizedLabels" : {
+                "en" : "Present"
+              },
+              "localizedDescriptions" : {
+                "en" : "One or more systemic complications are recorded since prosthesis implantation."
+              }
+            }, {
+              "value" : "at0030",
+              "label" : "Unknown or not assessed",
+              "localizedLabels" : {
+                "en" : "Unknown or not assessed"
+              },
+              "localizedDescriptions" : {
+                "en" : "It is unknown or was not assessed whether systemic complications occurred."
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "systemic_complication",
+          "name" : "Systemic complication",
+          "localizedName" : "Systemic complication",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0032",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "en" : "Systemic complication"
+          },
+          "localizedDescriptions" : {
+            "en" : "Single systemic complication recorded since implantation of this prosthesis."
+          },
+          "annotations" : {
+            "comment" : "Repeatable cluster for multiselect use. Record each selected complication as a separate instance, with its date when available."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0005]/items[at0032]",
+          "children" : [ {
+            "id" : "systemic_complication_type",
+            "name" : "Systemic complication type",
+            "localizedName" : "Systemic complication type",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0034",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Systemic complication type"
+            },
+            "localizedDescriptions" : {
+              "en" : "Category or specific type of systemic complication recorded since prosthesis implantation."
+            },
+            "annotations" : {
+              "comment" : "Use one coded value for each systemic complication instance. Use Other when the complication is not represented by the listed options."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0005]/items[at0032]/items[at0034]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0035",
+                "label" : "Pulmonary embolism",
+                "localizedLabels" : {
+                  "en" : "Pulmonary embolism"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Pulmonary embolism occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0036",
+                "label" : "Thrombophlebitis",
+                "localizedLabels" : {
+                  "en" : "Thrombophlebitis"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Thrombophlebitis occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0037",
+                "label" : "Central nervous system",
+                "localizedLabels" : {
+                  "en" : "Central nervous system"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Systemic complication related to the central nervous system."
+                }
+              }, {
+                "value" : "at0038",
+                "label" : "Respiratory tract",
+                "localizedLabels" : {
+                  "en" : "Respiratory tract"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Systemic complication related to the respiratory tract."
+                }
+              }, {
+                "value" : "at0039",
+                "label" : "Cardiovascular system",
+                "localizedLabels" : {
+                  "en" : "Cardiovascular system"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Systemic complication related to the cardiovascular system."
+                }
+              }, {
+                "value" : "at0040",
+                "label" : "Urological system",
+                "localizedLabels" : {
+                  "en" : "Urological system"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Systemic complication related to the urinary or urological system."
+                }
+              }, {
+                "value" : "at0041",
+                "label" : "Gastrointestinal system",
+                "localizedLabels" : {
+                  "en" : "Gastrointestinal system"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Systemic complication related to the gastrointestinal system."
+                }
+              }, {
+                "value" : "at0042",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Other systemic complication not represented by the listed options."
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "complication_date",
+            "name" : "Complication date",
+            "localizedName" : "Complication date",
+            "rmType" : "DV_DATE",
+            "nodeId" : "at0044",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Complication date"
+            },
+            "localizedDescriptions" : {
+              "en" : "Date when the systemic complication occurred or was identified."
+            },
+            "annotations" : {
+              "comment" : "Record the date next to the systemic complication when available."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0005]/items[at0032]/items[at0044]/value",
+            "inputs" : [ {
+              "type" : "DATE"
+            } ]
+          }, {
+            "id" : "other_systemic_complication_description",
+            "name" : "Other systemic complication description",
+            "localizedName" : "Other systemic complication description",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0045",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Other systemic complication description"
+            },
+            "localizedDescriptions" : {
+              "en" : "Free-text description of a systemic complication not represented by the coded options."
+            },
+            "annotations" : {
+              "comment" : "Use when Other is selected, or to provide additional clarification about a selected systemic complication."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0005]/items[at0032]/items[at0045]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "local_complications",
+        "name" : "Local complications",
+        "localizedName" : "Local complications",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0006",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Local complications"
+        },
+        "localizedDescriptions" : {
+          "en" : "Local complications occurring since implantation of this prosthesis."
+        },
+        "annotations" : {
+          "comment" : "If status is Present, at least one local complication should be recorded.\n\nIf status is None known, no local complication should be recorded.\n\nRecord each selected complication as a separate Local complication instance.\n\nIf Other is selected, Other local complication description should be recorded.\n\nRecord the complication date or year when available."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0006]",
+        "children" : [ {
+          "id" : "local_complication_status",
+          "name" : "Local complication status",
+          "localizedName" : "Local complication status",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0046",
+          "min" : 1,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Local complication status"
+          },
+          "localizedDescriptions" : {
+            "en" : "Status indicating whether local complications are recorded since prosthesis implantation."
+          },
+          "annotations" : {
+            "comment" : "Use Present when one or more local complications are recorded. Use None known only when no local complications are recorded. Use Unknown or not assessed when this information is unavailable or was not assessed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0006]/items[at0046]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0047",
+              "label" : "None known",
+              "localizedLabels" : {
+                "en" : "None known"
+              },
+              "localizedDescriptions" : {
+                "en" : "No local complications are recorded since prosthesis implantation."
+              }
+            }, {
+              "value" : "at0048",
+              "label" : "Present",
+              "localizedLabels" : {
+                "en" : "Present"
+              },
+              "localizedDescriptions" : {
+                "en" : "One or more local complications are recorded since prosthesis implantation."
+              }
+            }, {
+              "value" : "at0049",
+              "label" : "Unknown or not assessed",
+              "localizedLabels" : {
+                "en" : "Unknown or not assessed"
+              },
+              "localizedDescriptions" : {
+                "en" : "It is unknown or was not assessed whether local complications occurred."
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "local_complication",
+          "name" : "Local complication",
+          "localizedName" : "Local complication",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0050",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "en" : "Local complication"
+          },
+          "localizedDescriptions" : {
+            "en" : "Single local complication recorded since implantation of this prosthesis."
+          },
+          "annotations" : {
+            "comment" : "Repeatable cluster for multiselect use. Record each selected complication as a separate instance, with its date or year when available."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0006]/items[at0050]",
+          "children" : [ {
+            "id" : "local_complication_type",
+            "name" : "Local complication type",
+            "localizedName" : "Local complication type",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0051",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Local complication type"
+            },
+            "localizedDescriptions" : {
+              "en" : "Category or specific type of local complication recorded since prosthesis implantation."
+            },
+            "annotations" : {
+              "comment" : "Use one coded value for each local complication instance. Use Other when the complication is not represented by the listed options."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0006]/items[at0050]/items[at0051]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0052",
+                "label" : "Dislocation",
+                "localizedLabels" : {
+                  "en" : "Dislocation"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Local dislocation occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0053",
+                "label" : "Haematoma / seroma",
+                "localizedLabels" : {
+                  "en" : "Haematoma / seroma"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Local haematoma or seroma occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0054",
+                "label" : "Persistent drainage",
+                "localizedLabels" : {
+                  "en" : "Persistent drainage"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Persistent wound drainage occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0055",
+                "label" : "Dehiscence",
+                "localizedLabels" : {
+                  "en" : "Dehiscence"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Wound dehiscence occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0056",
+                "label" : "Neuropraxia",
+                "localizedLabels" : {
+                  "en" : "Neuropraxia"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Local neuropraxia occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0057",
+                "label" : "Loosening",
+                "localizedLabels" : {
+                  "en" : "Loosening"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Prosthesis loosening occurring since implantation."
+                }
+              }, {
+                "value" : "at0058",
+                "label" : "Deep sepsis",
+                "localizedLabels" : {
+                  "en" : "Deep sepsis"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Deep sepsis or deep infection occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0059",
+                "label" : "Superficial sepsis",
+                "localizedLabels" : {
+                  "en" : "Superficial sepsis"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Superficial sepsis or superficial infection occurring since prosthesis implantation."
+                }
+              }, {
+                "value" : "at0060",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Other local complication not represented by the listed options."
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "complication_date",
+            "name" : "Complication date",
+            "localizedName" : "Complication date",
+            "rmType" : "DV_DATE",
+            "nodeId" : "at0061",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Complication date"
+            },
+            "localizedDescriptions" : {
+              "en" : "Date or year when the local complication occurred or was identified."
+            },
+            "annotations" : {
+              "comment" : "Record the date or year next to the complication when available."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0006]/items[at0050]/items[at0061]/value",
+            "inputs" : [ {
+              "type" : "DATE"
+            } ]
+          }, {
+            "id" : "other_local_complication_description",
+            "name" : "Other local complication description",
+            "localizedName" : "Other local complication description",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0062",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Other local complication description"
+            },
+            "localizedDescriptions" : {
+              "en" : "Free-text description of a local complication not represented by the coded options."
+            },
+            "annotations" : {
+              "comment" : "Use when Other is selected, or to provide additional clarification about a selected local complication."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0006]/items[at0050]/items[at0062]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "other_associated_orthopaedic_conditions",
+        "name" : "Other associated orthopaedic conditions",
+        "localizedName" : "Other associated orthopaedic conditions",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0007",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Other associated orthopaedic conditions"
+        },
+        "localizedDescriptions" : {
+          "en" : "Other associated orthopaedic pathologies or conditions relevant to this clinical follow-up."
+        },
+        "annotations" : {
+          "comment" : "If status is Present, at least one associated orthopaedic condition should be recorded.\n\nIf status is None known, no associated orthopaedic condition should be recorded.\n\nRecord each selected condition as a separate Other associated orthopaedic condition instance.\n\nRecord laterality, date or year, and description when applicable."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]",
+        "children" : [ {
+          "id" : "other_associated_orthopaedic_condition_status",
+          "name" : "Other associated orthopaedic condition status",
+          "localizedName" : "Other associated orthopaedic condition status",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0063",
+          "min" : 1,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Other associated orthopaedic condition status"
+          },
+          "localizedDescriptions" : {
+            "en" : "Status indicating whether other associated orthopaedic conditions are recorded at this follow-up."
+          },
+          "annotations" : {
+            "comment" : "Use Present when one or more associated orthopaedic conditions are recorded. Use None known only when no associated orthopaedic conditions are recorded. Use Unknown or not assessed when this information is unavailable or was not assessed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]/items[at0063]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0064",
+              "label" : "None known",
+              "localizedLabels" : {
+                "en" : "None known"
+              },
+              "localizedDescriptions" : {
+                "en" : "No other associated orthopaedic conditions are recorded at this follow-up."
+              }
+            }, {
+              "value" : "at0065",
+              "label" : "Present",
+              "localizedLabels" : {
+                "en" : "Present"
+              },
+              "localizedDescriptions" : {
+                "en" : "One or more other associated orthopaedic conditions are recorded at this follow-up."
+              }
+            }, {
+              "value" : "at0066",
+              "label" : "Unknown or not assessed",
+              "localizedLabels" : {
+                "en" : "Unknown or not assessed"
+              },
+              "localizedDescriptions" : {
+                "en" : "It is unknown or was not assessed whether other associated orthopaedic conditions are present."
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "other_associated_orthopaedic_condition",
+          "name" : "Other associated orthopaedic condition",
+          "localizedName" : "Other associated orthopaedic condition",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0067",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "en" : "Other associated orthopaedic condition"
+          },
+          "localizedDescriptions" : {
+            "en" : "Single other associated orthopaedic condition recorded at this follow-up."
+          },
+          "annotations" : {
+            "comment" : "Repeatable cluster for multiselect use. Record each selected condition as a separate instance, with laterality, date or year, and description when applicable."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]/items[at0067]",
+          "children" : [ {
+            "id" : "other_associated_orthopaedic_condition_type",
+            "name" : "Other associated orthopaedic condition type",
+            "localizedName" : "Other associated orthopaedic condition type",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0069",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Other associated orthopaedic condition type"
+            },
+            "localizedDescriptions" : {
+              "en" : "Category or specific type of other associated orthopaedic condition recorded at clinical follow-up."
+            },
+            "annotations" : {
+              "comment" : "Use one coded value for each associated orthopaedic condition instance. Use Other when the condition is not represented by the listed options."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]/items[at0067]/items[at0069]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0070",
+                "label" : "Contralateral knee",
+                "localizedLabels" : {
+                  "en" : "Contralateral knee"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the contralateral knee."
+                }
+              }, {
+                "value" : "at0071",
+                "label" : "Ankle / foot",
+                "localizedLabels" : {
+                  "en" : "Ankle / foot"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the ankle or foot."
+                }
+              }, {
+                "value" : "at0072",
+                "label" : "Wrist / hand",
+                "localizedLabels" : {
+                  "en" : "Wrist / hand"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the wrist or hand."
+                }
+              }, {
+                "value" : "at0073",
+                "label" : "Opposite hip",
+                "localizedLabels" : {
+                  "en" : "Opposite hip"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the opposite hip."
+                }
+              }, {
+                "value" : "at0074",
+                "label" : "Shoulder",
+                "localizedLabels" : {
+                  "en" : "Shoulder"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the shoulder."
+                }
+              }, {
+                "value" : "at0075",
+                "label" : "Trauma",
+                "localizedLabels" : {
+                  "en" : "Trauma"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated orthopaedic condition related to trauma."
+                }
+              }, {
+                "value" : "at0076",
+                "label" : "Spine",
+                "localizedLabels" : {
+                  "en" : "Spine"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the spine."
+                }
+              }, {
+                "value" : "at0077",
+                "label" : "Elbow",
+                "localizedLabels" : {
+                  "en" : "Elbow"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Associated condition affecting the elbow."
+                }
+              }, {
+                "value" : "at0078",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Other associated orthopaedic condition not represented by the listed options."
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "condition_date",
+            "name" : "Condition date",
+            "localizedName" : "Condition date",
+            "rmType" : "DV_DATE",
+            "nodeId" : "at0079",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Condition date"
+            },
+            "localizedDescriptions" : {
+              "en" : "Date or year when the associated orthopaedic condition occurred or was identified."
+            },
+            "annotations" : {
+              "comment" : "Record the date or year next to the associated orthopaedic condition when available."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]/items[at0067]/items[at0079]/value",
+            "inputs" : [ {
+              "type" : "DATE"
+            } ]
+          }, {
+            "id" : "condition_laterality",
+            "name" : "Condition laterality",
+            "localizedName" : "Condition laterality",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0080",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Condition laterality"
+            },
+            "localizedDescriptions" : {
+              "en" : "Laterality of the associated orthopaedic condition, where applicable."
+            },
+            "annotations" : {
+              "comment" : "Record for contralateral knee or opposite hip when applicable, using the anatomical side affected."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]/items[at0067]/items[at0080]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0081",
+                "label" : "Left",
+                "localizedLabels" : {
+                  "en" : "Left"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Left side."
+                }
+              }, {
+                "value" : "at0082",
+                "label" : "Right",
+                "localizedLabels" : {
+                  "en" : "Right"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Right side."
+                }
+              }, {
+                "value" : "at0084",
+                "label" : "Bilateral",
+                "localizedLabels" : {
+                  "en" : "Bilateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Both left and right sides."
+                }
+              }, {
+                "value" : "at0086",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Laterality is unknown."
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "other_associated_orthopaedic_condition_description",
+            "name" : "Other associated orthopaedic condition description",
+            "localizedName" : "Other associated orthopaedic condition description",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0085",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Other associated orthopaedic condition description"
+            },
+            "localizedDescriptions" : {
+              "en" : "Free-text description of the associated orthopaedic condition."
+            },
+            "annotations" : {
+              "comment" : "Use when Trauma or Other is selected, or to provide additional clarification about a selected associated orthopaedic condition."
+            },
+            "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0007]/items[at0067]/items[at0085]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "comment",
+        "name" : "Comment",
+        "localizedName" : "Comment",
+        "rmType" : "DV_TEXT",
+        "nodeId" : "at0011",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Comment"
+        },
+        "localizedDescriptions" : {
+          "en" : "Additional free-text comment about the orthopaedic clinical follow-up."
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0011]/value",
+        "inputs" : [ {
+          "type" : "TEXT"
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "knee_arthroplasty_x-ray_follow-up",
+      "name" : "Knee arthroplasty X-ray follow-up",
+      "localizedName" : "Knee arthroplasty X-ray follow-up",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "Knee arthroplasty X-ray follow-up"
+      },
+      "localizedDescriptions" : {
+        "en" : "Radiographic follow-up assessment after knee arthroplasty, including implant alignment, component-specific radiolucent line measurements, patellar component zones, and patellar tracking and morphology measurements."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]",
+      "children" : [ {
+        "id" : "point_in_time",
+        "name" : "Point in time",
+        "localizedName" : "Point in time",
+        "rmType" : "POINT_EVENT",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : -1,
+        "localizedNames" : {
+          "en" : "Point in time"
+        },
+        "localizedDescriptions" : {
+          "en" : "@ internal @"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']",
+        "children" : [ {
+          "id" : "x-ray_date",
+          "name" : "X-ray date",
+          "localizedName" : "X-ray date",
+          "rmType" : "DV_DATE",
+          "nodeId" : "at0004",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "X-ray date"
+          },
+          "localizedDescriptions" : {
+            "en" : "Date on which the X-ray examination was performed, if recorded separately from the observation event time."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/value",
+          "inputs" : [ {
+            "type" : "DATE"
+          } ]
+        }, {
+          "id" : "prior_implant_status",
+          "name" : "Prior implant status",
+          "localizedName" : "Prior implant status",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0012",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Prior implant status"
+          },
+          "localizedDescriptions" : {
+            "en" : "Presence or absence of prior implants relevant to the knee arthroplasty radiographic follow-up."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0012]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0013",
+              "label" : "Present",
+              "localizedLabels" : {
+                "en" : "Present"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0014",
+              "label" : "Absent",
+              "localizedLabels" : {
+                "en" : "Absent"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0015",
+              "label" : "Unknown",
+              "localizedLabels" : {
+                "en" : "Unknown"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0016",
+              "label" : "Not assessed",
+              "localizedLabels" : {
+                "en" : "Not assessed"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "prior_implant_details",
+          "name" : "Prior implant details",
+          "localizedName" : "Prior implant details",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0017",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Prior implant details"
+          },
+          "localizedDescriptions" : {
+            "en" : "Additional details about prior implants, such as type, anatomical location, laterality, date or removal status."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0017]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "knee_side",
+          "name" : "Knee side",
+          "localizedName" : "Knee side",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0005",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Knee side"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0006",
+              "label" : "Left",
+              "localizedLabels" : {
+                "en" : "Left"
+              },
+              "localizedDescriptions" : {
+                "en" : "Left knee."
+              }
+            }, {
+              "value" : "at0007",
+              "label" : "Right",
+              "localizedLabels" : {
+                "en" : "Right"
+              },
+              "localizedDescriptions" : {
+                "en" : "Right knee."
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "patient_position_during_imaging",
+          "name" : "Patient position during imaging",
+          "localizedName" : "Patient position during imaging",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0008",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Patient position during imaging"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0008]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0009",
+              "label" : "Recumbent",
+              "localizedLabels" : {
+                "en" : "Recumbent"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0010",
+              "label" : "Standing",
+              "localizedLabels" : {
+                "en" : "Standing"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "hka_angle",
+          "name" : "HKA angle",
+          "localizedName" : "HKA angle",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0011",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "HKA angle"
+          },
+          "localizedDescriptions" : {
+            "en" : "Hip-knee-ankle angle measured on a weight-bearing full-length lower limb radiograph."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0011]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL"
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "deg",
+              "label" : "deg",
+              "localizedLabels" : {
+                "en" : "°"
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "coronal_knee_arthroplasty_alignment",
+          "name" : "Coronal knee arthroplasty alignment",
+          "localizedName" : "Coronal knee arthroplasty alignment",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0018",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Coronal knee arthroplasty alignment"
+          },
+          "localizedDescriptions" : {
+            "en" : "AP implant alignment measurements."
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0030",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Anteroposterior, ggf. Long-leg anteroposterior"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0030]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0035",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0036",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0037",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0038",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0039",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0040",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0041",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0042",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0043",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0044",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ],
+              "defaultValue" : "at0035"
+            } ]
+          }, {
+            "id" : "femoral_angle_alpha",
+            "name" : "Femoral angle alpha",
+            "localizedName" : "Femoral angle alpha",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0019",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Femoral angle alpha"
+            },
+            "localizedDescriptions" : {
+              "en" : "Femoral component alignment angle alpha as defined in the source radiographic scoring form."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0019]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "tibial_angle_beta",
+            "name" : "Tibial angle beta",
+            "localizedName" : "Tibial angle beta",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0020",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Tibial angle beta"
+            },
+            "localizedDescriptions" : {
+              "en" : "Tibial component alignment angle beta as defined in the source radiographic scoring form."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0020]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "total_valgus_angle",
+            "name" : "Total valgus angle",
+            "localizedName" : "Total valgus angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0021",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Total valgus angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Overall valgus alignment angle derived from the femoral and tibial component alignment measurements."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0021]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "ap_film_reference",
+            "name" : "AP film reference",
+            "localizedName" : "AP film reference",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0022",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "AP film reference"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0022]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0023",
+                "label" : "18-inch film",
+                "localizedLabels" : {
+                  "en" : "18-inch film"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0024",
+                "label" : "3-foot film",
+                "localizedLabels" : {
+                  "en" : "3-foot film"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0077",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0077]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "sagittal_knee_arthroplasty_alignment",
+          "name" : "Sagittal knee arthroplasty alignment",
+          "localizedName" : "Sagittal knee arthroplasty alignment",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0025",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Sagittal knee arthroplasty alignment"
+          },
+          "localizedDescriptions" : {
+            "en" : "Lateral implant alignment measurements."
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0028",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Lateral"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0028]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0045",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0046",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0047",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0048",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0049",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0050",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0051",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0052",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0053",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0054",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ],
+              "defaultValue" : "at0046"
+            } ]
+          }, {
+            "id" : "femoral_flexion_angle",
+            "name" : "Femoral flexion angle",
+            "localizedName" : "Femoral flexion angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0026",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Femoral flexion angle"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0026]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "tibial_slope_angle",
+            "name" : "Tibial slope angle",
+            "localizedName" : "Tibial slope angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0027",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Tibial slope angle"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0027]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0078",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0078]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "femoral_component_radiolucency_zones",
+          "name" : "Femoral component radiolucency zones",
+          "localizedName" : "Femoral component radiolucency zones",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0058",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Femoral component radiolucency zones"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0089",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Lateral oder Anteroposterior"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0089]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0090",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0091",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0092",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0093",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0094",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0095",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0096",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0097",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0098",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0099",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ],
+              "defaultValue" : "at0091"
+            } ]
+          }, {
+            "id" : "zone_1_radiolucent_line_width",
+            "name" : "Zone 1 radiolucent line width",
+            "localizedName" : "Zone 1 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0059",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 1 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 1 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0059]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_2_radiolucent_line_width",
+            "name" : "Zone 2 radiolucent line width",
+            "localizedName" : "Zone 2 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0060",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 2 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 2 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0060]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_3_radiolucent_line_width",
+            "name" : "Zone 3 radiolucent line width",
+            "localizedName" : "Zone 3 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0061",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0061]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_4_radiolucent_line_width",
+            "name" : "Zone 4 radiolucent line width",
+            "localizedName" : "Zone 4 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0062",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 4 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 4 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0062]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_5_radiolucent_line_width",
+            "name" : "Zone 5 radiolucent line width",
+            "localizedName" : "Zone 5 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0063",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 5 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 5 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0063]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_6_radiolucent_line_width",
+            "name" : "Zone 6 radiolucent line width",
+            "localizedName" : "Zone 6 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0064",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 6 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 6 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0064]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_7_radiolucent_line_width",
+            "name" : "Zone 7 radiolucent line width",
+            "localizedName" : "Zone 7 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0065",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 7 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 7 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0065]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "total_radiolucent_line_width",
+            "name" : "Total radiolucent line width",
+            "localizedName" : "Total radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0075",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Total radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0075]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0076",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0076]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "tibial_component_ap_radiolucency_zones",
+          "name" : "Tibial component AP radiolucency zones",
+          "localizedName" : "Tibial component AP radiolucency zones",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0079",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Tibial component AP radiolucency zones"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0100",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Anteroposterior"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0100]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0101",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0102",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0103",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0104",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0105",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0106",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0107",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0108",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0109",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0110",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ],
+              "defaultValue" : "at0101"
+            } ]
+          }, {
+            "id" : "zone_1_radiolucent_line_width",
+            "name" : "Zone 1 radiolucent line width",
+            "localizedName" : "Zone 1 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0080",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 1 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 1 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0080]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_2_radiolucent_line_width",
+            "name" : "Zone 2 radiolucent line width",
+            "localizedName" : "Zone 2 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0081",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 2 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 2 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0081]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_3_radiolucent_line_width",
+            "name" : "Zone 3 radiolucent line width",
+            "localizedName" : "Zone 3 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0082",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0082]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_4_radiolucent_line_width",
+            "name" : "Zone 4 radiolucent line width",
+            "localizedName" : "Zone 4 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0083",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 4 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 4 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0083]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_5_radiolucent_line_width",
+            "name" : "Zone 5 radiolucent line width",
+            "localizedName" : "Zone 5 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0084",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 5 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 5 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0084]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_6_radiolucent_line_width",
+            "name" : "Zone 6 radiolucent line width",
+            "localizedName" : "Zone 6 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0085",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 6 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 6 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0085]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_7_radiolucent_line_width",
+            "name" : "Zone 7 radiolucent line width",
+            "localizedName" : "Zone 7 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0086",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 7 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 7 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0086]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "total_radiolucent_line_width",
+            "name" : "Total radiolucent line width",
+            "localizedName" : "Total radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0087",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Total radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0087]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0088",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0088]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "tibial_component_lateral_radiolucency_zones",
+          "name" : "Tibial component lateral radiolucency zones",
+          "localizedName" : "Tibial component lateral radiolucency zones",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0111",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Tibial component lateral radiolucency zones"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0112",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Lateral"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0112]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0113",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0114",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0115",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0116",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0117",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0118",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0119",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0120",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0121",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0122",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ],
+              "defaultValue" : "at0114"
+            } ]
+          }, {
+            "id" : "zone_1_radiolucent_line_width",
+            "name" : "Zone 1 radiolucent line width",
+            "localizedName" : "Zone 1 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0123",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 1 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 1 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0123]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_2_radiolucent_line_width",
+            "name" : "Zone 2 radiolucent line width",
+            "localizedName" : "Zone 2 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0124",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 2 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 2 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0124]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_3_radiolucent_line_width",
+            "name" : "Zone 3 radiolucent line width",
+            "localizedName" : "Zone 3 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0125",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0125]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "total_radiolucent_line_width",
+            "name" : "Total radiolucent line width",
+            "localizedName" : "Total radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0130",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Total radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0130]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0131",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0131]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "patellar_component_radiolucency_zones",
+          "name" : "Patellar component radiolucency zones",
+          "localizedName" : "Patellar component radiolucency zones",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0132",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Patellar component radiolucency zones"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0179",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Skyline / Sunrise / Merchant"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0179]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0180",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0181",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0182",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0183",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0184",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0185",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0186",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0187",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0188",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0189",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "patellar_zone_scheme",
+            "name" : "Patellar zone scheme",
+            "localizedName" : "Patellar zone scheme",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0153",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Patellar zone scheme"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0153]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0154",
+                "label" : "Patellar component standard zone scheme",
+                "localizedLabels" : {
+                  "en" : "Patellar component standard zone scheme"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Zone 1-5"
+                }
+              }, {
+                "value" : "at0155",
+                "label" : "Patellar component alternative zone scheme",
+                "localizedLabels" : {
+                  "en" : "Patellar component alternative zone scheme"
+                },
+                "localizedDescriptions" : {
+                  "en" : "Zone 1-3"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "zone_1_radiolucent_line_width",
+            "name" : "Zone 1 radiolucent line width",
+            "localizedName" : "Zone 1 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0144",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 1 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 1 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0144]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_2_radiolucent_line_width",
+            "name" : "Zone 2 radiolucent line width",
+            "localizedName" : "Zone 2 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0145",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 2 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 2 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0145]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_3_radiolucent_line_width",
+            "name" : "Zone 3 radiolucent line width",
+            "localizedName" : "Zone 3 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0146",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 3 radiolucent line width"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0146]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_4_radiolucent_line_width",
+            "name" : "Zone 4 radiolucent line width",
+            "localizedName" : "Zone 4 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0147",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 4 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 4 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0147]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "zone_5_radiolucent_line_width",
+            "name" : "Zone 5 radiolucent line width",
+            "localizedName" : "Zone 5 radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0148",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Zone 5 radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Zone 5 radiolucent line width."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0148]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "total_radiolucent_line_width",
+            "name" : "Total radiolucent line width",
+            "localizedName" : "Total radiolucent line width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0151",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Total radiolucent line width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0151]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0152",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0152]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "patellar_tracking_and_morphology_measurements",
+          "name" : "Patellar tracking and morphology measurements",
+          "localizedName" : "Patellar tracking and morphology measurements",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0156",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Patellar tracking and morphology measurements"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "annotations" : {
+            "comment" : "Image-Reference [img]."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]",
+          "children" : [ {
+            "id" : "radiographic_projection",
+            "name" : "Radiographic projection",
+            "localizedName" : "Radiographic projection",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0157",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiographic projection"
+            },
+            "localizedDescriptions" : {
+              "en" : "Radiographic projection or view used for the assessment or measurement."
+            },
+            "annotations" : {
+              "comment" : "Template: Skyline / Sunrise / Merchant"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0157]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0158",
+                "label" : "Anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0159",
+                "label" : "Lateral",
+                "localizedLabels" : {
+                  "en" : "Lateral"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0160",
+                "label" : "Skyline",
+                "localizedLabels" : {
+                  "en" : "Skyline"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0161",
+                "label" : "Sunrise",
+                "localizedLabels" : {
+                  "en" : "Sunrise"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0162",
+                "label" : "Merchant",
+                "localizedLabels" : {
+                  "en" : "Merchant"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0163",
+                "label" : "Tunnel",
+                "localizedLabels" : {
+                  "en" : "Tunnel"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0164",
+                "label" : "Rosenberg",
+                "localizedLabels" : {
+                  "en" : "Rosenberg"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0165",
+                "label" : "Long-leg anteroposterior",
+                "localizedLabels" : {
+                  "en" : "Long-leg anteroposterior"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0166",
+                "label" : "Other",
+                "localizedLabels" : {
+                  "en" : "Other"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0167",
+                "label" : "Unknown",
+                "localizedLabels" : {
+                  "en" : "Unknown"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "patellar_width",
+            "name" : "Patellar width",
+            "localizedName" : "Patellar width",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0168",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Patellar width"
+            },
+            "localizedDescriptions" : {
+              "en" : "Width of the patella measured on the corresponding axial/tangential radiographic view."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0168]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "patellar_tilt_angle_alpha",
+            "name" : "Patellar tilt angle alpha",
+            "localizedName" : "Patellar tilt angle alpha",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0169",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Patellar tilt angle alpha"
+            },
+            "localizedDescriptions" : {
+              "en" : "Patellar tilt angle alpha as defined in the source radiographic scoring form."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0169]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "patellar_tilt_angle_beta",
+            "name" : "Patellar tilt angle beta",
+            "localizedName" : "Patellar tilt angle beta",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0170",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Patellar tilt angle beta"
+            },
+            "localizedDescriptions" : {
+              "en" : "Patellar tilt angle beta as defined in the source radiographic scoring form."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0170]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "patellar_thickness",
+            "name" : "Patellar thickness",
+            "localizedName" : "Patellar thickness",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0171",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Patellar thickness"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0171]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "prosthesis-bone_angle",
+            "name" : "Prosthesis-bone angle",
+            "localizedName" : "Prosthesis-bone angle",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0173",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Prosthesis-bone angle"
+            },
+            "localizedDescriptions" : {
+              "en" : "Angle between the patellar prosthetic component and the underlying patellar bone as defined in the source form."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0173]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "deg",
+                "label" : "deg",
+                "localizedLabels" : {
+                  "en" : "°"
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "medial_patellar_displacement",
+            "name" : "Medial patellar displacement",
+            "localizedName" : "Medial patellar displacement",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0174",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Medial patellar displacement"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0174]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "lateral_patellar_displacement",
+            "name" : "Lateral patellar displacement",
+            "localizedName" : "Lateral patellar displacement",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0175",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Lateral patellar displacement"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0175]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL"
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "mm",
+                "label" : "mm"
+              } ]
+            } ]
+          }, {
+            "id" : "comment",
+            "name" : "Comment",
+            "localizedName" : "Comment",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0176",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Comment"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0176]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
+        }, {
+          "id" : "comment",
+          "name" : "Comment",
+          "localizedName" : "Comment",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0178",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Comment"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0178]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "time",
+          "name" : "Time",
+          "rmType" : "DV_DATE_TIME",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/time",
+          "inputs" : [ {
+            "type" : "DATETIME"
+          } ],
+          "inContext" : true
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "category",
+      "rmType" : "DV_CODED_TEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/category",
+      "inputs" : [ {
+        "suffix" : "code",
+        "type" : "CODED_TEXT",
+        "list" : [ {
+          "value" : "433",
+          "label" : "event",
+          "localizedLabels" : {
+            "en" : "event"
+          }
+        } ],
+        "terminology" : "openehr"
+      } ],
+      "inContext" : true
+    }, {
+      "id" : "language",
+      "name" : "Language",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/language",
+      "inContext" : true
+    }, {
+      "id" : "territory",
+      "name" : "Territory",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/territory",
+      "inContext" : true
+    }, {
+      "id" : "composer",
+      "name" : "Composer",
+      "rmType" : "PARTY_PROXY",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/composer",
+      "inputs" : [ {
+        "suffix" : "id",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_scheme",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_namespace",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "name",
+        "type" : "TEXT"
+      } ],
+      "inContext" : true
+    } ]
+  }
+}

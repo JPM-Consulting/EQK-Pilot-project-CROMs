@@ -1,0 +1,806 @@
+archetype (adl_version=1.4; uid=3b09db78-3aa2-4efb-b792-a9d3e8dd25a4)
+	openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-05-26">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a structured clinician-reported orthopaedic follow-up assessment of the operated or assessed knee after knee surgery or knee arthroplasty.
+The archetype is intended to support consistent documentation of clinical knee status, functional status and relevant arthroplasty context over time. It may be used to support longitudinal follow-up, outcome monitoring, quality reporting and clinical review in orthopaedic care.">
+			keywords = <"orthopaedics","knee","knee arthroplasty","knee replacement","clinical follow-up","clinician-reported outcome measure","CROM","knee score","function score","range of motion","neutral-zero method","stability","alignment","prosthesis">
+			use = <"Use to document clinician-reported outcome measures and clinical follow-up findings for patients undergoing orthopaedic knee follow-up, particularly after knee arthroplasty.
+
+This archetype may be used to record:
+- the prosthesis or arthroplasty context;
+- the operated or assessed side;
+- pain while walking, on stairs and at rest;
+- flexion-neutral-extension range of motion using the neutral-zero method;
+- medial-lateral and anterior-posterior stability;
+- passive flexion contracture;
+- active extension lag;
+- clinical valgus or varus alignment;
+- walking ability, stair use, assistive device use and activity level;
+- the patient's physical condition in relation to age;
+- calculated knee and function score totals, where applicable.
+
+The archetype is suitable for use in templates for structured orthopaedic follow-up forms, CROMs, registries, quality improvement programmes and longitudinal clinical documentation.">
+			misuse = <"Not to be used for patient-reported outcome measures unless the content is explicitly adapted and validated for patient self-reporting.
+Not to be used as a generic assessment for all knee disorders where the follow-up context, scoring logic or clinical content differs substantially from orthopaedic knee surgery or knee arthroplasty follow-up.
+Not to be used to record detailed operative data, implant registry data, radiology findings or rehabilitation therapy plans. These should be documented using separate, appropriate archetypes.
+Not to be used as the sole source for clinical decision-making without considering the broader clinical context, imaging, operative details, complications, comorbidities and patient-reported outcomes.
+The score total fields should not be populated unless the scoring algorithm used by the implementing system or template is clearly defined and consistent with the intended clinical instrument.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"ch.croms">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"64ab9002aa91812f9d6bd4e422a78e10">
+		["build_uid"] = <"9016b03d-722c-346d-847c-82b70f7863fa">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Orthopaedic knee clinical follow-up
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0005] occurrences matches {0..1} matches {    -- Knee arthroplasty context
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0018] occurrences matches {0..1} matches {    -- Type of prosthesis
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0019,    -- First
+											at0020,    -- First Evolution
+											at0021,    -- First Sensitive
+											at0022,    -- Origin
+											at0023,    -- NexGen LCCK
+											at0024,    -- NexGen standard
+											at0025,    -- Triathlon
+											at0026,    -- PUC
+											at0027,    -- PFJ
+											at0028]    -- Other
+										}
+									}
+								}
+							}
+							ELEMENT[at0029] occurrences matches {0..1} matches {    -- Other prosthesis type
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0030] occurrences matches {0..1} matches {    -- Side operated or to be operated
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0031,    -- Right
+											at0032]    -- Left
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0006] occurrences matches {0..1} matches {    -- Knee score
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0033] occurrences matches {0..1} matches {    -- Pain while walking
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0034,    -- None
+											at0035,    -- Mild or occasional
+											at0036,    -- Moderate
+											at0037]    -- Severe
+										}
+									}
+								}
+							}
+							ELEMENT[at0038] occurrences matches {0..1} matches {    -- Pain on stairs
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0039,    -- None
+											at0040,    -- Mild or occasional
+											at0041,    -- Moderate
+											at0042]    -- Severe
+										}
+									}
+								}
+							}
+							ELEMENT[at0043] occurrences matches {0..1} matches {    -- Pain at rest
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0044,    -- None
+											at0045,    -- Mild
+											at0046,    -- Moderate
+											at0047]    -- Severe
+										}
+									}
+								}
+							}
+							CLUSTER[at0048] occurrences matches {0..1} matches {    -- Flexion-neutral-extension range of motion
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- Maximum flexion angle
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"deg">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"°">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0050] occurrences matches {0..1} matches {    -- Neutral position angle
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"deg">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"°">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..1} matches {    -- Maximum extension angle
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"deg">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"°">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+							ELEMENT[at0052] occurrences matches {0..1} matches {    -- Medial-lateral stability in valgus/varus
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0053,    -- 5 degrees or less
+											at0054,    -- 6 to 10 degrees
+											at0055]    -- More than 10 degrees
+										}
+									}
+								}
+							}
+							ELEMENT[at0056] occurrences matches {0..1} matches {    -- Anterior-posterior stability
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0057,    -- 0 to 5 mm
+											at0058,    -- 6 to 10 mm
+											at0059]    -- More than 10 mm
+										}
+									}
+								}
+							}
+							ELEMENT[at0060] occurrences matches {0..1} matches {    -- Passive flexion contracture
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0061,    -- 5 degrees or less
+											at0062,    -- 6 to 10 degrees
+											at0063,    -- 11 to 20 degrees
+											at0064]    -- More than 20 degrees
+										}
+									}
+								}
+							}
+							ELEMENT[at0065] occurrences matches {0..1} matches {    -- Active extension lag
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0066,    -- None
+											at0067,    -- Less than 4 degrees
+											at0068,    -- 5 to 10 degrees
+											at0069]    -- More than 11 degrees
+										}
+									}
+								}
+							}
+							CLUSTER[at0070] occurrences matches {0..1} matches {    -- Clinical alignment
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0071] occurrences matches {0..1} matches {    -- Valgus angle
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"deg">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"°">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0072] occurrences matches {0..1} matches {    -- Varus angle
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::497]>
+												list = <
+													["1"] = <
+														units = <"deg">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"°">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+							ELEMENT[at0101] occurrences matches {0..1} matches {    -- Knee score total
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0007] occurrences matches {0..1} matches {    -- Function score
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0078] occurrences matches {0..1} matches {    -- Walking ability
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0079,    -- Unlimited or more than 1 hour
+											at0080,    -- More than 1000 m
+											at0081,    -- 500 to 1000 m or more than 30 minutes
+											at0082,    -- Less than 500 m or 15 minutes or less
+											at0083,    -- At home only
+											at0084]    -- Impossible
+										}
+									}
+								}
+							}
+							ELEMENT[at0085] occurrences matches {0..1} matches {    -- Stairs
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0086,    -- Up and down stairs normally
+											at0087,    -- Up normally, down with handrail
+											at0088,    -- Up and down with handrail
+											at0089]    -- Up with handrail, down impossible
+										}
+									}
+								}
+							}
+							ELEMENT[at0090] occurrences matches {0..1} matches {    -- Assistive devices
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0091,    -- None
+											at0092,    -- One cane
+											at0093,    -- Two canes
+											at0094]    -- Two Canadian crutches or walker
+										}
+									}
+								}
+							}
+							ELEMENT[at0095] occurrences matches {0..1} matches {    -- Activity level
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0096,    -- High
+											at0097,    -- Daily activity
+											at0098,    -- Independent
+											at0099]    -- Not independent
+										}
+									}
+								}
+							}
+							ELEMENT[at0102] occurrences matches {0..1} matches {    -- Function score total
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0100] occurrences matches {0..1} matches {    -- Patient physical condition
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0073] occurrences matches {0..1} matches {    -- Condition depending on age
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0074,    -- Excellent
+											at0075,    -- Good
+											at0076,    -- Average
+											at0077]    -- Poor
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0003] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Consulting clinician name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Follow-up timing
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0010,    -- Preoperative
+									at0011,    -- 6 weeks
+									at0012,    -- 3 months
+									at0013,    -- 6 months
+									at0014,    -- 1 year
+									at0015,    -- 2 years
+									at0016]    -- Other number of years
+								}
+							}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Other follow-up interval in years
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Orthopaedic knee clinical follow-up">
+					description = <"A structured clinician-reported assessment for orthopaedic knee follow-up, including knee arthroplasty context, pain, range of motion, stability, flexion contracture, extension lag, clinical alignment, functional ability and the patient's physical condition in relation to age.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Consulting clinician name">
+					description = <"Name of the clinician responsible for, or performing, the clinical follow-up assessment.">
+				>
+				["at0005"] = <
+					text = <"Knee arthroplasty context">
+					description = <"Contextual information about the knee arthroplasty or knee prosthesis relevant to this clinical follow-up assessment.">
+				>
+				["at0006"] = <
+					text = <"Knee score">
+					description = <"Clinician-reported assessment of pain, mobility, stability, flexion contracture, extension lag and clinical alignment of the operated or assessed knee.">
+				>
+				["at0007"] = <
+					text = <"Function score">
+					description = <"Clinician-reported assessment of functional ability related to walking, stair use, assistive device use and activity level.">
+				>
+				["at0009"] = <
+					text = <"Follow-up timing">
+					description = <"Timing of the follow-up assessment in relation to surgery, baseline assessment or the planned follow-up schedule.">
+				>
+				["at0010"] = <
+					text = <"Preoperative">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"6 weeks">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"3 months">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"6 months">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"1 year">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"2 years">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Other number of years">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Other follow-up interval in years">
+					description = <"Number of years after surgery or baseline assessment for follow-up timing, used when \"Other number of years\" is selected.">
+				>
+				["at0018"] = <
+					text = <"Type of prosthesis">
+					description = <"Type or product family of the knee prosthesis relevant to this follow-up assessment.">
+				>
+				["at0019"] = <
+					text = <"First">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"First Evolution">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"First Sensitive">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Origin">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"NexGen LCCK">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"NexGen standard">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Triathlon">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"PUC">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"PFJ">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Other">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Other prosthesis type">
+					description = <"Free-text description of the prosthesis type when the coded value \"Other\" is selected.">
+				>
+				["at0030"] = <
+					text = <"Side operated or to be operated">
+					description = <"Laterality of the knee that has been operated on or is planned for operation.">
+				>
+				["at0031"] = <
+					text = <"Right">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Left">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Pain while walking">
+					description = <"Clinician-reported assessment of knee pain experienced while walking.">
+				>
+				["at0034"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Mild or occasional">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Pain on stairs">
+					description = <"Clinician-reported assessment of knee pain experienced when using stairs.">
+				>
+				["at0039"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Mild or occasional">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Pain at rest">
+					description = <"Clinician-reported assessment of knee pain experienced at rest.">
+				>
+				["at0044"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Mild">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Flexion-neutral-extension range of motion">
+					description = <"Range of motion of the knee documented using the neutral-zero method.">
+				>
+				["at0049"] = <
+					text = <"Maximum flexion angle">
+					description = <"Maximum flexion angle of the assessed knee, expressed in degrees.">
+				>
+				["at0050"] = <
+					text = <"Neutral position angle">
+					description = <"Neutral-zero reference position of the assessed knee, usually documented as 0 degrees.">
+				>
+				["at0051"] = <
+					text = <"Maximum extension angle">
+					description = <"Maximum extension angle or extension deficit of the assessed knee, expressed in degrees.">
+				>
+				["at0052"] = <
+					text = <"Medial-lateral stability in valgus/varus">
+					description = <"Clinician-assessed medial-lateral stability of the knee during valgus and varus stress testing.">
+				>
+				["at0053"] = <
+					text = <"5 degrees or less">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"6 to 10 degrees">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"More than 10 degrees">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Anterior-posterior stability">
+					description = <"Clinician-assessed anterior-posterior stability of the knee, expressed as a categorical range in millimetres.">
+				>
+				["at0057"] = <
+					text = <"0 to 5 mm">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"6 to 10 mm">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"More than 10 mm">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Passive flexion contracture">
+					description = <"Clinician-assessed passive flexion contracture of the knee, expressed as a categorical angular range.">
+				>
+				["at0061"] = <
+					text = <"5 degrees or less">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"6 to 10 degrees">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"11 to 20 degrees">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"More than 20 degrees">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Active extension lag">
+					description = <"Clinician-assessed difference between passive and active knee extension, expressed as a categorical angular range.">
+				>
+				["at0066"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Less than 4 degrees">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"5 to 10 degrees">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"More than 11 degrees">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Clinical alignment">
+					description = <"Clinician-reported coronal plane alignment of the assessed knee, documented as valgus or varus angle.">
+				>
+				["at0071"] = <
+					text = <"Valgus angle">
+					description = <"Clinical valgus alignment angle of the assessed knee, expressed in degrees.">
+				>
+				["at0072"] = <
+					text = <"Varus angle">
+					description = <"Clinical varus alignment angle of the assessed knee, expressed in degrees.">
+				>
+				["at0073"] = <
+					text = <"Condition depending on age">
+					description = <"Overall physical condition assessed in relation to the patient's age.">
+				>
+				["at0074"] = <
+					text = <"Excellent">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Average">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Walking ability">
+					description = <"Clinician-reported assessment of the patient's walking capacity, based on distance or duration.">
+				>
+				["at0079"] = <
+					text = <"Unlimited or more than 1 hour">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"More than 1000 m">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"500 to 1000 m or more than 30 minutes">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Less than 500 m or 15 minutes or less">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"At home only">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Stairs">
+					description = <"Clinician-reported assessment of the patient's ability to ascend and descend stairs.">
+				>
+				["at0086"] = <
+					text = <"Up and down stairs normally">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Up normally, down with handrail">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Up and down with handrail">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Up with handrail, down impossible">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Assistive devices">
+					description = <"Assistive walking devices used by the patient for mobility.">
+				>
+				["at0091"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"One cane">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Two canes">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Two Canadian crutches or walker">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Activity level">
+					description = <"Clinician-reported assessment of the patient's general activity and independence level.">
+				>
+				["at0096"] = <
+					text = <"High">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Daily activity">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Independent">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Not independent">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Patient physical condition">
+					description = <"Clinician-reported assessment of the patient's overall physical condition in relation to age.">
+				>
+				["at0101"] = <
+					text = <"Knee score total">
+					description = <"Calculated total knee score derived from the knee score items according to the configured scoring algorithm.">
+					comment = <"The scoring algorithm is not defined by this archetype. Implementations must define the calculation logic, score range and interpretation in the template, application logic or implementation guide.">
+				>
+				["at0102"] = <
+					text = <"Function score total">
+					description = <"Calculated total function score derived from the function score items according to the configured scoring algorithm.">
+					comment = <"The scoring algorithm is not defined by this archetype. Implementations must define the calculation logic, score range and interpretation in the template, application logic or implementation guide.">
+				>
+			>
+		>
+	>

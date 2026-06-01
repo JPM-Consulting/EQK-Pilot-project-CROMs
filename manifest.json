@@ -1,0 +1,58 @@
+{
+  "modelVersion" : 1,
+  "sources" : [ {
+    "sourceType" : "repository",
+    "id" : "crom-3gc",
+    "user" : "jean-pierre.messerli@jpm-consulting.ch@google",
+    "repositoryId" : "crom-3gc"
+  } ],
+  "entries" : [ {
+    "path" : "Templates/croms_knee_arthroplasty_follow_up.v0.t.json",
+    "type" : "template",
+    "id" : "croms_knee_arthroplasty_follow_up.v0",
+    "sourceId" : "crom-3gc",
+    "lastModified" : "2026-06-01T09:45:30.960989587Z",
+    "dependsOn" : [ {
+      "type" : "archetype",
+      "reference" : "openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0"
+    }, {
+      "type" : "archetype",
+      "reference" : "openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0"
+    }, {
+      "type" : "archetype",
+      "reference" : "openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0"
+    }, {
+      "type" : "archetype",
+      "reference" : "openEHR-EHR-COMPOSITION.report.v1"
+    } ]
+  }, {
+    "path" : "Templates/croms_knee_arthroplasty_follow_up.v0.opt",
+    "type" : "opt",
+    "id" : "croms_knee_arthroplasty_follow_up.v0",
+    "lastModified" : "2026-06-01T09:45:30.960997547Z"
+  }, {
+    "path" : "Archetypes/openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0",
+    "sourceId" : "crom-3gc",
+    "lastModified" : "2026-05-16T10:08:44.054Z"
+  }, {
+    "path" : "Archetypes/openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0",
+    "sourceId" : "crom-3gc",
+    "lastModified" : "2026-05-27T05:23:25.482Z"
+  }, {
+    "path" : "Archetypes/openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0",
+    "sourceId" : "crom-3gc",
+    "lastModified" : "2026-05-26T06:43:06.274Z"
+  }, {
+    "path" : "Archetypes/openEHR-EHR-COMPOSITION.report.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.report.v1",
+    "sourceId" : "crom-3gc",
+    "lastModified" : "2026-05-16T10:15:39.460Z"
+  } ]
+}

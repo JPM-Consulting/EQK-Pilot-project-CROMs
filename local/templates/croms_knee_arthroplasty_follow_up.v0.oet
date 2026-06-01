@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>b3373a9f-7b7a-42e6-9c03-90d14b38699d</id>
+    <name>croms_knee_arthroplasty_follow_up.v0</name>
+    <description>
+        <original_author>
+            <item>
+                <key>name</key>
+                <value>Jean-Pierre Messerli</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>JPM Consulting GmbH</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>jean-pierre.messerli@jpm-consulting.ch</value>
+            </item>
+            <item>
+                <key>date</key>
+                <value>2026-06-01</value>
+            </item>
+        </original_author>
+        <lifecycle_state>in_development</lifecycle_state>
+        <details>
+            <purpose>To document a structured point-in-time follow-up report before or after knee arthroplasty, combining clinician-reported knee assessment, general orthopaedic clinical background information and structured radiographic follow-up findings for the knee prosthesis.</purpose>
+            <use>Use this template to record a structured follow-up assessment for patients before or after knee arthroplasty, especially in the context of orthopaedic outcome monitoring, clinical follow-up, prosthesis surveillance and registry-oriented data collection. The template supports combined documentation of knee clinical findings, knee score and function score items, comorbidities, systemic and local complications, associated orthopaedic conditions and X-ray follow-up findings of the knee prosthesis. It may be used for preoperative assessment and postoperative follow-up intervals such as 6 weeks, 3 months, 6 months, 1 year, 2 years or later annual follow-up.</use>
+            <misuse>Not to be used as the primary record of the knee arthroplasty procedure, implant registry, operative report, medication record or detailed device inventory. Detailed implant component documentation, surgical procedure details, medication administration, adverse event reporting and diagnostic imaging reports should be recorded using dedicated archetypes or systems where required. This template is not intended to replace the original radiology report or the primary operative documentation.</misuse>
+            <copyright>Creative Commons Attribution-ShareAlike 4.0 International License</copyright>
+        </details>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>0.8.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value>01703b50-ee49-4680-b352-b0ddce83e50e</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>b869cab7dabda137629dae9be46e0fbf</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>A60D0B7F52F1F9C3C9B3518DB83ACDAE</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="CROMS knee arthroplasty follow up" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0" concept_name="Orthopaedic knee clinical follow-up" max="1" name="Knee clinical follow-up" path="/content" xsi:type="tem:EVALUATION"/>
+        <Content archetype_id="openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0" concept_name="Orthopaedic clinical follow-up" max="1" name="Orthopaedic clinical background and follow-up" path="/content" xsi:type="tem:EVALUATION"/>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule name="Point in time" path="/data[at0001]/events[at0002]">
+                <eventConstraint>
+                    <allowedType>PointInTime</allowedType>
+                </eventConstraint>
+            </Rule>
+        </Content>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.report.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">A60D0B7F52F1F9C3C9B3518DB83ACDAE</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">64ab9002aa91812f9d6bd4e422a78e10</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">71c7d232eda86da991bd9aea64684d4f</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">02be5aa752067bebf7b7caabc075163d</digest>
+    </integrity_checks>
+</template>

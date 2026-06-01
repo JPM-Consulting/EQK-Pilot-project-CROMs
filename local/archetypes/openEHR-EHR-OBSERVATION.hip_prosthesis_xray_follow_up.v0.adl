@@ -1,0 +1,805 @@
+archetype (adl_version=1.4; uid=8db6d621-e5c6-46eb-b8e6-47b8d5066123)
+	openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-05-16">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record structured radiographic follow-up findings for a hip prosthesis, including prosthesis site, X-ray examination date, cup and stem-related findings, radiolucent lines, heterotopic ossification and angular measurements.">
+			use = <"Use to document structured X-ray follow-up findings after hip arthroplasty or hip prosthesis implantation. Use to record radiographic signs such as cup migration, asymmetric head position, radiolucent lines, stem subsidence, calcar resorption, cortical hypertrophy, heterotopic ossification, Brooker grade and relevant angular measurements.">
+			misuse = <"Not to be used to record the operative procedure, implant component catalogue details, surgical technique or non-imaging clinical follow-up findings. Not to be used as a replacement for a complete narrative radiology report when detailed diagnostic interpretation is required.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"40f5f78811f269b683488f83ab27d405">
+		["build_uid"] = <"5947f422-5cf2-37b9-b911-1400e9c95ea6">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Hip prosthesis X-ray follow-up
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- Prosthesis site
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0006] occurrences matches {0..1} matches {    -- Body site
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0007]    -- Hip
+														}
+													}
+												}
+											}
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- Laterality
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0009,    -- Left
+															at0010]    -- Right
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0013] occurrences matches {0..1} matches {    -- Hip prosthesis X-ray follow-up findings
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- X-ray examination date
+												value matches {
+													DV_DATE matches {*}
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Cup brand name
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											CLUSTER[at0018] occurrences matches {0..1} matches {    -- Cup migration
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Cup migration status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0028,    -- No
+																	at0029,    -- Yes
+																	at0030]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0031] occurrences matches {0..1} matches {    -- Migration distance more than 3 mm
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0032,    -- No
+																	at0033,    -- Yes
+																	at0034]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0035] occurrences matches {0..1} matches {    -- Migration angle more than 3 degrees
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0036,    -- No
+																	at0037,    -- Yes
+																	at0038]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0019] occurrences matches {0..1} matches {    -- Asymmetric head position
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0039] occurrences matches {0..1} matches {    -- Asymmetric head position status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0040,    -- No
+																	at0041,    -- Yes
+																	at0042]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0043] occurrences matches {0..*} matches {    -- Cup zone
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0044,    -- DeLee-Charnley zone 1
+																	at0045,    -- DeLee-Charnley zone 2
+																	at0046]    -- DeLee-Charnley zone 3
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0020] occurrences matches {0..1} matches {    -- Radiolucent lines
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0047] occurrences matches {0..1} matches {    -- Radiolucent line status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0048,    -- No
+																	at0049,    -- Yes
+																	at0050]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0051] occurrences matches {0..*} matches {    -- Cup radiolucent zone
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0052,    -- DeLee-Charnley zone 1
+																	at0053,    -- DeLee-Charnley zone 2
+																	at0054]    -- DeLee-Charnley zone 3
+																}
+															}
+														}
+													}
+													ELEMENT[at0055] occurrences matches {0..*} matches {    -- Stem radiolucent zone
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0056,    -- Gruen zone 1
+																	at0057,    -- Gruen zone 2
+																	at0058,    -- Gruen zone 3
+																	at0059,    -- Gruen zone 4
+																	at0060,    -- Gruen zone 5
+																	at0061,    -- Gruen zone 6
+																	at0062]    -- Gruen zone 7
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0021] occurrences matches {0..1} matches {    -- Stem subsidence
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0063] occurrences matches {0..1} matches {    -- Stem subsidence status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0064,    -- No
+																	at0065,    -- Yes
+																	at0066]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0067] occurrences matches {0..1} matches {    -- Subsidence more than 3 mm postoperatively
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0068,    -- No
+																	at0069,    -- Yes
+																	at0070]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0022] occurrences matches {0..1} matches {    -- Calcar resorption
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0071] occurrences matches {0..1} matches {    -- Calcar resorption status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0072,    -- No
+																	at0073,    -- Yes
+																	at0074]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0023] occurrences matches {0..1} matches {    -- Cortical hypertrophy
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0075] occurrences matches {0..1} matches {    -- Cortical hypertrophy status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0076,    -- No
+																	at0077,    -- Yes
+																	at0078]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0079] occurrences matches {0..*} matches {    -- Gruen zone
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0080,    -- Gruen zone 1
+																	at0081,    -- Gruen zone 2
+																	at0082,    -- Gruen zone 3
+																	at0083,    -- Gruen zone 4
+																	at0084,    -- Gruen zone 5
+																	at0085,    -- Gruen zone 6
+																	at0086]    -- Gruen zone 7
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0024] occurrences matches {0..1} matches {    -- Heterotopic ossification
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0087] occurrences matches {0..1} matches {    -- Heterotopic ossification status
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0088,    -- No
+																	at0089,    -- Yes
+																	at0090]    -- Unknown or not assessed
+																}
+															}
+														}
+													}
+													ELEMENT[at0096] occurrences matches {0..1} matches {    -- Brooker grade
+														value matches {
+															1|[local::at0097],
+															2|[local::at0098],
+															3|[local::at0099],
+															4|[local::at0100]
+														}
+													}
+												}
+											}
+											CLUSTER[at0025] occurrences matches {0..1} matches {    -- Cotyle measurements
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0101] occurrences matches {0..1} matches {    -- Cotyle inclination
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::497]>
+																list = <
+																	["1"] = <
+																		units = <"deg">
+																		units_system = <"http://unitsofmeasure.org">
+																		units_display_name = <"°">
+																	>
+																>
+															>
+														}
+													}
+													ELEMENT[at0102] occurrences matches {0..1} matches {    -- Cotyle anteversion
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::497]>
+																list = <
+																	["1"] = <
+																		units = <"deg">
+																		units_system = <"http://unitsofmeasure.org">
+																		units_display_name = <"°">
+																	>
+																>
+															>
+														}
+													}
+												}
+											}
+											CLUSTER[at0026] occurrences matches {0..1} matches {    -- Femoral neck measurements
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0103] occurrences matches {0..1} matches {    -- CCD angle
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::497]>
+																list = <
+																	["1"] = <
+																		units = <"deg">
+																		units_system = <"http://unitsofmeasure.org">
+																		units_display_name = <"°">
+																	>
+																>
+															>
+														}
+													}
+													ELEMENT[at0104] occurrences matches {0..1} matches {    -- Femoral anteversion
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::497]>
+																list = <
+																	["1"] = <
+																		units = <"deg">
+																		units_system = <"http://unitsofmeasure.org">
+																		units_display_name = <"°">
+																	>
+																>
+															>
+														}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0105] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0107] occurrences matches {0..*} matches {    -- Extension
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0106] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Hip prosthesis X-ray follow-up">
+					description = <"Structured radiographic follow-up findings for a hip prosthesis, including cup, stem, radiolucency, ossification and angular measurements.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Prosthesis site">
+					description = <"Anatomical site and side to which the hip prosthesis X-ray follow-up findings apply.">
+				>
+				["at0006"] = <
+					text = <"Body site">
+					description = <"Hip region or hip joint to which the prosthesis follow-up findings apply.">
+				>
+				["at0007"] = <
+					text = <"Hip">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Laterality">
+					description = <"Side of the hip prosthesis to which the X-ray follow-up findings apply.">
+				>
+				["at0009"] = <
+					text = <"Left">
+					description = <"Left side.">
+				>
+				["at0010"] = <
+					text = <"Right">
+					description = <"Right side.">
+				>
+				["at0013"] = <
+					text = <"Hip prosthesis X-ray follow-up findings">
+					description = <"Structured radiographic findings from hip prosthesis X-ray follow-up.">
+					comment = <"Use to record structured cup, stem, radiolucency, heterotopic ossification and angular measurement findings from the X-ray follow-up.">
+				>
+				["at0015"] = <
+					text = <"X-ray examination date">
+					description = <"Date on which the X-ray examination was performed.">
+					comment = <"Use when the X-ray examination date differs from the date or time when the structured findings are recorded.">
+				>
+				["at0016"] = <
+					text = <"Cup brand name">
+					description = <"Brand name of the acetabular cup component, if recorded.">
+					comment = <"Use when the cup brand is available from the clinical or radiographic documentation.">
+				>
+				["at0018"] = <
+					text = <"Cup migration">
+					description = <"Radiographic assessment of acetabular cup migration.">
+					comment = <"Image-Reference [img].">
+				>
+				["at0019"] = <
+					text = <"Asymmetric head position">
+					description = <"Radiographic assessment of asymmetric femoral head position within the acetabular cup.">
+					comment = <"Image-Reference [img].">
+				>
+				["at0020"] = <
+					text = <"Radiolucent lines">
+					description = <"Radiographic assessment of radiolucent lines around the acetabular cup or femoral stem.">
+					comment = <"Image-Reference [img].
+Image-Reference [img].">
+				>
+				["at0021"] = <
+					text = <"Stem subsidence">
+					description = <"Radiographic assessment of femoral stem subsidence after implantation.">
+				>
+				["at0022"] = <
+					text = <"Calcar resorption">
+					description = <"Radiographic assessment of calcar resorption.">
+				>
+				["at0023"] = <
+					text = <"Cortical hypertrophy">
+					description = <"Radiographic assessment of cortical hypertrophy around the femoral stem.">
+					comment = <"Image-Reference [img].">
+				>
+				["at0024"] = <
+					text = <"Heterotopic ossification">
+					description = <"Radiographic assessment of heterotopic ossification around the hip.">
+				>
+				["at0025"] = <
+					text = <"Cotyle measurements">
+					description = <"Angular measurements of the acetabular cup component.">
+				>
+				["at0026"] = <
+					text = <"Femoral neck measurements">
+					description = <"Angular measurements related to the femoral neck or femoral component.">
+				>
+				["at0027"] = <
+					text = <"Cup migration status">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0029"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0030"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0031"] = <
+					text = <"Migration distance more than 3 mm">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Unknown or not assessed">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Migration angle more than 3 degrees">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"No">
+					description = <"Criterion is not met.">
+				>
+				["at0037"] = <
+					text = <"Yes">
+					description = <"Criterion is met.">
+				>
+				["at0038"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the criterion is met.">
+				>
+				["at0039"] = <
+					text = <"Asymmetric head position status">
+					description = <"Radiographic assessment of asymmetric femoral head position within the acetabular cup.">
+				>
+				["at0040"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0041"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0042"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0043"] = <
+					text = <"Cup zone">
+					description = <"DeLee-Charnley acetabular zone affected by asymmetric head position.">
+					comment = <"Repeatable element for multiselect use. Record each selected DeLee-Charnley zone as a separate instance.">
+				>
+				["at0044"] = <
+					text = <"DeLee-Charnley zone 1">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"DeLee-Charnley zone 2">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"DeLee-Charnley zone 3">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Radiolucent line status">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0049"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0050"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0051"] = <
+					text = <"Cup radiolucent zone">
+					description = <"DeLee-Charnley acetabular zone with radiolucent lines.">
+					comment = <"Repeatable element for multiselect use. Record each selected DeLee-Charnley zone as a separate instance.">
+				>
+				["at0052"] = <
+					text = <"DeLee-Charnley zone 1">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"DeLee-Charnley zone 2">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"DeLee-Charnley zone 3">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Stem radiolucent zone">
+					description = <"Gruen femoral stem zone affected by cortical hypertrophy.">
+					comment = <"Repeatable element for multiselect use. Record each selected Gruen zone as a separate instance.">
+				>
+				["at0056"] = <
+					text = <"Gruen zone 1">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Gruen zone 2">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Gruen zone 3">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Gruen zone 4">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Gruen zone 5">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Gruen zone 6">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Gruen zone 7">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Stem subsidence status">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0065"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0066"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0067"] = <
+					text = <"Subsidence more than 3 mm postoperatively">
+					description = <"Radiographic assessment of femoral stem subsidence after implantation.">
+				>
+				["at0068"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Unknown or not assessed">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Calcar resorption status">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0073"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0074"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0075"] = <
+					text = <"Cortical hypertrophy status">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0077"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0078"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0079"] = <
+					text = <"Gruen zone">
+					description = <"Gruen femoral stem zone affected by cortical hypertrophy.">
+					comment = <"Repeatable element for multiselect use. Record each selected Gruen zone as a separate instance.">
+				>
+				["at0080"] = <
+					text = <"Gruen zone 1">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Gruen zone 2">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Gruen zone 3">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Gruen zone 4">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Gruen zone 5">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Gruen zone 6">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Gruen zone 7">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Heterotopic ossification status">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"No">
+					description = <"Finding is not present.">
+				>
+				["at0089"] = <
+					text = <"Yes">
+					description = <"Finding is present.">
+				>
+				["at0090"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether the finding is present.">
+				>
+				["at0096"] = <
+					text = <"Brooker grade">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Islands">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"> 1 cm between">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"< 1 cm between">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Apparent bone ankylosis">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Cotyle inclination">
+					description = <"Inclination angle of the acetabular cup component.">
+				>
+				["deg"] = <
+					text = <"Degree">
+					description = <"degree">
+				>
+				["at0102"] = <
+					text = <"Cotyle anteversion">
+					description = <"Anteversion angle of the acetabular cup component.">
+				>
+				["at0103"] = <
+					text = <"CCD angle">
+					description = <"Caput-collum-diaphyseal angle.">
+				>
+				["at0104"] = <
+					text = <"Femoral anteversion">
+					description = <"Femoral anteversion angle.">
+				>
+				["at0105"] = <
+					text = <"Comment">
+					description = <"Additional free-text comment about the hip prosthesis X-ray follow-up findings.">
+				>
+				["at0106"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+	>

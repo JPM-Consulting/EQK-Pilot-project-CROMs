@@ -1,0 +1,634 @@
+archetype (adl_version=1.4; uid=adc42896-c6f5-42c7-8b99-1ec682b7a789)
+	openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-05-16">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record structured information from an orthopaedic clinical follow-up after prosthesis implantation, including the presence or absence of other known conditions, systemic and local complications, other associated orthopaedic conditions, relevant dates or years, laterality where applicable, and additional comments.">
+			use = <"Use to document orthopaedic clinical follow-up information in patients with a joint prosthesis, for example after hip or knee arthroplasty.
+Use to record whether other known conditions, systemic complications, local complications, or other associated orthopaedic conditions are present, absent, unknown or not assessed.
+Use the repeatable nested clusters to record each selected condition or complication as a separate instance, including date or year, laterality and free-text description where applicable.
+This archetype may be used in templates for prosthesis follow-up forms, orthopaedic registries, quality documentation, clinical audit and structured follow-up documentation.">
+			misuse = <"Not to be used to record the primary operative procedure, implant details, prosthesis components or surgical technique.
+Not to be used as a general problem list, diagnosis list or longitudinal comorbidity register. Use appropriate problem/diagnosis archetypes for detailed clinical diagnoses and their lifecycle.
+Not to be used to record detailed adverse event management, treatment, medication, procedures or outcome measures unless represented in appropriate additional archetypes.
+Not to be used for patient-reported outcome measures, pain scores, functional scores or questionnaire item responses. Use appropriate OBSERVATION archetypes for scores, scales and PROMs.
+Not to be used as a replacement for detailed infection, thromboembolic event, neurological event or wound assessment archetypes when detailed clinical documentation is required.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"71c7d232eda86da991bd9aea64684d4f">
+		["build_uid"] = <"09188cfe-c798-3456-91c3-3b38cf4757f4">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Orthopaedic clinical follow-up
+		data matches {
+			ITEM_TREE[at0003] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0004] occurrences matches {0..1} matches {    -- Other known conditions
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0008] matches {    -- Other known condition status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0015,    -- None known
+											at0016,    -- Present
+											at0017]    -- Unknown or not assessed
+										}
+									}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..*} matches {    -- Other known condition
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0018,    -- Nervous system
+											at0019,    -- Gastrointestinal system
+											at0020,    -- Osteoporosis
+											at0021,    -- Respiratory tract
+											at0022,    -- Urogenital system
+											at0023,    -- Endocrine system
+											at0024,    -- Cardiovascular system
+											at0025,    -- Diabetes
+											at0026]    -- Other
+										}
+									}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Other known condition description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0005] occurrences matches {0..1} matches {    -- Systemic complications
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0027] matches {    -- Systemic complication status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0028,    -- None known
+											at0029,    -- Present
+											at0030]    -- Unknown or not assessed
+										}
+									}
+								}
+							}
+							CLUSTER[at0032] occurrences matches {0..*} matches {    -- Systemic complication
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0034] matches {    -- Systemic complication type
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0035,    -- Pulmonary embolism
+													at0036,    -- Thrombophlebitis
+													at0037,    -- Central nervous system
+													at0038,    -- Respiratory tract
+													at0039,    -- Cardiovascular system
+													at0040,    -- Urological system
+													at0041,    -- Gastrointestinal system
+													at0042]    -- Other
+												}
+											}
+										}
+									}
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Complication date
+										value matches {
+											DV_DATE matches {*}
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Other systemic complication description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0006] occurrences matches {0..1} matches {    -- Local complications
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0046] matches {    -- Local complication status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0047,    -- None known
+											at0048,    -- Present
+											at0049]    -- Unknown or not assessed
+										}
+									}
+								}
+							}
+							CLUSTER[at0050] occurrences matches {0..*} matches {    -- Local complication
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0051] matches {    -- Local complication type
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0052,    -- Dislocation
+													at0053,    -- Haematoma / seroma
+													at0054,    -- Persistent drainage
+													at0055,    -- Dehiscence
+													at0056,    -- Neuropraxia
+													at0057,    -- Loosening
+													at0058,    -- Deep sepsis
+													at0059,    -- Superficial sepsis
+													at0060]    -- Other
+												}
+											}
+										}
+									}
+									ELEMENT[at0061] occurrences matches {0..1} matches {    -- Complication date
+										value matches {
+											DV_DATE matches {*}
+										}
+									}
+									ELEMENT[at0062] occurrences matches {0..1} matches {    -- Other local complication description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0007] occurrences matches {0..1} matches {    -- Other associated orthopaedic conditions
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0063] matches {    -- Other associated orthopaedic condition status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0064,    -- None known
+											at0065,    -- Present
+											at0066]    -- Unknown or not assessed
+										}
+									}
+								}
+							}
+							CLUSTER[at0067] occurrences matches {0..*} matches {    -- Other associated orthopaedic condition
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0069] matches {    -- Other associated orthopaedic condition type
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0070,    -- Contralateral knee
+													at0071,    -- Ankle / foot
+													at0072,    -- Wrist / hand
+													at0073,    -- Opposite hip
+													at0074,    -- Shoulder
+													at0075,    -- Trauma
+													at0076,    -- Spine
+													at0077,    -- Elbow
+													at0078]    -- Other
+												}
+											}
+										}
+									}
+									ELEMENT[at0079] occurrences matches {0..1} matches {    -- Condition date
+										value matches {
+											DV_DATE matches {*}
+										}
+									}
+									ELEMENT[at0080] occurrences matches {0..1} matches {    -- Condition laterality
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0081,    -- Left
+													at0082,    -- Right
+													at0084,    -- Bilateral
+													at0086]    -- Unknown
+												}
+											}
+										}
+									}
+									ELEMENT[at0085] occurrences matches {0..1} matches {    -- Other associated orthopaedic condition description
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Orthopaedic clinical follow-up">
+					description = <"Structured assessment of orthopaedic clinical follow-up information, including known conditions, complications and associated orthopaedic conditions.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Other known conditions">
+					description = <"Other known pathologies, comorbidities or body system-related conditions recorded at clinical follow-up.">
+					comment = <"If status is Present, at least one Other known condition should be recorded.
+
+If status is None known, no Other known condition should be recorded.
+
+If Other is selected, Other known condition description should be recorded.">
+				>
+				["at0005"] = <
+					text = <"Systemic complications">
+					description = <"Systemic complications occurring since implantation of this prosthesis.">
+					comment = <"If status is Present, at least one systemic complication should be recorded.
+
+If status is None known, no systemic complication should be recorded.
+
+Record each selected complication as a separate Systemic complication instance.
+
+If Other is selected, Other systemic complication description should be recorded.
+
+Record the complication date when available.">
+				>
+				["at0006"] = <
+					text = <"Local complications">
+					description = <"Local complications occurring since implantation of this prosthesis.">
+					comment = <"If status is Present, at least one local complication should be recorded.
+
+If status is None known, no local complication should be recorded.
+
+Record each selected complication as a separate Local complication instance.
+
+If Other is selected, Other local complication description should be recorded.
+
+Record the complication date or year when available.">
+				>
+				["at0007"] = <
+					text = <"Other associated orthopaedic conditions">
+					description = <"Other associated orthopaedic pathologies or conditions relevant to this clinical follow-up.">
+					comment = <"If status is Present, at least one associated orthopaedic condition should be recorded.
+
+If status is None known, no associated orthopaedic condition should be recorded.
+
+Record each selected condition as a separate Other associated orthopaedic condition instance.
+
+Record laterality, date or year, and description when applicable.">
+				>
+				["at0008"] = <
+					text = <"Other known condition status">
+					description = <"Status indicating whether other known conditions are recorded at this follow-up.">
+					comment = <"Use when the presence of other known conditions is unknown or was not assessed.">
+				>
+				["at0009"] = <
+					text = <"Other known condition">
+					description = <"Category or specific type of other known condition recorded at clinical follow-up.">
+					comment = <"Repeatable element for multiselect use. Record each selected option as a separate instance. Do not record a value when the status is None known.">
+				>
+				["at0010"] = <
+					text = <"Other known condition description">
+					description = <"Free-text description of another known condition not represented by the coded options.">
+					comment = <"Use when Other is selected, or to provide additional clarification about a selected condition.">
+				>
+				["at0011"] = <
+					text = <"Comment">
+					description = <"Additional free-text comment about the orthopaedic clinical follow-up.">
+				>
+				["at0015"] = <
+					text = <"None known">
+					description = <"No other known conditions are recorded at this follow-up.">
+				>
+				["at0016"] = <
+					text = <"Present">
+					description = <"One or more other known conditions are recorded.">
+				>
+				["at0017"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether other conditions are present.">
+				>
+				["at0018"] = <
+					text = <"Nervous system">
+					description = <"Known condition related to the nervous system.">
+				>
+				["at0019"] = <
+					text = <"Gastrointestinal system">
+					description = <"Known condition related to the gastrointestinal system.">
+				>
+				["at0020"] = <
+					text = <"Osteoporosis">
+					description = <"Known osteoporosis.">
+				>
+				["at0021"] = <
+					text = <"Respiratory tract">
+					description = <"Known condition related to the respiratory tract.">
+				>
+				["at0022"] = <
+					text = <"Urogenital system">
+					description = <"Known condition related to the urogenital system.">
+				>
+				["at0023"] = <
+					text = <"Endocrine system">
+					description = <"Known condition related to the endocrine system.">
+				>
+				["at0024"] = <
+					text = <"Cardiovascular system">
+					description = <"Known condition related to the cardiovascular system.">
+				>
+				["at0025"] = <
+					text = <"Diabetes">
+					description = <"Known diabetes mellitus.">
+				>
+				["at0026"] = <
+					text = <"Other">
+					description = <"Other known condition not represented by the listed options.">
+				>
+				["at0027"] = <
+					text = <"Systemic complication status">
+					description = <"Status indicating whether systemic complications are recorded since prosthesis implantation.">
+					comment = <"Use Present when one or more systemic complications are recorded. Use None known only when no systemic complications are recorded. Use Unknown or not assessed when this information is unavailable or was not assessed.">
+				>
+				["at0028"] = <
+					text = <"None known">
+					description = <"No systemic complications are recorded since prosthesis implantation.">
+				>
+				["at0029"] = <
+					text = <"Present">
+					description = <"One or more systemic complications are recorded since prosthesis implantation.">
+				>
+				["at0030"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether systemic complications occurred.">
+				>
+				["at0032"] = <
+					text = <"Systemic complication">
+					description = <"Single systemic complication recorded since implantation of this prosthesis.">
+					comment = <"Repeatable cluster for multiselect use. Record each selected complication as a separate instance, with its date when available.">
+				>
+				["at0034"] = <
+					text = <"Systemic complication type">
+					description = <"Category or specific type of systemic complication recorded since prosthesis implantation.">
+					comment = <"Use one coded value for each systemic complication instance. Use Other when the complication is not represented by the listed options.">
+				>
+				["at0035"] = <
+					text = <"Pulmonary embolism">
+					description = <"Pulmonary embolism occurring since prosthesis implantation.">
+				>
+				["at0036"] = <
+					text = <"Thrombophlebitis">
+					description = <"Thrombophlebitis occurring since prosthesis implantation.">
+				>
+				["at0037"] = <
+					text = <"Central nervous system">
+					description = <"Systemic complication related to the central nervous system.">
+				>
+				["at0038"] = <
+					text = <"Respiratory tract">
+					description = <"Systemic complication related to the respiratory tract.">
+				>
+				["at0039"] = <
+					text = <"Cardiovascular system">
+					description = <"Systemic complication related to the cardiovascular system.">
+				>
+				["at0040"] = <
+					text = <"Urological system">
+					description = <"Systemic complication related to the urinary or urological system.">
+				>
+				["at0041"] = <
+					text = <"Gastrointestinal system">
+					description = <"Systemic complication related to the gastrointestinal system.">
+				>
+				["at0042"] = <
+					text = <"Other">
+					description = <"Other systemic complication not represented by the listed options.">
+				>
+				["at0044"] = <
+					text = <"Complication date">
+					description = <"Date when the systemic complication occurred or was identified.">
+					comment = <"Record the date next to the systemic complication when available.">
+				>
+				["at0045"] = <
+					text = <"Other systemic complication description">
+					description = <"Free-text description of a systemic complication not represented by the coded options.">
+					comment = <"Use when Other is selected, or to provide additional clarification about a selected systemic complication.">
+				>
+				["at0046"] = <
+					text = <"Local complication status">
+					description = <"Status indicating whether local complications are recorded since prosthesis implantation.">
+					comment = <"Use Present when one or more local complications are recorded. Use None known only when no local complications are recorded. Use Unknown or not assessed when this information is unavailable or was not assessed.">
+				>
+				["at0047"] = <
+					text = <"None known">
+					description = <"No local complications are recorded since prosthesis implantation.">
+				>
+				["at0048"] = <
+					text = <"Present">
+					description = <"One or more local complications are recorded since prosthesis implantation.">
+				>
+				["at0049"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether local complications occurred.">
+				>
+				["at0050"] = <
+					text = <"Local complication">
+					description = <"Single local complication recorded since implantation of this prosthesis.">
+					comment = <"Repeatable cluster for multiselect use. Record each selected complication as a separate instance, with its date or year when available.">
+				>
+				["at0051"] = <
+					text = <"Local complication type">
+					description = <"Category or specific type of local complication recorded since prosthesis implantation.">
+					comment = <"Use one coded value for each local complication instance. Use Other when the complication is not represented by the listed options.">
+				>
+				["at0052"] = <
+					text = <"Dislocation">
+					description = <"Local dislocation occurring since prosthesis implantation.">
+				>
+				["at0053"] = <
+					text = <"Haematoma / seroma">
+					description = <"Local haematoma or seroma occurring since prosthesis implantation.">
+				>
+				["at0054"] = <
+					text = <"Persistent drainage">
+					description = <"Persistent wound drainage occurring since prosthesis implantation.">
+				>
+				["at0055"] = <
+					text = <"Dehiscence">
+					description = <"Wound dehiscence occurring since prosthesis implantation.">
+				>
+				["at0056"] = <
+					text = <"Neuropraxia">
+					description = <"Local neuropraxia occurring since prosthesis implantation.">
+				>
+				["at0057"] = <
+					text = <"Loosening">
+					description = <"Prosthesis loosening occurring since implantation.">
+				>
+				["at0058"] = <
+					text = <"Deep sepsis">
+					description = <"Deep sepsis or deep infection occurring since prosthesis implantation.">
+				>
+				["at0059"] = <
+					text = <"Superficial sepsis">
+					description = <"Superficial sepsis or superficial infection occurring since prosthesis implantation.">
+				>
+				["at0060"] = <
+					text = <"Other">
+					description = <"Other local complication not represented by the listed options.">
+				>
+				["at0061"] = <
+					text = <"Complication date">
+					description = <"Date or year when the local complication occurred or was identified.">
+					comment = <"Record the date or year next to the complication when available.">
+				>
+				["at0062"] = <
+					text = <"Other local complication description">
+					description = <"Free-text description of a local complication not represented by the coded options.">
+					comment = <"Use when Other is selected, or to provide additional clarification about a selected local complication.">
+				>
+				["at0063"] = <
+					text = <"Other associated orthopaedic condition status">
+					description = <"Status indicating whether other associated orthopaedic conditions are recorded at this follow-up.">
+					comment = <"Use Present when one or more associated orthopaedic conditions are recorded. Use None known only when no associated orthopaedic conditions are recorded. Use Unknown or not assessed when this information is unavailable or was not assessed.">
+				>
+				["at0064"] = <
+					text = <"None known">
+					description = <"No other associated orthopaedic conditions are recorded at this follow-up.">
+				>
+				["at0065"] = <
+					text = <"Present">
+					description = <"One or more other associated orthopaedic conditions are recorded at this follow-up.">
+				>
+				["at0066"] = <
+					text = <"Unknown or not assessed">
+					description = <"It is unknown or was not assessed whether other associated orthopaedic conditions are present.">
+				>
+				["at0067"] = <
+					text = <"Other associated orthopaedic condition">
+					description = <"Single other associated orthopaedic condition recorded at this follow-up.">
+					comment = <"Repeatable cluster for multiselect use. Record each selected condition as a separate instance, with laterality, date or year, and description when applicable.">
+				>
+				["at0069"] = <
+					text = <"Other associated orthopaedic condition type">
+					description = <"Category or specific type of other associated orthopaedic condition recorded at clinical follow-up.">
+					comment = <"Use one coded value for each associated orthopaedic condition instance. Use Other when the condition is not represented by the listed options.">
+				>
+				["at0070"] = <
+					text = <"Contralateral knee">
+					description = <"Associated condition affecting the contralateral knee.">
+				>
+				["at0071"] = <
+					text = <"Ankle / foot">
+					description = <"Associated condition affecting the ankle or foot.">
+				>
+				["at0072"] = <
+					text = <"Wrist / hand">
+					description = <"Associated condition affecting the wrist or hand.">
+				>
+				["at0073"] = <
+					text = <"Opposite hip">
+					description = <"Associated condition affecting the opposite hip.">
+				>
+				["at0074"] = <
+					text = <"Shoulder">
+					description = <"Associated condition affecting the shoulder.">
+				>
+				["at0075"] = <
+					text = <"Trauma">
+					description = <"Associated orthopaedic condition related to trauma.">
+				>
+				["at0076"] = <
+					text = <"Spine">
+					description = <"Associated condition affecting the spine.">
+				>
+				["at0077"] = <
+					text = <"Elbow">
+					description = <"Associated condition affecting the elbow.">
+				>
+				["at0078"] = <
+					text = <"Other">
+					description = <"Other associated orthopaedic condition not represented by the listed options.">
+				>
+				["at0079"] = <
+					text = <"Condition date">
+					description = <"Date or year when the associated orthopaedic condition occurred or was identified.">
+					comment = <"Record the date or year next to the associated orthopaedic condition when available.">
+				>
+				["at0080"] = <
+					text = <"Condition laterality">
+					description = <"Laterality of the associated orthopaedic condition, where applicable.">
+					comment = <"Record for contralateral knee or opposite hip when applicable, using the anatomical side affected.">
+				>
+				["at0081"] = <
+					text = <"Left">
+					description = <"Left side.">
+				>
+				["at0082"] = <
+					text = <"Right">
+					description = <"Right side.">
+				>
+				["at0084"] = <
+					text = <"Bilateral">
+					description = <"Both left and right sides.">
+				>
+				["at0085"] = <
+					text = <"Other associated orthopaedic condition description">
+					description = <"Free-text description of the associated orthopaedic condition.">
+					comment = <"Use when Trauma or Other is selected, or to provide additional clarification about a selected associated orthopaedic condition.">
+				>
+				["at0086"] = <
+					text = <"Unknown">
+					description = <"Laterality is unknown.">
+				>
+			>
+		>
+	>
