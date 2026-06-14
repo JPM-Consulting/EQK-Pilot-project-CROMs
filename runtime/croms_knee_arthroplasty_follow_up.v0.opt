@@ -17,10 +17,10 @@
         <other_details id="original_namespace"></other_details>
         <other_details id="original_publisher"></other_details>
         <other_details id="custodian_namespace"></other_details>
-        <other_details id="sem_ver">0.8.0</other_details>
-        <other_details id="build_uid">01703b50-ee49-4680-b352-b0ddce83e50e</other_details>
-        <other_details id="MD5-CAM-1.0.1">b869cab7dabda137629dae9be46e0fbf</other_details>
-        <other_details id="PARENT:MD5-CAM-1.0.1">A60D0B7F52F1F9C3C9B3518DB83ACDAE</other_details>
+        <other_details id="sem_ver">0.9.3</other_details>
+        <other_details id="build_uid">a54305a7-0350-4666-8fd8-02537ce0551d</other_details>
+        <other_details id="MD5-CAM-1.0.1">8539396bf9f604423b87961c1c097e9d</other_details>
+        <other_details id="PARENT:MD5-CAM-1.0.1">9600c4fcc6d15581c8db853325c979f7</other_details>
         <details>
             <language>
                 <terminology_id>
@@ -32,6 +32,22 @@
             <use>Use this template to record a structured follow-up assessment for patients before or after knee arthroplasty, especially in the context of orthopaedic outcome monitoring, clinical follow-up, prosthesis surveillance and registry-oriented data collection. The template supports combined documentation of knee clinical findings, knee score and function score items, comorbidities, systemic and local complications, associated orthopaedic conditions and X-ray follow-up findings of the knee prosthesis. It may be used for preoperative assessment and postoperative follow-up intervals such as 6 weeks, 3 months, 6 months, 1 year, 2 years or later annual follow-up.</use>
             <misuse>Not to be used as the primary record of the knee arthroplasty procedure, implant registry, operative report, medication record or detailed device inventory. Detailed implant component documentation, surgical procedure details, medication administration, adverse event reporting and diagnostic imaging reports should be recorded using dedicated archetypes or systems where required. This template is not intended to replace the original radiology report or the primary operative documentation.</misuse>
             <copyright>Creative Commons Attribution-ShareAlike 4.0 International License</copyright>
+        </details>
+        <details>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>fr</code_string>
+            </language>
+            <purpose>Archétype conteneur générique destiné à porter des informations qui doivent être partagées avec des tiers.</purpose>
+            <keywords>rapport</keywords>
+            <use>Utiliser comme archétype générique pour porter des informations qui doivent être partagées avec des tiers, lorsqu’il n’existe pas d’archétype spécialisé pour un type de rapport spécifique.
+
+Les cas d’utilisation courants sont : documenter une réponse à une demande d’information ; le résultat d’un test ; des activités qui ont été réalisées ; ou des événements qui se sont produits.
+
+Le composant principal Sections/Contenu a été délibérément laissé non contraint. Cela permettra de le renseigner avec tout archétype SECTION ou ENTRY approprié à l’objectif clinique dans un template.</use>
+            <copyright>© openEHR Foundation</copyright>
         </details>
     </description>
     <uid>
@@ -8406,6 +8422,1460 @@ Record laterality, date or year, and description when applicable.</items>
             <items id="comment">For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.</items>
         </term_definitions>
     </definition>
+    <ontology archetype_id="openEHR-EHR-COMPOSITION.report.v1">
+        <term_definitions language="fr">
+            <items code="at0000">
+                <items id="text">CROMS suivi genou prothétique</items>
+                <items id="description">Document destiné à communiquer des informations à des tiers, généralement en réponse à une demande d’une autre partie.</items>
+            </items>
+            <items code="at0001">
+                <items id="text">Arborescence</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0002">
+                <items id="text">Identifiant du rapport</items>
+                <items id="description">Informations d’identification du rapport.</items>
+            </items>
+            <items code="at0005">
+                <items id="text">Statut</items>
+                <items id="description">Statut du rapport dans son ensemble. Remarque : il ne s’agit pas du statut des différents composants du rapport.</items>
+            </items>
+            <items code="at0006">
+                <items id="text">Extension</items>
+                <items id="description">Informations supplémentaires nécessaires pour saisir le contexte local ou assurer l’alignement avec d’autres modèles ou formalismes de référence.</items>
+                <items id="comment">Par exemple : exigences d’information locales ou métadonnées supplémentaires pour l’alignement avec des équivalents FHIR ou CIMI.</items>
+            </items>
+        </term_definitions>
+    </ontology>
+    <component_ontologies archetype_id="openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0">
+        <term_definitions language="fr">
+            <items code="at0000">
+                <items id="text">Suivi clinique orthopédique du genou</items>
+                <items id="description">Évaluation structurée, rapportée par un clinicien, pour le suivi orthopédique du genou, incluant le contexte de l’arthroplastie du genou, la douleur, l’amplitude de mouvement, la stabilité, le flexum passif, le déficit d’extension active, l’alignement clinique, la capacité fonctionnelle et la condition physique du patient en fonction de l’âge.</items>
+            </items>
+            <items code="at0001">
+                <items id="text">Item tree</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0003">
+                <items id="text">Item tree</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0004">
+                <items id="text">Nom du clinicien qui consulte</items>
+                <items id="description">Nom du clinicien responsable de l’évaluation clinique de suivi ou qui la réalise.</items>
+            </items>
+            <items code="at0005">
+                <items id="text">Contexte de l’arthroplastie du genou</items>
+                <items id="description">Informations contextuelles relatives à l’arthroplastie du genou ou à la prothèse du genou, pertinentes pour cette évaluation clinique de suivi.</items>
+            </items>
+            <items code="at0006">
+                <items id="text">Score genou</items>
+                <items id="description">Évaluation rapportée par un clinicien de la douleur, de la mobilité, de la stabilité, du flexum passif, du déficit d’extension active et de l’alignement clinique du genou opéré ou évalué.</items>
+            </items>
+            <items code="at0007">
+                <items id="text">Score fonction</items>
+                <items id="description">Évaluation rapportée par un clinicien de la capacité fonctionnelle liée à la marche, à l’utilisation des escaliers, aux moyens auxiliaires et au niveau d’activité.</items>
+            </items>
+            <items code="at0009">
+                <items id="text">Contrôle</items>
+                <items id="description">Moment de l’évaluation de suivi par rapport à l’intervention, à l’évaluation de référence ou au calendrier de suivi prévu.</items>
+            </items>
+            <items code="at0010">
+                <items id="text">Préopératoire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0011">
+                <items id="text">6 semaines</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0012">
+                <items id="text">3 mois</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0013">
+                <items id="text">6 mois</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0014">
+                <items id="text">1 an</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0015">
+                <items id="text">2 ans</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0016">
+                <items id="text">Autre nombre d’années</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0017">
+                <items id="text">Autre intervalle de suivi en années</items>
+                <items id="description">Nombre d’années après l’intervention ou l’évaluation de référence pour le moment du suivi, utilisé lorsque « Autre nombre d’années » est sélectionné.</items>
+            </items>
+            <items code="at0018">
+                <items id="text">Type de prothèse</items>
+                <items id="description">Type ou famille de produit de la prothèse du genou pertinente pour cette évaluation de suivi.</items>
+            </items>
+            <items code="at0019">
+                <items id="text">First</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0020">
+                <items id="text">First Evolution</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0021">
+                <items id="text">First Sensitive</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0022">
+                <items id="text">Origin</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0023">
+                <items id="text">NexGen LCCK</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0024">
+                <items id="text">NexGen standard</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0025">
+                <items id="text">Triathlon</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0026">
+                <items id="text">PUC</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0027">
+                <items id="text">PFJ</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0028">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0029">
+                <items id="text">Autre type de prothèse</items>
+                <items id="description">Description en texte libre du type de prothèse lorsque la valeur codée « Autre » est sélectionnée.</items>
+            </items>
+            <items code="at0030">
+                <items id="text">Côté opéré ou à opérer</items>
+                <items id="description">Latéralité du genou qui a été opéré ou pour lequel une intervention est prévue.</items>
+            </items>
+            <items code="at0031">
+                <items id="text">Droit</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0032">
+                <items id="text">Gauche</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0033">
+                <items id="text">Douleur à la marche</items>
+                <items id="description">Évaluation rapportée par un clinicien de la douleur du genou ressentie à la marche.</items>
+            </items>
+            <items code="at0034">
+                <items id="text">Aucune</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0035">
+                <items id="text">Légère ou occasionnelle</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0036">
+                <items id="text">Modérée</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0037">
+                <items id="text">Sévère</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0038">
+                <items id="text">Douleur dans les escaliers</items>
+                <items id="description">Évaluation rapportée par un clinicien de la douleur du genou ressentie lors de l’utilisation des escaliers.</items>
+            </items>
+            <items code="at0039">
+                <items id="text">Aucune</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0040">
+                <items id="text">Légère ou occasionnelle</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0041">
+                <items id="text">Modérée</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0042">
+                <items id="text">Sévère</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0043">
+                <items id="text">Douleur au repos</items>
+                <items id="description">Évaluation rapportée par un clinicien de la douleur du genou ressentie au repos.</items>
+            </items>
+            <items code="at0044">
+                <items id="text">Aucune</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0045">
+                <items id="text">Légère</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0046">
+                <items id="text">Modérée</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0047">
+                <items id="text">Sévère</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0048">
+                <items id="text">Mobilité</items>
+                <items id="description">Amplitude de mouvement du genou documentée selon la méthode neutre-zéro.</items>
+            </items>
+            <items code="at0049">
+                <items id="text">Angle maximal de flexion</items>
+                <items id="description">Angle maximal de flexion du genou évalué, exprimé en degrés.</items>
+            </items>
+            <items code="at0050">
+                <items id="text">Angle en position neutre</items>
+                <items id="description">Position de référence neutre-zéro du genou évalué, généralement documentée comme 0 degré.</items>
+            </items>
+            <items code="at0051">
+                <items id="text">Angle maximal d’extension</items>
+                <items id="description">Angle maximal d’extension ou déficit d’extension du genou évalué, exprimé en degrés.</items>
+            </items>
+            <items code="at0052">
+                <items id="text">Stabilité en valgus/varus</items>
+                <items id="description">Stabilité médio-latérale du genou évaluée par le clinicien lors des tests de stress en valgus et en varus.</items>
+            </items>
+            <items code="at0053">
+                <items id="text">5 degrés ou moins</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0054">
+                <items id="text">6 à 10 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0055">
+                <items id="text">Plus de 10 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0056">
+                <items id="text">Stabilité A/P</items>
+                <items id="description">Stabilité antéro-postérieure du genou évaluée par le clinicien, exprimée sous forme de catégorie en millimètres.</items>
+            </items>
+            <items code="at0057">
+                <items id="text">0 à 5 mm</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0058">
+                <items id="text">6 à 10 mm</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0059">
+                <items id="text">Plus de 10 mm</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0060">
+                <items id="text">Flexum passif</items>
+                <items id="description">Flexum passif du genou évalué par le clinicien, exprimé sous forme de catégorie angulaire.</items>
+            </items>
+            <items code="at0061">
+                <items id="text">5 degrés ou moins</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0062">
+                <items id="text">6 à 10 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0063">
+                <items id="text">11 à 20 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0064">
+                <items id="text">Plus de 20 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0065">
+                <items id="text">Flexum actif</items>
+                <items id="description">Différence entre l’extension passive et l’extension active du genou, évaluée par le clinicien et exprimée sous forme de catégorie angulaire.</items>
+            </items>
+            <items code="at0066">
+                <items id="text">Aucun</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0067">
+                <items id="text">Moins de 4 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0068">
+                <items id="text">5 à 10 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0069">
+                <items id="text">Plus de 11 degrés</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0070">
+                <items id="text">Alignement clinique</items>
+                <items id="description">Alignement clinique dans le plan coronal du genou évalué, documenté comme angle en valgus ou en varus.</items>
+            </items>
+            <items code="at0071">
+                <items id="text">Angle de valgus</items>
+                <items id="description">Angle d’alignement clinique en valgus du genou évalué, exprimé en degrés.</items>
+            </items>
+            <items code="at0072">
+                <items id="text">Angle de varus</items>
+                <items id="description">Angle d’alignement clinique en varus du genou évalué, exprimé en degrés.</items>
+            </items>
+            <items code="at0073">
+                <items id="text">Condition physique du patient selon l’âge</items>
+                <items id="description">Condition physique globale évaluée en relation avec l’âge du patient.</items>
+            </items>
+            <items code="at0074">
+                <items id="text">Excellente</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0075">
+                <items id="text">Bonne</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0076">
+                <items id="text">Moyenne</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0077">
+                <items id="text">Faible</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0078">
+                <items id="text">Marche</items>
+                <items id="description">Évaluation rapportée par un clinicien de la capacité de marche du patient, basée sur la distance ou la durée.</items>
+            </items>
+            <items code="at0079">
+                <items id="text">Illimitée ou plus de 1 h</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0080">
+                <items id="text">Plus de 1000 m</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0081">
+                <items id="text">500 à 1000 m ou plus de 30 min</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0082">
+                <items id="text">Moins de 500 m ou 15 min ou moins</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0083">
+                <items id="text">Au domicile</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0084">
+                <items id="text">Impossible</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0085">
+                <items id="text">Escaliers</items>
+                <items id="description">Évaluation rapportée par un clinicien de la capacité du patient à monter et descendre les escaliers.</items>
+            </items>
+            <items code="at0086">
+                <items id="text">Montée et descente sans rampe</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0087">
+                <items id="text">Montée sans rampe, descente avec rampe</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0088">
+                <items id="text">Montée et descente avec rampe</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0089">
+                <items id="text">Montée avec rampe, descente impossible</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0090">
+                <items id="text">Moyens auxiliaires</items>
+                <items id="description">Moyens auxiliaires de marche utilisés par le patient pour la mobilité.</items>
+            </items>
+            <items code="at0091">
+                <items id="text">Aucun</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0092">
+                <items id="text">1 canne basse</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0093">
+                <items id="text">2 cannes basses</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0094">
+                <items id="text">2 cannes anglaises ou tintébin</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0095">
+                <items id="text">Activité</items>
+                <items id="description">Évaluation rapportée par un clinicien du niveau général d’activité et d’autonomie du patient.</items>
+            </items>
+            <items code="at0096">
+                <items id="text">Importante</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0097">
+                <items id="text">Activité quotidienne</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0098">
+                <items id="text">Autonome</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0099">
+                <items id="text">Non autonome</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0100">
+                <items id="text">Condition physique du patient</items>
+                <items id="description">Évaluation rapportée par un clinicien de la condition physique globale du patient en relation avec l’âge.</items>
+            </items>
+            <items code="at0101">
+                <items id="text">Score genou total</items>
+                <items id="description">Score genou total calculé à partir des items du score genou selon l’algorithme de cotation configuré.</items>
+                <items id="comment">L’algorithme de cotation n’est pas défini par cet archétype. Les implémentations doivent définir la logique de calcul, l’étendue du score et son interprétation dans le template, la logique applicative ou le guide d’implémentation.</items>
+            </items>
+            <items code="at0102">
+                <items id="text">Score fonction total</items>
+                <items id="description">Score fonction total calculé à partir des items du score fonction selon l’algorithme de cotation configuré.</items>
+                <items id="comment">L’algorithme de cotation n’est pas défini par cet archétype. Les implémentations doivent définir la logique de calcul, l’étendue du score et son interprétation dans le template, la logique applicative ou le guide d’implémentation.</items>
+            </items>
+            <items code="deg">
+                <items id="text">°</items>
+                <items id="description">degree</items>
+            </items>
+        </term_definitions>
+    </component_ontologies>
+    <component_ontologies archetype_id="openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0">
+        <term_definitions language="fr">
+            <items code="at0000">
+                <items id="text">Suivi clinique orthopédique</items>
+                <items id="description">Évaluation structurée des informations de suivi clinique orthopédique, incluant les pathologies connues, les complications et les pathologies orthopédiques associées.</items>
+            </items>
+            <items code="at0001">
+                <items id="text">Arborescence des éléments</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0002">
+                <items id="text">Extension</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0003">
+                <items id="text">Arborescence des éléments</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0004">
+                <items id="text">Autres pathologies connues</items>
+                <items id="description">Autres pathologies connues, comorbidités ou affections liées à un système corporel, enregistrées lors du suivi clinique.</items>
+                <items id="comment">Si le statut est « Présente », au moins une autre pathologie connue doit être enregistrée.
+
+Si le statut est « Aucune », aucune autre pathologie connue ne doit être enregistrée.
+
+Si « Autre » est sélectionné, une description de l’autre pathologie connue doit être enregistrée.</items>
+            </items>
+            <items code="at0005">
+                <items id="text">Complications systémiques</items>
+                <items id="description">Complications systémiques survenues depuis la mise en place de cette prothèse.</items>
+                <items id="comment">Si le statut est « Présente », au moins une complication systémique doit être enregistrée.
+
+Si le statut est « Aucune », aucune complication systémique ne doit être enregistrée.
+
+Enregistrer chaque complication sélectionnée comme une instance distincte de complication systémique.
+
+Si « Autre » est sélectionné, une description de l’autre complication systémique doit être enregistrée.
+
+Enregistrer la date de la complication lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0006">
+                <items id="text">Complications locales</items>
+                <items id="description">Complications locales survenues depuis la mise en place de cette prothèse.</items>
+                <items id="comment">Si le statut est « Présente », au moins une complication locale doit être enregistrée.
+
+Si le statut est « Aucune », aucune complication locale ne doit être enregistrée.
+
+Enregistrer chaque complication sélectionnée comme une instance distincte de complication locale.
+
+Si « Autre » est sélectionné, une description de l’autre complication locale doit être enregistrée.
+
+Enregistrer la date ou l’année de la complication lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0007">
+                <items id="text">Autres pathologies orthopédiques associées</items>
+                <items id="description">Autres pathologies orthopédiques associées pertinentes pour ce suivi clinique.</items>
+                <items id="comment">Si le statut est « Présente », au moins une pathologie orthopédique associée doit être enregistrée.
+
+Si le statut est « Aucune », aucune pathologie orthopédique associée ne doit être enregistrée.
+
+Enregistrer chaque pathologie sélectionnée comme une instance distincte d’autre pathologie orthopédique associée.
+
+Enregistrer la latéralité, la date ou l’année, ainsi qu’une description le cas échéant.</items>
+            </items>
+            <items code="at0008">
+                <items id="text">Statut des autres pathologies connues</items>
+                <items id="description">Statut indiquant si d’autres pathologies connues sont enregistrées lors de ce suivi.</items>
+                <items id="comment">Utiliser lorsque la présence d’autres pathologies connues est inconnue ou n’a pas été évaluée.</items>
+            </items>
+            <items code="at0009">
+                <items id="text">Autre pathologie connue</items>
+                <items id="description">Catégorie ou type spécifique d’autre pathologie connue enregistrée lors du suivi clinique.</items>
+                <items id="comment">Élément répétable pour une utilisation en sélection multiple. Enregistrer chaque option sélectionnée comme une instance distincte. Ne pas enregistrer de valeur lorsque le statut est « Aucune ».</items>
+            </items>
+            <items code="at0010">
+                <items id="text">Description d’une autre pathologie connue</items>
+                <items id="description">Description en texte libre d’une autre pathologie connue non représentée par les options codées.</items>
+                <items id="comment">Utiliser lorsque « Autre » est sélectionné, ou pour fournir des précisions supplémentaires sur une pathologie sélectionnée.</items>
+            </items>
+            <items code="at0011">
+                <items id="text">Commentaire</items>
+                <items id="description">Commentaire complémentaire en texte libre concernant le suivi clinique orthopédique.</items>
+            </items>
+            <items code="at0015">
+                <items id="text">Aucune</items>
+                <items id="description">Aucune autre pathologie connue n’est enregistrée lors de ce suivi.</items>
+            </items>
+            <items code="at0016">
+                <items id="text">Présente</items>
+                <items id="description">Une ou plusieurs autres pathologies connues sont enregistrées.</items>
+            </items>
+            <items code="at0017">
+                <items id="text">Inconnue ou non évaluée</items>
+                <items id="description">La présence d’autres pathologies est inconnue ou n’a pas été évaluée.</items>
+            </items>
+            <items code="at0018">
+                <items id="text">Système nerveux</items>
+                <items id="description">Pathologie connue liée au système nerveux.</items>
+            </items>
+            <items code="at0019">
+                <items id="text">Système gastro-intestinal</items>
+                <items id="description">Pathologie connue liée au système gastro-intestinal.</items>
+            </items>
+            <items code="at0020">
+                <items id="text">Ostéoporose</items>
+                <items id="description">Ostéoporose connue.</items>
+            </items>
+            <items code="at0021">
+                <items id="text">Voies respiratoires</items>
+                <items id="description">Pathologie connue liée aux voies respiratoires.</items>
+            </items>
+            <items code="at0022">
+                <items id="text">Système uro-génital</items>
+                <items id="description">Pathologie connue liée au système uro-génital.</items>
+            </items>
+            <items code="at0023">
+                <items id="text">Système endocrinien</items>
+                <items id="description">Pathologie connue liée au système endocrinien.</items>
+            </items>
+            <items code="at0024">
+                <items id="text">Système cardio-vasculaire</items>
+                <items id="description">Pathologie connue liée au système cardio-vasculaire.</items>
+            </items>
+            <items code="at0025">
+                <items id="text">Diabète</items>
+                <items id="description">Diabète sucré connu.</items>
+            </items>
+            <items code="at0026">
+                <items id="text">Autre</items>
+                <items id="description">Autre pathologie connue non représentée par les options listées.</items>
+            </items>
+            <items code="at0027">
+                <items id="text">Statut des complications systémiques</items>
+                <items id="description">Statut indiquant si des complications systémiques sont enregistrées depuis la mise en place de la prothèse.</items>
+                <items id="comment">Utiliser « Présente » lorsqu’une ou plusieurs complications systémiques sont enregistrées. Utiliser « Aucune » uniquement lorsqu’aucune complication systémique n’est enregistrée. Utiliser « Inconnue ou non évaluée » lorsque cette information n’est pas disponible ou n’a pas été évaluée.</items>
+            </items>
+            <items code="at0028">
+                <items id="text">Aucune</items>
+                <items id="description">Aucune complication systémique n’est enregistrée depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0029">
+                <items id="text">Présente</items>
+                <items id="description">Une ou plusieurs complications systémiques sont enregistrées depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0030">
+                <items id="text">Inconnue ou non évaluée</items>
+                <items id="description">Il est inconnu ou non évalué si des complications systémiques sont survenues.</items>
+            </items>
+            <items code="at0032">
+                <items id="text">Complication systémique</items>
+                <items id="description">Complication systémique unique enregistrée depuis la mise en place de cette prothèse.</items>
+                <items id="comment">Cluster répétable pour une utilisation en sélection multiple. Enregistrer chaque complication sélectionnée comme une instance distincte, avec sa date lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0034">
+                <items id="text">Type de complication systémique</items>
+                <items id="description">Catégorie ou type spécifique de complication systémique enregistrée depuis la mise en place de la prothèse.</items>
+                <items id="comment">Utiliser une valeur codée pour chaque instance de complication systémique. Utiliser « Autre » lorsque la complication n’est pas représentée par les options listées.</items>
+            </items>
+            <items code="at0035">
+                <items id="text">Embolie pulmonaire</items>
+                <items id="description">Embolie pulmonaire survenue depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0036">
+                <items id="text">Thrombophlébite</items>
+                <items id="description">Thrombophlébite survenue depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0037">
+                <items id="text">Système nerveux central</items>
+                <items id="description">Complication systémique liée au système nerveux central.</items>
+            </items>
+            <items code="at0038">
+                <items id="text">Voies respiratoires</items>
+                <items id="description">Complication systémique liée aux voies respiratoires.</items>
+            </items>
+            <items code="at0039">
+                <items id="text">Système cardio-vasculaire</items>
+                <items id="description">Complication systémique liée au système cardio-vasculaire.</items>
+            </items>
+            <items code="at0040">
+                <items id="text">Urologie</items>
+                <items id="description">Complication systémique liée au système urinaire ou urologique.</items>
+            </items>
+            <items code="at0041">
+                <items id="text">Système gastro-intestinal</items>
+                <items id="description">Complication systémique liée au système gastro-intestinal.</items>
+            </items>
+            <items code="at0042">
+                <items id="text">Autre</items>
+                <items id="description">Autre complication systémique non représentée par les options listées.</items>
+            </items>
+            <items code="at0044">
+                <items id="text">Date de la complication</items>
+                <items id="description">Date à laquelle la complication systémique est survenue ou a été identifiée.</items>
+                <items id="comment">Enregistrer la date à côté de la complication systémique lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0045">
+                <items id="text">Description d’une autre complication systémique</items>
+                <items id="description">Description en texte libre d’une complication systémique non représentée par les options codées.</items>
+                <items id="comment">Utiliser lorsque « Autre » est sélectionné, ou pour fournir des précisions supplémentaires sur une complication systémique sélectionnée.</items>
+            </items>
+            <items code="at0046">
+                <items id="text">Statut des complications locales</items>
+                <items id="description">Statut indiquant si des complications locales sont enregistrées depuis la mise en place de la prothèse.</items>
+                <items id="comment">Utiliser « Présente » lorsqu’une ou plusieurs complications locales sont enregistrées. Utiliser « Aucune » uniquement lorsqu’aucune complication locale n’est enregistrée. Utiliser « Inconnue ou non évaluée » lorsque cette information n’est pas disponible ou n’a pas été évaluée.</items>
+            </items>
+            <items code="at0047">
+                <items id="text">Aucune</items>
+                <items id="description">Aucune complication locale n’est enregistrée depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0048">
+                <items id="text">Présente</items>
+                <items id="description">Une ou plusieurs complications locales sont enregistrées depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0049">
+                <items id="text">Inconnue ou non évaluée</items>
+                <items id="description">Il est inconnu ou non évalué si des complications locales sont survenues.</items>
+            </items>
+            <items code="at0050">
+                <items id="text">Complication locale</items>
+                <items id="description">Complication locale unique enregistrée depuis la mise en place de cette prothèse.</items>
+                <items id="comment">Cluster répétable pour une utilisation en sélection multiple. Enregistrer chaque complication sélectionnée comme une instance distincte, avec sa date ou son année lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0051">
+                <items id="text">Type de complication locale</items>
+                <items id="description">Catégorie ou type spécifique de complication locale enregistrée depuis la mise en place de la prothèse.</items>
+                <items id="comment">Utiliser une valeur codée pour chaque instance de complication locale. Utiliser « Autre » lorsque la complication n’est pas représentée par les options listées.</items>
+            </items>
+            <items code="at0052">
+                <items id="text">Luxation</items>
+                <items id="description">Luxation locale survenue depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0053">
+                <items id="text">Hématome / sérome</items>
+                <items id="description">Hématome ou sérome local survenu depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0054">
+                <items id="text">Drainage persistant</items>
+                <items id="description">Drainage persistant de la plaie survenu depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0055">
+                <items id="text">Déhiscence</items>
+                <items id="description">Déhiscence de la plaie survenue depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0056">
+                <items id="text">Neurapraxie</items>
+                <items id="description">Neuro-praxie locale survenue depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0057">
+                <items id="text">Descellement</items>
+                <items id="description">Descellement de la prothèse survenu depuis sa mise en place.</items>
+            </items>
+            <items code="at0058">
+                <items id="text">Sepsis profond</items>
+                <items id="description">Sepsis profond ou infection profonde survenu depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0059">
+                <items id="text">Sepsis superficiel</items>
+                <items id="description">Sepsis superficiel ou infection superficielle survenu depuis la mise en place de la prothèse.</items>
+            </items>
+            <items code="at0060">
+                <items id="text">Autre</items>
+                <items id="description">Autre complication locale non représentée par les options listées.</items>
+            </items>
+            <items code="at0061">
+                <items id="text">Date de la complication</items>
+                <items id="description">Date ou année à laquelle la complication locale est survenue ou a été identifiée.</items>
+                <items id="comment">Enregistrer la date ou l’année à côté de la complication lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0062">
+                <items id="text">Description d’une autre complication locale</items>
+                <items id="description">Description en texte libre d’une complication locale non représentée par les options codées.</items>
+                <items id="comment">Utiliser lorsque « Autre » est sélectionné, ou pour fournir des précisions supplémentaires sur une complication locale sélectionnée.</items>
+            </items>
+            <items code="at0063">
+                <items id="text">Statut des autres pathologies orthopédiques associées</items>
+                <items id="description">Statut indiquant si d’autres pathologies orthopédiques associées sont enregistrées lors de ce suivi.</items>
+                <items id="comment">Utiliser « Présente » lorsqu’une ou plusieurs pathologies orthopédiques associées sont enregistrées. Utiliser « Aucune » uniquement lorsqu’aucune pathologie orthopédique associée n’est enregistrée. Utiliser « Inconnue ou non évaluée » lorsque cette information n’est pas disponible ou n’a pas été évaluée.</items>
+            </items>
+            <items code="at0064">
+                <items id="text">Aucune</items>
+                <items id="description">Aucune autre pathologie orthopédique associée n’est enregistrée lors de ce suivi.</items>
+            </items>
+            <items code="at0065">
+                <items id="text">Présente</items>
+                <items id="description">Une ou plusieurs autres pathologies orthopédiques associées sont enregistrées lors de ce suivi.</items>
+            </items>
+            <items code="at0066">
+                <items id="text">Inconnue ou non évaluée</items>
+                <items id="description">La présence d’autres pathologies orthopédiques associées est inconnue ou n’a pas été évaluée.</items>
+            </items>
+            <items code="at0067">
+                <items id="text">Autre pathologie orthopédique associée</items>
+                <items id="description">Autre pathologie orthopédique associée unique enregistrée lors de ce suivi.</items>
+                <items id="comment">Cluster répétable pour une utilisation en sélection multiple. Enregistrer chaque pathologie sélectionnée comme une instance distincte, avec la latéralité, la date ou l’année et une description le cas échéant.</items>
+            </items>
+            <items code="at0069">
+                <items id="text">Type d’autre pathologie orthopédique associée</items>
+                <items id="description">Catégorie ou type spécifique d’autre pathologie orthopédique associée enregistrée lors du suivi clinique.</items>
+                <items id="comment">Utiliser une valeur codée pour chaque instance de pathologie orthopédique associée. Utiliser « Autre » lorsque la pathologie n’est pas représentée par les options listées.</items>
+            </items>
+            <items code="at0070">
+                <items id="text">Genou controlatéral</items>
+                <items id="description">Pathologie associée touchant le genou controlatéral.</items>
+            </items>
+            <items code="at0071">
+                <items id="text">Cheville / pied</items>
+                <items id="description">Pathologie associée touchant la cheville ou le pied.</items>
+            </items>
+            <items code="at0072">
+                <items id="text">Poignet / main</items>
+                <items id="description">Pathologie associée touchant le poignet ou la main.</items>
+            </items>
+            <items code="at0073">
+                <items id="text">Hanche opposée</items>
+                <items id="description">Pathologie associée touchant la hanche opposée.</items>
+            </items>
+            <items code="at0074">
+                <items id="text">Épaule</items>
+                <items id="description">Pathologie associée touchant l’épaule.</items>
+            </items>
+            <items code="at0075">
+                <items id="text">Trauma</items>
+                <items id="description">Pathologie orthopédique associée liée à un traumatisme.</items>
+            </items>
+            <items code="at0076">
+                <items id="text">Colonne vertébrale</items>
+                <items id="description">Pathologie associée touchant la colonne vertébrale.</items>
+            </items>
+            <items code="at0077">
+                <items id="text">Coude</items>
+                <items id="description">Pathologie associée touchant le coude.</items>
+            </items>
+            <items code="at0078">
+                <items id="text">Autre</items>
+                <items id="description">Autre pathologie orthopédique associée non représentée par les options listées.</items>
+            </items>
+            <items code="at0079">
+                <items id="text">Date de la pathologie</items>
+                <items id="description">Date ou année à laquelle la pathologie orthopédique associée est survenue ou a été identifiée.</items>
+                <items id="comment">Enregistrer la date ou l’année à côté de la pathologie orthopédique associée lorsqu’elle est disponible.</items>
+            </items>
+            <items code="at0080">
+                <items id="text">Latéralité de la pathologie</items>
+                <items id="description">Latéralité de la pathologie orthopédique associée, le cas échéant.</items>
+                <items id="comment">À enregistrer pour le genou controlatéral ou la hanche opposée le cas échéant, en utilisant le côté anatomique atteint.</items>
+            </items>
+            <items code="at0081">
+                <items id="text">Gauche</items>
+                <items id="description">Côté gauche.</items>
+            </items>
+            <items code="at0082">
+                <items id="text">Droit</items>
+                <items id="description">Côté droit.</items>
+            </items>
+            <items code="at0084">
+                <items id="text">Bilatérale</items>
+                <items id="description">Côtés gauche et droit.</items>
+            </items>
+            <items code="at0085">
+                <items id="text">Description d’une autre pathologie orthopédique associée</items>
+                <items id="description">Description en texte libre de la pathologie orthopédique associée.</items>
+                <items id="comment">Utiliser lorsque « Trauma » ou « Autre » est sélectionné, ou pour fournir des précisions supplémentaires sur une pathologie orthopédique associée sélectionnée.</items>
+            </items>
+            <items code="at0086">
+                <items id="text">Inconnue</items>
+                <items id="description">La latéralité est inconnue.</items>
+            </items>
+        </term_definitions>
+    </component_ontologies>
+    <component_ontologies archetype_id="openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0">
+        <term_definitions language="fr">
+            <items code="at0000">
+                <items id="text">Suivi radiographique d’arthroplastie du genou</items>
+                <items id="description">Évaluation radiographique de suivi après arthroplastie du genou, incluant l’alignement de l’implant, les mesures des lignes radiotransparentes propres à chaque composant, les zones du composant rotulien ainsi que les mesures du centrage et de la morphologie rotuliens.</items>
+            </items>
+            <items code="at0001">
+                <items id="text">Historique</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0002">
+                <items id="text">Tout événement</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0003">
+                <items id="text">Arborescence</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0004">
+                <items id="text">Date de radiographie</items>
+                <items id="description">Date à laquelle l’examen radiographique a été réalisé, si elle est enregistrée séparément de l’heure de l’événement d’observation.</items>
+            </items>
+            <items code="at0005">
+                <items id="text">Côté du genou</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0006">
+                <items id="text">Gauche</items>
+                <items id="description">Genou gauche.</items>
+            </items>
+            <items code="at0007">
+                <items id="text">Droit</items>
+                <items id="description">Genou droit.</items>
+            </items>
+            <items code="at0008">
+                <items id="text">Position du patient lors de l’imagerie</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0009">
+                <items id="text">Couché</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0010">
+                <items id="text">Debout</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0011">
+                <items id="text">Angle HKA</items>
+                <items id="description">Angle hanche-genou-cheville mesuré sur une radiographie du membre inférieur entier en charge.</items>
+            </items>
+            <items code="at0012">
+                <items id="text">Statut des implants antérieurs</items>
+                <items id="description">Présence ou absence d’implants antérieurs pertinents pour le suivi radiographique de l’arthroplastie du genou.</items>
+            </items>
+            <items code="at0013">
+                <items id="text">Présent</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0014">
+                <items id="text">Absent</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0015">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0016">
+                <items id="text">Non évalué</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0017">
+                <items id="text">Détails des implants antérieurs</items>
+                <items id="description">Informations supplémentaires sur les implants antérieurs, telles que le type, la localisation anatomique, la latéralité, la date ou le statut de retrait.</items>
+            </items>
+            <items code="at0018">
+                <items id="text">Alignement coronal de l’arthroplastie du genou</items>
+                <items id="description">Mesures de l’alignement de l’implant en projection AP.</items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0019">
+                <items id="text">Angle fémoral alpha</items>
+                <items id="description">Angle alpha d’alignement du composant fémoral tel que défini dans le formulaire source de cotation radiographique.</items>
+            </items>
+            <items code="at0020">
+                <items id="text">Angle tibial bêta</items>
+                <items id="description">Angle bêta d’alignement du composant tibial tel que défini dans le formulaire source de cotation radiographique.</items>
+            </items>
+            <items code="at0021">
+                <items id="text">Angle de valgus total</items>
+                <items id="description">Angle global d’alignement en valgus dérivé des mesures d’alignement des composants fémoral et tibial.</items>
+            </items>
+            <items code="at0022">
+                <items id="text">Référence du film AP</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0023">
+                <items id="text">Film 18 pouces</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0024">
+                <items id="text">Film 3 pieds</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0025">
+                <items id="text">Alignement sagittal de l’arthroplastie du genou</items>
+                <items id="description">Mesures de l’alignement de l’implant en projection latérale.</items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0026">
+                <items id="text">Angle de flexion fémorale</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0027">
+                <items id="text">Angle de pente tibiale</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0028">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : latéral.</items>
+            </items>
+            <items code="at0030">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : antéropostérieur, le cas échéant antéropostérieur du membre inférieur entier.</items>
+            </items>
+            <items code="at0035">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0036">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0037">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0038">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0039">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0040">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0041">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0042">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0043">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0044">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0045">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0046">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0047">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0048">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0049">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0050">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0051">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0052">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0053">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0054">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0058">
+                <items id="text">Zones de radiotransparence du composant fémoral</items>
+                <items id="description"></items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0059">
+                <items id="text">Largeur de la ligne radiotransparente en zone 1</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 1.</items>
+            </items>
+            <items code="at0060">
+                <items id="text">Largeur de la ligne radiotransparente en zone 2</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 2.</items>
+            </items>
+            <items code="at0061">
+                <items id="text">Largeur de la ligne radiotransparente en zone 3</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 3.</items>
+            </items>
+            <items code="at0062">
+                <items id="text">Largeur de la ligne radiotransparente en zone 4</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 4.</items>
+            </items>
+            <items code="at0063">
+                <items id="text">Largeur de la ligne radiotransparente en zone 5</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 5.</items>
+            </items>
+            <items code="at0064">
+                <items id="text">Largeur de la ligne radiotransparente en zone 6</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 6.</items>
+            </items>
+            <items code="at0065">
+                <items id="text">Largeur de la ligne radiotransparente en zone 7</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 7.</items>
+            </items>
+            <items code="at0074">
+                <items id="text">Arborescence des éléments</items>
+                <items id="description">@ internal @</items>
+            </items>
+            <items code="at0075">
+                <items id="text">Largeur totale des lignes radiotransparentes</items>
+                <items id="description">Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.</items>
+            </items>
+            <items code="at0076">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0077">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0078">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0079">
+                <items id="text">Zones de radiotransparence AP du composant tibial</items>
+                <items id="description"></items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0080">
+                <items id="text">Largeur de la ligne radiotransparente en zone 1</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 1.</items>
+            </items>
+            <items code="at0081">
+                <items id="text">Largeur de la ligne radiotransparente en zone 2</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 2.</items>
+            </items>
+            <items code="at0082">
+                <items id="text">Largeur de la ligne radiotransparente en zone 3</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 3.</items>
+            </items>
+            <items code="at0083">
+                <items id="text">Largeur de la ligne radiotransparente en zone 4</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 4.</items>
+            </items>
+            <items code="at0084">
+                <items id="text">Largeur de la ligne radiotransparente en zone 5</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 5.</items>
+            </items>
+            <items code="at0085">
+                <items id="text">Largeur de la ligne radiotransparente en zone 6</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 6.</items>
+            </items>
+            <items code="at0086">
+                <items id="text">Largeur de la ligne radiotransparente en zone 7</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 7.</items>
+            </items>
+            <items code="at0087">
+                <items id="text">Largeur totale des lignes radiotransparentes</items>
+                <items id="description">Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.</items>
+            </items>
+            <items code="at0088">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0089">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : latéral ou antéropostérieur.</items>
+            </items>
+            <items code="at0090">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0091">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0092">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0093">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0094">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0095">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0096">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0097">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0098">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0099">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0100">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : antéropostérieur.</items>
+            </items>
+            <items code="at0101">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0102">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0103">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0104">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0105">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0106">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0107">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0108">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0109">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0110">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0111">
+                <items id="text">Zones de radiotransparence latérales du composant tibial</items>
+                <items id="description"></items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0112">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : latéral.</items>
+            </items>
+            <items code="at0113">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0114">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0115">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0116">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0117">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0118">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0119">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0120">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0121">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0122">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0123">
+                <items id="text">Largeur de la ligne radiotransparente en zone 1</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 1.</items>
+            </items>
+            <items code="at0124">
+                <items id="text">Largeur de la ligne radiotransparente en zone 2</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 2.</items>
+            </items>
+            <items code="at0125">
+                <items id="text">Largeur de la ligne radiotransparente en zone 3</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 3.</items>
+            </items>
+            <items code="at0130">
+                <items id="text">Largeur totale des lignes radiotransparentes</items>
+                <items id="description">Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.</items>
+            </items>
+            <items code="at0131">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0132">
+                <items id="text">Zones de radiotransparence du composant rotulien</items>
+                <items id="description"></items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0144">
+                <items id="text">Largeur de la ligne radiotransparente en zone 1</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 1.</items>
+            </items>
+            <items code="at0145">
+                <items id="text">Largeur de la ligne radiotransparente en zone 2</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 2.</items>
+            </items>
+            <items code="at0146">
+                <items id="text">Largeur de la ligne radiotransparente en zone 3</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 3.</items>
+            </items>
+            <items code="at0147">
+                <items id="text">Largeur de la ligne radiotransparente en zone 4</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 4.</items>
+            </items>
+            <items code="at0148">
+                <items id="text">Largeur de la ligne radiotransparente en zone 5</items>
+                <items id="description">Largeur de la ligne radiotransparente en zone 5.</items>
+            </items>
+            <items code="at0151">
+                <items id="text">Largeur totale des lignes radiotransparentes</items>
+                <items id="description">Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.</items>
+            </items>
+            <items code="at0152">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0153">
+                <items id="text">Schéma des zones rotuliennes</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0154">
+                <items id="text">Schéma standard des zones du composant rotulien</items>
+                <items id="description">Zones 1 à 5.</items>
+            </items>
+            <items code="at0155">
+                <items id="text">Schéma alternatif des zones du composant rotulien</items>
+                <items id="description">Zones 1 à 3.</items>
+            </items>
+            <items code="at0156">
+                <items id="text">Mesures du centrage et de la morphologie rotuliens</items>
+                <items id="description"></items>
+                <items id="comment">Référence image [img].</items>
+            </items>
+            <items code="at0157">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : Skyline / Sunrise / Merchant.</items>
+            </items>
+            <items code="at0158">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0159">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0160">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0161">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0162">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0163">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0164">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0165">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0166">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0167">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0168">
+                <items id="text">Largeur rotulienne</items>
+                <items id="description">Largeur de la rotule mesurée sur l’incidence radiographique axiale ou tangentielle correspondante.</items>
+            </items>
+            <items code="at0169">
+                <items id="text">Angle d’inclinaison rotulienne alpha</items>
+                <items id="description">Angle alpha d’inclinaison rotulienne tel que défini dans le formulaire source de cotation radiographique.</items>
+            </items>
+            <items code="at0170">
+                <items id="text">Angle d’inclinaison rotulienne bêta</items>
+                <items id="description">Angle bêta d’inclinaison rotulienne tel que défini dans le formulaire source de cotation radiographique.</items>
+            </items>
+            <items code="at0171">
+                <items id="text">Épaisseur rotulienne</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0173">
+                <items id="text">Angle prothèse-os</items>
+                <items id="description">Angle entre le composant prothétique rotulien et l’os rotulien sous-jacent, tel que défini dans le formulaire source.</items>
+            </items>
+            <items code="at0174">
+                <items id="text">Déplacement médial de la rotule</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0175">
+                <items id="text">Déplacement latéral de la rotule</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0176">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0177">
+                <items id="text">Extension</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0178">
+                <items id="text">Commentaire</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0179">
+                <items id="text">Projection radiographique</items>
+                <items id="description">Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.</items>
+                <items id="comment">Template : Skyline / Sunrise / Merchant.</items>
+            </items>
+            <items code="at0180">
+                <items id="text">Antéropostérieur</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0181">
+                <items id="text">Latéral</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0182">
+                <items id="text">Skyline</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0183">
+                <items id="text">Sunrise</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0184">
+                <items id="text">Merchant</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0185">
+                <items id="text">Tunnel</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0186">
+                <items id="text">Rosenberg</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0187">
+                <items id="text">Antéropostérieur du membre inférieur entier</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0188">
+                <items id="text">Autre</items>
+                <items id="description"></items>
+            </items>
+            <items code="at0189">
+                <items id="text">Inconnu</items>
+                <items id="description"></items>
+            </items>
+            <items code="deg">
+                <items id="text">°</items>
+                <items id="description">degree</items>
+            </items>
+        </term_definitions>
+    </component_ontologies>
     <constraints>
         <attributes>
             <rm_attribute_name>value</rm_attribute_name>

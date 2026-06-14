@@ -6,6 +6,16 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"JPM Consulting GmbH">
+				["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -43,6 +53,34 @@ Not to be used to record detailed operative data, implant registry data, radiolo
 Not to be used as the sole source for clinical decision-making without considering the broader clinical context, imaging, operative details, complications, comorbidities and patient-reported outcomes.
 The score total fields should not be populated unless the scoring algorithm used by the implementing system or template is clearly defined and consistent with the intended clinical instrument.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Enregistrer une évaluation orthopédique structurée de suivi du genou opéré ou évalué, rapportée par un clinicien, après chirurgie du genou ou arthroplastie du genou.
+L’archétype vise à soutenir une documentation cohérente dans le temps de l’état clinique du genou, de l’état fonctionnel et du contexte pertinent de l’arthroplastie. Il peut être utilisé pour le suivi longitudinal, le suivi des résultats, le reporting qualité et la revue clinique en soins orthopédiques.">
+			copyright = <"© openEHR Foundation">
+			use = <"Utiliser pour documenter les mesures de résultat rapportées par le clinicien et les constatations de suivi clinique chez les patients faisant l’objet d’un suivi orthopédique du genou, en particulier après arthroplastie du genou.
+
+Cet archétype peut être utilisé pour enregistrer :
+
+* le contexte de la prothèse ou de l’arthroplastie ;
+* le côté opéré ou évalué ;
+* la douleur à la marche, dans les escaliers et au repos ;
+* l’amplitude de mouvement flexion-neutre-extension selon la méthode neutre-zéro ;
+* la stabilité médio-latérale et antéro-postérieure ;
+* le flexum passif ;
+* le déficit d’extension active ;
+* l’alignement clinique en valgus ou en varus ;
+* la capacité de marche, l’utilisation des escaliers, l’utilisation de moyens auxiliaires et le niveau d’activité ;
+* la condition physique du patient en relation avec l’âge ;
+* les scores totaux calculés du score genou et du score fonction, le cas échéant.
+
+L’archétype convient à une utilisation dans des templates pour formulaires structurés de suivi orthopédique, CROMs, registres, programmes d’amélioration de la qualité et documentation clinique longitudinale.">
+			misuse = <"Ne pas utiliser pour des mesures de résultat rapportées par le patient, sauf si le contenu est explicitement adapté et validé pour l’auto-déclaration par le patient.
+Ne pas utiliser comme évaluation générique pour toutes les pathologies du genou lorsque le contexte de suivi, la logique de cotation ou le contenu clinique diffèrent substantiellement du suivi après chirurgie orthopédique du genou ou arthroplastie du genou.
+Ne pas utiliser pour enregistrer des données opératoires détaillées, des données de registre d’implant, des constatations radiologiques ou des plans de thérapie de réhabilitation. Ceux-ci doivent être documentés au moyen d’archétypes séparés et appropriés.
+Ne pas utiliser comme source unique pour la prise de décision clinique sans tenir compte du contexte clinique global, de l’imagerie, des détails opératoires, des complications, des comorbidités et des résultats rapportés par le patient.
+Les champs de score total ne doivent pas être renseignés si l’algorithme de cotation utilisé par le système ou le template d’implémentation n’est pas clairement défini et cohérent avec l’instrument clinique visé.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -50,7 +88,7 @@ The score total fields should not be populated unless the scoring algorithm used
 		["original_namespace"] = <"ch.croms">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"64ab9002aa91812f9d6bd4e422a78e10">
+		["MD5-CAM-1.0.1"] = <"073af9c4e276c428895775b80a913a51">
 		["build_uid"] = <"9016b03d-722c-346d-847c-82b70f7863fa">
 	>
 
@@ -800,6 +838,416 @@ ontology
 					text = <"Function score total">
 					description = <"Calculated total function score derived from the function score items according to the configured scoring algorithm.">
 					comment = <"The scoring algorithm is not defined by this archetype. Implementations must define the calculation logic, score range and interpretation in the template, application logic or implementation guide.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Suivi clinique orthopédique du genou">
+					description = <"Évaluation structurée, rapportée par un clinicien, pour le suivi orthopédique du genou, incluant le contexte de l’arthroplastie du genou, la douleur, l’amplitude de mouvement, la stabilité, le flexum passif, le déficit d’extension active, l’alignement clinique, la capacité fonctionnelle et la condition physique du patient en fonction de l’âge.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Nom du clinicien qui consulte">
+					description = <"Nom du clinicien responsable de l’évaluation clinique de suivi ou qui la réalise.">
+				>
+				["at0005"] = <
+					text = <"Contexte de l’arthroplastie du genou">
+					description = <"Informations contextuelles relatives à l’arthroplastie du genou ou à la prothèse du genou, pertinentes pour cette évaluation clinique de suivi.">
+				>
+				["at0006"] = <
+					text = <"Score genou">
+					description = <"Évaluation rapportée par un clinicien de la douleur, de la mobilité, de la stabilité, du flexum passif, du déficit d’extension active et de l’alignement clinique du genou opéré ou évalué.">
+				>
+				["at0007"] = <
+					text = <"Score fonction">
+					description = <"Évaluation rapportée par un clinicien de la capacité fonctionnelle liée à la marche, à l’utilisation des escaliers, aux moyens auxiliaires et au niveau d’activité.">
+				>
+				["at0009"] = <
+					text = <"Contrôle">
+					description = <"Moment de l’évaluation de suivi par rapport à l’intervention, à l’évaluation de référence ou au calendrier de suivi prévu.">
+				>
+				["at0010"] = <
+					text = <"Préopératoire">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"6 semaines">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"3 mois">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"6 mois">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"1 an">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"2 ans">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Autre nombre d’années">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Autre intervalle de suivi en années">
+					description = <"Nombre d’années après l’intervention ou l’évaluation de référence pour le moment du suivi, utilisé lorsque « Autre nombre d’années » est sélectionné.">
+				>
+				["at0018"] = <
+					text = <"Type de prothèse">
+					description = <"Type ou famille de produit de la prothèse du genou pertinente pour cette évaluation de suivi.">
+				>
+				["at0019"] = <
+					text = <"First">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"First Evolution">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"First Sensitive">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Origin">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"NexGen LCCK">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"NexGen standard">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Triathlon">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"PUC">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"PFJ">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Autre type de prothèse">
+					description = <"Description en texte libre du type de prothèse lorsque la valeur codée « Autre » est sélectionnée.">
+				>
+				["at0030"] = <
+					text = <"Côté opéré ou à opérer">
+					description = <"Latéralité du genou qui a été opéré ou pour lequel une intervention est prévue.">
+				>
+				["at0031"] = <
+					text = <"Droit">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Gauche">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Douleur à la marche">
+					description = <"Évaluation rapportée par un clinicien de la douleur du genou ressentie à la marche.">
+				>
+				["at0034"] = <
+					text = <"Aucune">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Légère ou occasionnelle">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Douleur dans les escaliers">
+					description = <"Évaluation rapportée par un clinicien de la douleur du genou ressentie lors de l’utilisation des escaliers.">
+				>
+				["at0039"] = <
+					text = <"Aucune">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Légère ou occasionnelle">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Douleur au repos">
+					description = <"Évaluation rapportée par un clinicien de la douleur du genou ressentie au repos.">
+				>
+				["at0044"] = <
+					text = <"Aucune">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Légère">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Mobilité">
+					description = <"Amplitude de mouvement du genou documentée selon la méthode neutre-zéro.">
+				>
+				["at0049"] = <
+					text = <"Angle maximal de flexion">
+					description = <"Angle maximal de flexion du genou évalué, exprimé en degrés.">
+				>
+				["at0050"] = <
+					text = <"Angle en position neutre">
+					description = <"Position de référence neutre-zéro du genou évalué, généralement documentée comme 0 degré.">
+				>
+				["at0051"] = <
+					text = <"Angle maximal d’extension">
+					description = <"Angle maximal d’extension ou déficit d’extension du genou évalué, exprimé en degrés.">
+				>
+				["at0052"] = <
+					text = <"Stabilité en valgus/varus">
+					description = <"Stabilité médio-latérale du genou évaluée par le clinicien lors des tests de stress en valgus et en varus.">
+				>
+				["at0053"] = <
+					text = <"5 degrés ou moins">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"6 à 10 degrés">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Plus de 10 degrés">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Stabilité A/P">
+					description = <"Stabilité antéro-postérieure du genou évaluée par le clinicien, exprimée sous forme de catégorie en millimètres.">
+				>
+				["at0057"] = <
+					text = <"0 à 5 mm">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"6 à 10 mm">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Plus de 10 mm">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Flexum passif">
+					description = <"Flexum passif du genou évalué par le clinicien, exprimé sous forme de catégorie angulaire.">
+				>
+				["at0061"] = <
+					text = <"5 degrés ou moins">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"6 à 10 degrés">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"11 à 20 degrés">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Plus de 20 degrés">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Flexum actif">
+					description = <"Différence entre l’extension passive et l’extension active du genou, évaluée par le clinicien et exprimée sous forme de catégorie angulaire.">
+				>
+				["at0066"] = <
+					text = <"Aucun">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Moins de 4 degrés">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"5 à 10 degrés">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Plus de 11 degrés">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Alignement clinique">
+					description = <"Alignement clinique dans le plan coronal du genou évalué, documenté comme angle en valgus ou en varus.">
+				>
+				["at0071"] = <
+					text = <"Angle de valgus">
+					description = <"Angle d’alignement clinique en valgus du genou évalué, exprimé en degrés.">
+				>
+				["at0072"] = <
+					text = <"Angle de varus">
+					description = <"Angle d’alignement clinique en varus du genou évalué, exprimé en degrés.">
+				>
+				["at0073"] = <
+					text = <"Condition physique du patient selon l’âge">
+					description = <"Condition physique globale évaluée en relation avec l’âge du patient.">
+				>
+				["at0074"] = <
+					text = <"Excellente">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Bonne">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Moyenne">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Faible">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Marche">
+					description = <"Évaluation rapportée par un clinicien de la capacité de marche du patient, basée sur la distance ou la durée.">
+				>
+				["at0079"] = <
+					text = <"Illimitée ou plus de 1 h">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Plus de 1000 m">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"500 à 1000 m ou plus de 30 min">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Moins de 500 m ou 15 min ou moins">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Au domicile">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Escaliers">
+					description = <"Évaluation rapportée par un clinicien de la capacité du patient à monter et descendre les escaliers.">
+				>
+				["at0086"] = <
+					text = <"Montée et descente sans rampe">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Montée sans rampe, descente avec rampe">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Montée et descente avec rampe">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Montée avec rampe, descente impossible">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Moyens auxiliaires">
+					description = <"Moyens auxiliaires de marche utilisés par le patient pour la mobilité.">
+				>
+				["at0091"] = <
+					text = <"Aucun">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"1 canne basse">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"2 cannes basses">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"2 cannes anglaises ou tintébin">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Activité">
+					description = <"Évaluation rapportée par un clinicien du niveau général d’activité et d’autonomie du patient.">
+				>
+				["at0096"] = <
+					text = <"Importante">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Activité quotidienne">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Autonome">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Non autonome">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Condition physique du patient">
+					description = <"Évaluation rapportée par un clinicien de la condition physique globale du patient en relation avec l’âge.">
+				>
+				["at0101"] = <
+					text = <"Score genou total">
+					description = <"Score genou total calculé à partir des items du score genou selon l’algorithme de cotation configuré.">
+					comment = <"L’algorithme de cotation n’est pas défini par cet archétype. Les implémentations doivent définir la logique de calcul, l’étendue du score et son interprétation dans le template, la logique applicative ou le guide d’implémentation.">
+				>
+				["at0102"] = <
+					text = <"Score fonction total">
+					description = <"Score fonction total calculé à partir des items du score fonction selon l’algorithme de cotation configuré.">
+					comment = <"L’algorithme de cotation n’est pas défini par cet archétype. Les implémentations doivent définir la logique de calcul, l’étendue du score et son interprétation dans le template, la logique applicative ou le guide d’implémentation.">
 				>
 			>
 		>

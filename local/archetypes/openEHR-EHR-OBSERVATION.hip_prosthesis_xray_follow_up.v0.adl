@@ -6,6 +6,16 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"JPM Consulting GmbH">
+				["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -22,6 +32,13 @@ description
 			use = <"Use to document structured X-ray follow-up findings after hip arthroplasty or hip prosthesis implantation. Use to record radiographic signs such as cup migration, asymmetric head position, radiolucent lines, stem subsidence, calcar resorption, cortical hypertrophy, heterotopic ossification, Brooker grade and relevant angular measurements.">
 			misuse = <"Not to be used to record the operative procedure, implant component catalogue details, surgical technique or non-imaging clinical follow-up findings. Not to be used as a replacement for a complete narrative radiology report when detailed diagnostic interpretation is required.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Enregistrer des constatations radiographiques structurées de suivi d’une prothèse de hanche, incluant le site de la prothèse, la date de l’examen radiographique, les constatations relatives au cotyle et à la tige, les lignes radiotransparentes, l’ossification hétérotopique et les mesures angulaires.">
+			copyright = <"© openEHR Foundation">
+			use = <"Utiliser pour documenter les constatations radiographiques structurées de suivi après arthroplastie de la hanche ou implantation d’une prothèse de hanche. Utiliser pour enregistrer les signes radiographiques tels que la migration du cotyle, la position asymétrique de la tête, les lignes radiotransparentes, l’enfoncement de la tige, la résorption du calcar, l’hypertrophie corticale, l’ossification hétérotopique, le grade de Brooker et les mesures angulaires pertinentes.">
+			misuse = <"Ne pas utiliser pour enregistrer l’intervention opératoire, les détails de catalogue des composants d’implant, la technique chirurgicale ou les constatations cliniques de suivi non radiographiques. Ne pas utiliser comme remplacement d’un compte rendu radiologique narratif complet lorsqu’une interprétation diagnostique détaillée est requise.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -29,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"40f5f78811f269b683488f83ab27d405">
+		["MD5-CAM-1.0.1"] = <"2bfd3a0387e3022d5ef6af5b49b6b107">
 		["build_uid"] = <"5947f422-5cf2-37b9-b911-1400e9c95ea6">
 	>
 
@@ -604,7 +621,7 @@ Image-Reference [img].">
 				>
 				["at0055"] = <
 					text = <"Stem radiolucent zone">
-					description = <"Gruen femoral stem zone affected by cortical hypertrophy.">
+					description = <"Gruen femoral stem zone with radiolucent lines.">
 					comment = <"Repeatable element for multiselect use. Record each selected Gruen zone as a separate instance.">
 				>
 				["at0056"] = <
@@ -791,6 +808,422 @@ Image-Reference [img].">
 				["at0105"] = <
 					text = <"Comment">
 					description = <"Additional free-text comment about the hip prosthesis X-ray follow-up findings.">
+				>
+				["at0106"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Suivi radiographique de prothèse de hanche">
+					description = <"Constatations radiographiques structurées de suivi d’une prothèse de hanche, incluant le cotyle, la tige, les lignes radiotransparentes, l’ossification et les mesures angulaires.">
+				>
+				["at0001"] = <
+					text = <"Historique">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Arborescence">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Arborescence des éléments">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Site de la prothèse">
+					description = <"Site anatomique et côté auxquels s’appliquent les constatations du suivi radiographique de la prothèse de hanche.">
+				>
+				["at0006"] = <
+					text = <"Site anatomique">
+					description = <"Région de la hanche ou articulation de la hanche à laquelle s’appliquent les constatations de suivi de la prothèse.">
+				>
+				["at0007"] = <
+					text = <"Hanche">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Latéralité">
+					description = <"Côté de la prothèse de hanche auquel s’appliquent les constatations du suivi radiographique.">
+				>
+				["at0009"] = <
+					text = <"Gauche">
+					description = <"Côté gauche.">
+				>
+				["at0010"] = <
+					text = <"Droit">
+					description = <"Côté droit.">
+				>
+				["at0013"] = <
+					text = <"Constatations du suivi radiographique de la prothèse de hanche">
+					description = <"Constatations radiographiques structurées issues du suivi radiographique d’une prothèse de hanche.">
+					comment = <"Utiliser pour enregistrer les constatations structurées relatives au cotyle, à la tige, aux lignes radiotransparentes, à l’ossification hétérotopique et aux mesures angulaires issues du suivi radiographique.">
+				>
+				["at0015"] = <
+					text = <"Date de mesure">
+					description = <"Date à laquelle l’examen radiographique a été réalisé.">
+					comment = <"Utiliser lorsque la date de l’examen radiographique diffère de la date ou de l’heure d’enregistrement des constatations structurées.">
+				>
+				["at0016"] = <
+					text = <"Marque de la cupule">
+					description = <"Nom commercial de la cupule acétabulaire, s’il est documenté.">
+					comment = <"Utiliser lorsque la marque de la cupule est disponible dans la documentation clinique ou radiographique.">
+				>
+				["at0018"] = <
+					text = <"Migration du cotyle">
+					description = <"Évaluation radiographique de la migration du cotyle.">
+					comment = <"Référence d’image [img].">
+				>
+				["at0019"] = <
+					text = <"Position asymétrique de la tête">
+					description = <"Évaluation radiographique de la position asymétrique de la tête fémorale dans la cupule acétabulaire.">
+					comment = <"Référence d’image [img].">
+				>
+				["at0020"] = <
+					text = <"Lignes radiotransparentes">
+					description = <"Évaluation radiographique des lignes radiotransparentes autour de la cupule acétabulaire ou de la tige fémorale.">
+					comment = <"Référence d’image [img].
+Référence d’image [img].">
+				>
+				["at0021"] = <
+					text = <"Enfoncement de la tige">
+					description = <"Évaluation radiographique de l’enfoncement de la tige fémorale après implantation.">
+				>
+				["at0022"] = <
+					text = <"Résorption du calcar">
+					description = <"Évaluation radiographique de la résorption du calcar.">
+				>
+				["at0023"] = <
+					text = <"Hypertrophie corticale">
+					description = <"Évaluation radiographique de l’hypertrophie corticale autour de la tige fémorale.">
+					comment = <"Référence d’image [img].">
+				>
+				["at0024"] = <
+					text = <"Ossification hétérotopique">
+					description = <"Évaluation radiographique de l’ossification hétérotopique autour de la hanche.">
+				>
+				["at0025"] = <
+					text = <"Mesures du cotyle">
+					description = <"Mesures angulaires de la cupule acétabulaire.">
+				>
+				["at0026"] = <
+					text = <"Mesures du col fémoral">
+					description = <"Mesures angulaires relatives au col fémoral ou au composant fémoral.">
+				>
+				["at0027"] = <
+					text = <"Statut de la migration du cotyle">
+					description = <"Statut indiquant si une migration du cotyle est présente.">
+				>
+				["at0028"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0029"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0030"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0031"] = <
+					text = <"Migration de plus de 3 mm">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Migration angulaire de plus de 3°">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Non">
+					description = <"Le critère n’est pas rempli.">
+				>
+				["at0037"] = <
+					text = <"Oui">
+					description = <"Le critère est rempli.">
+				>
+				["at0038"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si le critère est rempli.">
+				>
+				["at0039"] = <
+					text = <"Statut de la position asymétrique de la tête">
+					description = <"Évaluation radiographique de la position asymétrique de la tête fémorale dans la cupule acétabulaire.">
+				>
+				["at0040"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0041"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0042"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0043"] = <
+					text = <"Zone du cotyle">
+					description = <"Zone acétabulaire de DeLee-Charnley concernée par la position asymétrique de la tête.">
+					comment = <"Élément répétable pour une utilisation en sélection multiple. Enregistrer chaque zone DeLee-Charnley sélectionnée comme une instance distincte.">
+				>
+				["at0044"] = <
+					text = <"Zone DeLee-Charnley 1">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Zone DeLee-Charnley 2">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Zone DeLee-Charnley 3">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Statut des lignes radiotransparentes">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0049"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0050"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0051"] = <
+					text = <"Zone radiotransparente du cotyle">
+					description = <"Zone acétabulaire de DeLee-Charnley présentant des lignes radiotransparentes.">
+					comment = <"Élément répétable pour une utilisation en sélection multiple. Enregistrer chaque zone DeLee-Charnley sélectionnée comme une instance distincte.">
+				>
+				["at0052"] = <
+					text = <"Zone DeLee-Charnley 1">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Zone DeLee-Charnley 2">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Zone DeLee-Charnley 3">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Zone radiotransparente de la tige">
+					description = <"Zone de Gruen de la tige fémorale présentant des lignes radiotransparentes.">
+					comment = <"Élément répétable pour une utilisation en sélection multiple. Enregistrer chaque zone de Gruen sélectionnée comme une instance distincte.">
+				>
+				["at0056"] = <
+					text = <"Zone de Gruen 1">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Zone de Gruen 2">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Zone de Gruen 3">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Zone de Gruen 4">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Zone de Gruen 5">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Zone de Gruen 6">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Zone de Gruen 7">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Statut de l’enfoncement de la tige">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0065"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0066"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0067"] = <
+					text = <"Enfoncement postopératoire de plus de 3 mm">
+					description = <"Évaluation radiographique de l’enfoncement de la tige fémorale après implantation.">
+				>
+				["at0068"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Statut de la résorption du calcar">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0073"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0074"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0075"] = <
+					text = <"Statut de l’hypertrophie corticale">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0077"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0078"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0079"] = <
+					text = <"Zone de Gruen">
+					description = <"Zone de Gruen de la tige fémorale concernée par l’hypertrophie corticale.">
+					comment = <"Élément répétable pour une utilisation en sélection multiple. Enregistrer chaque zone de Gruen sélectionnée comme une instance distincte.">
+				>
+				["at0080"] = <
+					text = <"Zone de Gruen 1">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Zone de Gruen 2">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Zone de Gruen 3">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Zone de Gruen 4">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Zone de Gruen 5">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Zone de Gruen 6">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Zone de Gruen 7">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Statut de l’ossification hétérotopique">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Non">
+					description = <"La constatation n’est pas présente.">
+				>
+				["at0089"] = <
+					text = <"Oui">
+					description = <"La constatation est présente.">
+				>
+				["at0090"] = <
+					text = <"Inconnu ou non évalué">
+					description = <"Il est inconnu ou non évalué si la constatation est présente.">
+				>
+				["at0096"] = <
+					text = <"Grade de Brooker">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Îlots osseux">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"> 1 cm entre les îlots osseux">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"< 1 cm entre les îlots osseux">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Ankylose osseuse apparente">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Inclinaison du cotyle">
+					description = <"Angle d’inclinaison de la cupule acétabulaire.">
+				>
+				["deg"] = <
+					text = <"Degré">
+					description = <"degré">
+				>
+				["at0102"] = <
+					text = <"Antéversion du cotyle">
+					description = <"Angle d’antéversion de la cupule acétabulaire.">
+				>
+				["at0103"] = <
+					text = <"Angle CCD">
+					description = <"Angle caput-collum-diaphysaire.">
+				>
+				["at0104"] = <
+					text = <"Antéversion fémorale">
+					description = <"Angle d’antéversion fémorale.">
+				>
+				["at0105"] = <
+					text = <"Commentaire">
+					description = <"Commentaire complémentaire en texte libre concernant les constatations du suivi radiographique de la prothèse de hanche.">
 				>
 				["at0106"] = <
 					text = <"Extension">

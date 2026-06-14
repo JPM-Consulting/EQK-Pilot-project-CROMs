@@ -60,6 +60,11 @@ language
 				["email"] = <"francesca.frexia@crs4.it">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
 		["zh-cn"] = <
 			language = <[ISO_639-1::zh-cn]>
 			author = <
@@ -216,6 +221,17 @@ Common use cases are: documenting a response to a request for information; the o
 
 The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Archétype conteneur générique destiné à porter des informations qui doivent être partagées avec des tiers.">
+			keywords = <"rapport", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Utiliser comme archétype générique pour porter des informations qui doivent être partagées avec des tiers, lorsqu’il n’existe pas d’archétype spécialisé pour un type de rapport spécifique.
+
+Les cas d’utilisation courants sont : documenter une réponse à une demande d’information ; le résultat d’un test ; des activités qui ont été réalisées ; ou des événements qui se sont produits.
+
+Le composant principal Sections/Contenu a été délibérément laissé non contraint. Cela permettra de le renseigner avec tout archétype SECTION ou ENTRY approprié à l’objectif clinique dans un template.">
+		>
 		["zh-cn"] = <
 			language = <[ISO_639-1::zh-cn]>
 			purpose = <"通用的容器类原始型，用于携带需要与他方共享的信息。">
@@ -304,7 +320,7 @@ El component principal Seccions/Contingut s'ha deixat deliberadament sense restr
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"A60D0B7F52F1F9C3C9B3518DB83ACDAE">
+		["MD5-CAM-1.0.1"] = <"9600c4fcc6d15581c8db853325c979f7">
 		["build_uid"] = <"59ba6544-c9ea-4842-9822-f695d638c80c">
 		["revision"] = <"1.2.4">
 	>
@@ -745,6 +761,31 @@ ontology
 					text = <"Extensión">
 					description = <"Información adicional requerida para capturar contexto local o alinearse con algún modelo de referencia o formalismo.">
 					comment = <"Por ejemplo: requerimientos de información local o metadatos adicionales para alinearse con equivalentes FHIR o CIMI.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Rapport">
+					description = <"Document destiné à communiquer des informations à des tiers, généralement en réponse à une demande d’une autre partie.">
+				>
+				["at0001"] = <
+					text = <"Arborescence">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Identifiant du rapport">
+					description = <"Informations d’identification du rapport.">
+				>
+				["at0005"] = <
+					text = <"Statut">
+					description = <"Statut du rapport dans son ensemble. Remarque : il ne s’agit pas du statut des différents composants du rapport.">
+				>
+				["at0006"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour saisir le contexte local ou assurer l’alignement avec d’autres modèles ou formalismes de référence.">
+					comment = <"Par exemple : exigences d’information locales ou métadonnées supplémentaires pour l’alignement avec des équivalents FHIR ou CIMI.">
 				>
 			>
 		>

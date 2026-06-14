@@ -50,19 +50,19 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.8.0</value>
+                <value>0.9.5</value>
             </item>
             <item>
                 <key>build_uid</key>
-                <value>bdbfefb7-d88b-44c8-bc10-b0fdcf87578c</value>
+                <value>7c9b862b-554d-48b0-81cc-127bc4423bec</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>7ef414e51d2ba622a2746fc32a71e8c6</value>
+                <value>82acf5265dfd22c4b111427081675a05</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
-                <value>A60D0B7F52F1F9C3C9B3518DB83ACDAE</value>
+                <value>9600c4fcc6d15581c8db853325c979f7</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -88,15 +88,15 @@
         </Content>
     </definition>
     <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.report.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">A60D0B7F52F1F9C3C9B3518DB83ACDAE</digest>
+        <digest id="MD5-CAM-1.0.1">9600c4fcc6d15581c8db853325c979f7</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">19c95862447640d74bef2485f55924de</digest>
+        <digest id="MD5-CAM-1.0.1">12b16f43aa08280b74aea7547542ff47</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">71c7d232eda86da991bd9aea64684d4f</digest>
+        <digest id="MD5-CAM-1.0.1">036df47ad5d55dcba2d0b5d47edb03fb</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">40f5f78811f269b683488f83ab27d405</digest>
+        <digest id="MD5-CAM-1.0.1">2bfd3a0387e3022d5ef6af5b49b6b107</digest>
     </integrity_checks>
 </template>

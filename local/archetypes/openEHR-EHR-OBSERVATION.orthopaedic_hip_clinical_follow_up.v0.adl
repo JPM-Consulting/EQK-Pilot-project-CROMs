@@ -6,6 +6,16 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"JPM Consulting GmbH">
+				["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -22,6 +32,13 @@ description
 			use = <"Use to document a point-in-time clinical assessment of the operated or assessed hip. The archetype may be used for preoperative assessment and postoperative follow-up intervals such as 6 weeks, 3 months, 6 months, 1 year, 2 years or later annual follow-up.">
 			misuse = <"Not to be used as the primary record of the surgical procedure, implant registry, prosthesis inventory or medication/procedure documentation. Detailed prosthesis components should preferably be documented using dedicated procedure, device or implant archetypes if required.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Enregistrer une évaluation orthopédique structurée de suivi clinique de la hanche, réalisée par un clinicien, en particulier avant ou après une arthroplastie de la hanche, incluant les items du Harris Hip Score, des items complémentaires de suivi, l’amplitude de mouvement, la comparaison de la longueur des membres, la condition physique et, le cas échéant, les scores totaux du Harris Hip Score modifié.">
+			copyright = <"© openEHR Foundation">
+			use = <"Utiliser pour documenter une évaluation clinique ponctuelle de la hanche opérée ou évaluée. Cet archétype peut être utilisé pour l’évaluation préopératoire et pour les suivis postopératoires à 6 semaines, 3 mois, 6 mois, 1 an, 2 ans ou lors de suivis annuels ultérieurs.">
+			misuse = <"Ne pas utiliser comme enregistrement principal de l’intervention chirurgicale, du registre d’implants, de l’inventaire prothétique ou de la documentation des médicaments/procédures. Les composants détaillés de la prothèse devraient, si nécessaire, être documentés de préférence au moyen d’archétypes dédiés aux procédures, dispositifs ou implants.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -30,7 +47,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"19c95862447640d74bef2485f55924de">
+		["MD5-CAM-1.0.1"] = <"12b16f43aa08280b74aea7547542ff47">
 		["build_uid"] = <"ecf0b17b-8af3-300c-aa74-bafd914c33f5">
 	>
 
@@ -969,6 +986,537 @@ ontology
 				["at0140"] = <
 					text = <"Total range of motion score">
 					description = <"Ordinal score component derived from the categorised total range of motion of the assessed hip.">
+				>
+				["at0141"] = <
+					text = <"211°–300°">
+					description = <"">
+				>
+				["at0142"] = <
+					text = <"161°–210°">
+					description = <"">
+				>
+				["at0143"] = <
+					text = <"101°–160°">
+					description = <"">
+				>
+				["at0144"] = <
+					text = <"61°–100°">
+					description = <"">
+				>
+				["at0145"] = <
+					text = <"31°–60°">
+					description = <"">
+				>
+				["at0146"] = <
+					text = <"0°–30°">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Suivi clinique orthopédique de la hanche">
+					description = <"Évaluation structurée, réalisée par un clinicien, de la fonction de la hanche et du résultat clinique avant ou après une arthroplastie ou une chirurgie de la hanche, incluant l’enregistrement facultatif des items du Harris Hip Score et du score total.">
+				>
+				["at0001"] = <
+					text = <"Historique">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Arborescence">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Arborescence des éléments">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Nom du clinicien consultant">
+					description = <"Nom du clinicien responsable de l’évaluation clinique de suivi, ou l’ayant réalisée, tel qu’il est documenté dans le formulaire.">
+				>
+				["at0006"] = <
+					text = <"Moment du suivi">
+					description = <"Moment de l’évaluation de suivi par rapport à l’intervention chirurgicale, à l’évaluation de référence ou au calendrier de suivi prévu.">
+				>
+				["at0007"] = <
+					text = <"Préopératoire">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"6 semaines">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3 mois">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"6 mois">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"1 an">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"2 ans">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Autre nombre d’années">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Autre intervalle de suivi en années">
+					description = <"Nombre d’années après l’intervention chirurgicale ou l’évaluation de référence pour le moment du suivi, utilisé lorsque « Autre nombre d’années » est sélectionné.">
+				>
+				["at0015"] = <
+					text = <"Contexte de l’arthroplastie de la hanche">
+					description = <"Informations contextuelles sur l’arthroplastie de la hanche ou la prothèse de hanche pertinentes pour cette évaluation clinique de suivi.">
+				>
+				["at0028"] = <
+					text = <"Côté opéré ou à opérer">
+					description = <"Latéralité de la hanche évaluée, y compris la hanche qui a été opérée ou dont l’opération est prévue.">
+				>
+				["at0029"] = <
+					text = <"Droit">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Gauche">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Résumé de la prothèse">
+					description = <"Informations résumées sur les composants de la prothèse de hanche pertinents pour l’évaluation de suivi. Cet élément n’est pas destiné à servir de registre primaire d’implants ou de documentation principale du dispositif.">
+				>
+				["at0032"] = <
+					text = <"Cupule / composant acétabulaire">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Tête">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Tige">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Évaluation de la douleur">
+					description = <"Évaluation de la sévérité et de la localisation de la douleur liée à la hanche évaluée.">
+				>
+				["at0037"] = <
+					text = <"Évaluation fonctionnelle">
+					description = <"Évaluation des limitations fonctionnelles liées à la hanche évaluée, incluant la marche, l’utilisation d’aides à la marche, le périmètre de marche, les escaliers, la position assise, l’utilisation des transports publics et certaines activités de la vie quotidienne.">
+				>
+				["at0038"] = <
+					text = <"Évaluation de la déformation">
+					description = <"Évaluation des critères de déformation de la hanche évaluée pertinents pour le Harris Hip Score, incluant les déformations fixées et l’inégalité de longueur des membres.">
+				>
+				["at0039"] = <
+					text = <"Amplitude de mouvement">
+					description = <"Évaluation de l’amplitude de mouvement de la hanche évaluée, incluant la flexion, l’extension, l’abduction, l’adduction, la rotation externe et la rotation interne.">
+				>
+				["at0040"] = <
+					text = <"Évaluation de la longueur du membre">
+					description = <"Évaluation de la longueur du membre opéré ou évalué par rapport au membre controlatéral.">
+				>
+				["at0041"] = <
+					text = <"Condition physique">
+					description = <"Évaluation clinique de la condition physique globale du patient par rapport à son âge.">
+				>
+				["at0042"] = <
+					text = <"Résumé des scores">
+					description = <"Résumé des scores calculés ou enregistrés pour l’évaluation clinique de suivi de la hanche, incluant le Harris Hip Score et, le cas échéant, les scores totaux du Harris Hip Score modifié ainsi que le classement.">
+				>
+				["at0043"] = <
+					text = <"Douleur">
+					description = <"Sévérité ou retentissement de la douleur liée à la hanche évaluée.">
+				>
+				["at0044"] = <
+					text = <"Aucune, ou douleur ignorée">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Légère, occasionnelle, sans limitation de l’activité">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Douleur légère, sans effet sur les activités habituelles ; rarement douleur modérée lors d’une activité inhabituelle ; prise possible d’aspirine">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Douleur modérée, tolérable mais nécessitant des concessions. Certaines limitations des activités ordinaires ou du travail. Peut nécessiter occasionnellement un antalgique plus fort que l’aspirine">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Douleur marquée, limitation importante des activités">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Invalidante, douleur au lit, patient alité">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Topographie de la douleur">
+					description = <"Localisation anatomique de la douleur liée à la hanche évaluée. Plusieurs localisations peuvent être enregistrées.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0051"] = <
+					text = <"Aine">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Cuisse antérieure">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Cuisse latérale">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Trochanter">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Genou">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Lombaire / bas du dos">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Sacro-iliaque">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Autre localisation de la douleur">
+					description = <"Description narrative d’une autre localisation de la douleur, utilisée lorsque « Autre » est sélectionné.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0060"] = <
+					text = <"Boiterie">
+					description = <"Degré de boiterie lors de la marche.">
+				>
+				["at0061"] = <
+					text = <"Aucune">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Occasionnelle">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Aide à la marche">
+					description = <"Utilisation d’aides à la marche ou de dispositifs d’appui pour la marche.">
+				>
+				["at0066"] = <
+					text = <"Aucune">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Canne pour les longues marches">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Canne la plupart du temps">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Une canne anglaise / béquille">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Deux cannes">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Deux cannes anglaises / béquilles, ou marche impossible">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Périmètre de marche">
+					description = <"Distance maximale de marche ou capacité de marche.">
+				>
+				["at0073"] = <
+					text = <"Illimité > 1 h">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Plus de 500 m / plus de 30 min">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Moins de 500 m / plus de 15 min">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Domicile uniquement">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Fauteuil / lit uniquement">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Escaliers">
+					description = <"Capacité à monter ou descendre les escaliers.">
+				>
+				["at0079"] = <
+					text = <"Alternés sans rampe">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Alternés avec rampe">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Autres méthodes">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Chaussage">
+					description = <"Capacité à mettre ses chaussures et chaussettes.">
+				>
+				["at0084"] = <
+					text = <"Facile">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Difficile">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Siège">
+					description = <"Capacité à s’asseoir confortablement sur une chaise pendant une durée définie.">
+				>
+				["at0088"] = <
+					text = <"Tous les sièges > 1 h">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Chaise surélevée">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Impossible > ½ h">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Transports publics">
+					description = <"Capacité à utiliser les transports publics.">
+				>
+				["at0092"] = <
+					text = <"Possible">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Stabilisation monopodale">
+					description = <"Évaluation complémentaire de la capacité du patient à se tenir debout sur le membre évalué.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0095"] = <
+					text = <"Pas de difficulté">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Difficultés mineures">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Difficultés majeures">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Impossible">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Flexion">
+					description = <"Amplitude de flexion de la hanche mesurée en degrés.">
+				>
+				["at0105"] = <
+					text = <"Extension">
+					description = <"Amplitude d’extension de la hanche mesurée en degrés.">
+				>
+				["at0106"] = <
+					text = <"Abduction">
+					description = <"Amplitude d’abduction de la hanche mesurée en degrés.">
+				>
+				["at0107"] = <
+					text = <"Adduction">
+					description = <"Amplitude d’adduction de la hanche mesurée en degrés.">
+				>
+				["at0108"] = <
+					text = <"Rotation externe">
+					description = <"Amplitude de rotation externe de la hanche mesurée en degrés.">
+				>
+				["at0109"] = <
+					text = <"Rotation interne">
+					description = <"Amplitude de rotation interne de la hanche mesurée en degrés.">
+				>
+				["at0110"] = <
+					text = <"Longueur du membre opéré par rapport à l’autre">
+					description = <"Comparaison qualitative de la longueur du membre opéré ou évalué avec celle du membre controlatéral.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0111"] = <
+					text = <"Identique">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"Plus long">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"Plus court">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"Différence de longueur du membre (mm)">
+					description = <"Différence de longueur mesurée ou estimée entre le membre opéré ou évalué et le membre controlatéral, enregistrée en millimètres.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0115"] = <
+					text = <"Condition physique du patient selon l’âge">
+					description = <"Condition physique globale du patient comparée à la condition physique attendue pour son âge. Il s’agit d’un item complémentaire enregistré en plus du Harris Hip Score.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0116"] = <
+					text = <"Excellente">
+					description = <"">
+				>
+				["at0117"] = <
+					text = <"Bonne">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"Moyenne">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"Faible">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"Score HHS total">
+					description = <"Score total du Harris Hip Score, enregistré comme la somme des points de l’évaluation.">
+				>
+				["at0121"] = <
+					text = <"Score brut mHHS total">
+					description = <"Score brut total du Harris Hip Score modifié, enregistré comme la somme des points de l’évaluation modifiée.">
+				>
+				["at0122"] = <
+					text = <"Score mHHS normalisé total">
+					description = <"Score normalisé du Harris Hip Score modifié, représentant le score brut exprimé sur une échelle de 0 à 100 afin de permettre la comparaison avec le Harris Hip Score original.">
+				>
+				["at0123"] = <
+					text = <"Classement">
+					description = <"Classement catégoriel dérivé du score total du Harris Hip Score.">
+				>
+				["at0124"] = <
+					text = <"Faible">
+					description = <"Inférieur à 70.">
+				>
+				["at0125"] = <
+					text = <"Moyen">
+					description = <"70–79.">
+				>
+				["at0126"] = <
+					text = <"Bon">
+					description = <"80–89.">
+				>
+				["at0127"] = <
+					text = <"Excellent">
+					description = <"90–100.">
+				>
+				["at0128"] = <
+					text = <"Absence de déformation">
+					description = <"Composant du score indiquant si tous les critères d’absence de déformation sont remplis : contracture en flexion fixée inférieure à 30 degrés, rotation interne fixée en extension inférieure à 10 degrés, adduction fixée inférieure à 10 degrés et inégalité de longueur des membres inférieure à 3,2 cm.">
+				>
+				["at0129"] = <
+					text = <"Un ou plusieurs critères ne sont pas remplis">
+					description = <"Un ou plusieurs critères d’absence de déformation ne sont pas remplis.">
+				>
+				["at0130"] = <
+					text = <"Les quatre critères sont remplis">
+					description = <"Les quatre critères d’absence de déformation sont remplis.">
+				>
+				["at0131"] = <
+					text = <"Activité">
+					description = <"Évaluation complémentaire du niveau d’activité ou de l’autonomie du patient dans les activités, enregistrée en plus des items du Harris Hip Score.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0132"] = <
+					text = <"Importante">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"Quotidienne">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"Autonome">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"Non autonome">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"Aucune adduction fixée ≥ 10°">
+					description = <"Indique s’il n’existe pas de déformation en adduction fixée de 10 degrés ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0137"] = <
+					text = <"Aucune rotation interne fixée ≥ 10°">
+					description = <"Indique s’il n’existe pas de déformation en rotation interne fixée de 10 degrés ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0138"] = <
+					text = <"Aucune différence de longueur ≥ 3,2 cm">
+					description = <"Indique s’il n’existe pas de différence de longueur des membres de 3,2 cm ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0139"] = <
+					text = <"Aucune contracture en flexion fixée ≥ 30°">
+					description = <"Indique s’il n’existe pas de contracture en flexion fixée de 30 degrés ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.">
+					comment = <"Question complémentaire relative au HHS.">
+				>
+				["at0140"] = <
+					text = <"Score total d’amplitude de mouvement">
+					description = <"Composant ordinal du score dérivé de l’amplitude totale de mouvement catégorisée de la hanche évaluée.">
 				>
 				["at0141"] = <
 					text = <"211°–300°">

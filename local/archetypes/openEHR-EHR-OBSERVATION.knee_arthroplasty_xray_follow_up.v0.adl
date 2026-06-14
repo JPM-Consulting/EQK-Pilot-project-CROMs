@@ -6,6 +6,16 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"JPM Consulting GmbH">
+				["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -19,6 +29,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,7 +40,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"02be5aa752067bebf7b7caabc075163d">
+		["MD5-CAM-1.0.1"] = <"69ff27401ef201a0e4ad92e9a1791990">
 		["build_uid"] = <"d424488d-9468-31ff-8e5c-a9a854bf6cc2">
 	>
 
@@ -1512,6 +1526,648 @@ ontology
 				>
 				["at0189"] = <
 					text = <"Unknown">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Suivi radiographique d’arthroplastie du genou">
+					description = <"Évaluation radiographique de suivi après arthroplastie du genou, incluant l’alignement de l’implant, les mesures des lignes radiotransparentes propres à chaque composant, les zones du composant rotulien ainsi que les mesures du centrage et de la morphologie rotuliens.">
+				>
+				["at0001"] = <
+					text = <"Historique">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Arborescence">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Date de radiographie">
+					description = <"Date à laquelle l’examen radiographique a été réalisé, si elle est enregistrée séparément de l’heure de l’événement d’observation.">
+				>
+				["at0005"] = <
+					text = <"Côté du genou">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Gauche">
+					description = <"Genou gauche.">
+				>
+				["at0007"] = <
+					text = <"Droit">
+					description = <"Genou droit.">
+				>
+				["at0008"] = <
+					text = <"Position du patient lors de l’imagerie">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Couché">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Debout">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Angle HKA">
+					description = <"Angle hanche-genou-cheville mesuré sur une radiographie du membre inférieur entier en charge.">
+				>
+				["at0012"] = <
+					text = <"Statut des implants antérieurs">
+					description = <"Présence ou absence d’implants antérieurs pertinents pour le suivi radiographique de l’arthroplastie du genou.">
+				>
+				["at0013"] = <
+					text = <"Présent">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Non évalué">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Détails des implants antérieurs">
+					description = <"Informations supplémentaires sur les implants antérieurs, telles que le type, la localisation anatomique, la latéralité, la date ou le statut de retrait.">
+				>
+				["at0018"] = <
+					text = <"Alignement coronal de l’arthroplastie du genou">
+					description = <"Mesures de l’alignement de l’implant en projection AP.">
+					comment = <"Référence image [img].">
+				>
+				["at0019"] = <
+					text = <"Angle fémoral alpha">
+					description = <"Angle alpha d’alignement du composant fémoral tel que défini dans le formulaire source de cotation radiographique.">
+				>
+				["at0020"] = <
+					text = <"Angle tibial bêta">
+					description = <"Angle bêta d’alignement du composant tibial tel que défini dans le formulaire source de cotation radiographique.">
+				>
+				["at0021"] = <
+					text = <"Angle de valgus total">
+					description = <"Angle global d’alignement en valgus dérivé des mesures d’alignement des composants fémoral et tibial.">
+				>
+				["at0022"] = <
+					text = <"Référence du film AP">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Film 18 pouces">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Film 3 pieds">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Alignement sagittal de l’arthroplastie du genou">
+					description = <"Mesures de l’alignement de l’implant en projection latérale.">
+					comment = <"Référence image [img].">
+				>
+				["at0026"] = <
+					text = <"Angle de flexion fémorale">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Angle de pente tibiale">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : latéral.">
+				>
+				["at0030"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : antéropostérieur, le cas échéant antéropostérieur du membre inférieur entier.">
+				>
+				["at0035"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Zones de radiotransparence du composant fémoral">
+					description = <"">
+					comment = <"Référence image [img].">
+				>
+				["at0059"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 1">
+					description = <"Largeur de la ligne radiotransparente en zone 1.">
+				>
+				["at0060"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 2">
+					description = <"Largeur de la ligne radiotransparente en zone 2.">
+				>
+				["at0061"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 3">
+					description = <"Largeur de la ligne radiotransparente en zone 3.">
+				>
+				["at0062"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 4">
+					description = <"Largeur de la ligne radiotransparente en zone 4.">
+				>
+				["at0063"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 5">
+					description = <"Largeur de la ligne radiotransparente en zone 5.">
+				>
+				["at0064"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 6">
+					description = <"Largeur de la ligne radiotransparente en zone 6.">
+				>
+				["at0065"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 7">
+					description = <"Largeur de la ligne radiotransparente en zone 7.">
+				>
+				["at0074"] = <
+					text = <"Arborescence des éléments">
+					description = <"@ internal @">
+				>
+				["at0075"] = <
+					text = <"Largeur totale des lignes radiotransparentes">
+					description = <"Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.">
+				>
+				["at0076"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Zones de radiotransparence AP du composant tibial">
+					description = <"">
+					comment = <"Référence image [img].">
+				>
+				["at0080"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 1">
+					description = <"Largeur de la ligne radiotransparente en zone 1.">
+				>
+				["at0081"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 2">
+					description = <"Largeur de la ligne radiotransparente en zone 2.">
+				>
+				["at0082"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 3">
+					description = <"Largeur de la ligne radiotransparente en zone 3.">
+				>
+				["at0083"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 4">
+					description = <"Largeur de la ligne radiotransparente en zone 4.">
+				>
+				["at0084"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 5">
+					description = <"Largeur de la ligne radiotransparente en zone 5.">
+				>
+				["at0085"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 6">
+					description = <"Largeur de la ligne radiotransparente en zone 6.">
+				>
+				["at0086"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 7">
+					description = <"Largeur de la ligne radiotransparente en zone 7.">
+				>
+				["at0087"] = <
+					text = <"Largeur totale des lignes radiotransparentes">
+					description = <"Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.">
+				>
+				["at0088"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : latéral ou antéropostérieur.">
+				>
+				["at0090"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : antéropostérieur.">
+				>
+				["at0101"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"Zones de radiotransparence latérales du composant tibial">
+					description = <"">
+					comment = <"Référence image [img].">
+				>
+				["at0112"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : latéral.">
+				>
+				["at0113"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0116"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0117"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0123"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 1">
+					description = <"Largeur de la ligne radiotransparente en zone 1.">
+				>
+				["at0124"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 2">
+					description = <"Largeur de la ligne radiotransparente en zone 2.">
+				>
+				["at0125"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 3">
+					description = <"Largeur de la ligne radiotransparente en zone 3.">
+				>
+				["at0130"] = <
+					text = <"Largeur totale des lignes radiotransparentes">
+					description = <"Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.">
+				>
+				["at0131"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"Zones de radiotransparence du composant rotulien">
+					description = <"">
+					comment = <"Référence image [img].">
+				>
+				["at0144"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 1">
+					description = <"Largeur de la ligne radiotransparente en zone 1.">
+				>
+				["at0145"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 2">
+					description = <"Largeur de la ligne radiotransparente en zone 2.">
+				>
+				["at0146"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 3">
+					description = <"Largeur de la ligne radiotransparente en zone 3.">
+				>
+				["at0147"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 4">
+					description = <"Largeur de la ligne radiotransparente en zone 4.">
+				>
+				["at0148"] = <
+					text = <"Largeur de la ligne radiotransparente en zone 5">
+					description = <"Largeur de la ligne radiotransparente en zone 5.">
+				>
+				["at0151"] = <
+					text = <"Largeur totale des lignes radiotransparentes">
+					description = <"Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.">
+				>
+				["at0152"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0153"] = <
+					text = <"Schéma des zones rotuliennes">
+					description = <"">
+				>
+				["at0154"] = <
+					text = <"Schéma standard des zones du composant rotulien">
+					description = <"Zones 1 à 5.">
+				>
+				["at0155"] = <
+					text = <"Schéma alternatif des zones du composant rotulien">
+					description = <"Zones 1 à 3.">
+				>
+				["at0156"] = <
+					text = <"Mesures du centrage et de la morphologie rotuliens">
+					description = <"">
+					comment = <"Référence image [img].">
+				>
+				["at0157"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : Skyline / Sunrise / Merchant.">
+				>
+				["at0158"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0159"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0160"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0162"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0163"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0164"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0165"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0166"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0167"] = <
+					text = <"Inconnu">
+					description = <"">
+				>
+				["at0168"] = <
+					text = <"Largeur rotulienne">
+					description = <"Largeur de la rotule mesurée sur l’incidence radiographique axiale ou tangentielle correspondante.">
+				>
+				["at0169"] = <
+					text = <"Angle d’inclinaison rotulienne alpha">
+					description = <"Angle alpha d’inclinaison rotulienne tel que défini dans le formulaire source de cotation radiographique.">
+				>
+				["at0170"] = <
+					text = <"Angle d’inclinaison rotulienne bêta">
+					description = <"Angle bêta d’inclinaison rotulienne tel que défini dans le formulaire source de cotation radiographique.">
+				>
+				["at0171"] = <
+					text = <"Épaisseur rotulienne">
+					description = <"">
+				>
+				["at0173"] = <
+					text = <"Angle prothèse-os">
+					description = <"Angle entre le composant prothétique rotulien et l’os rotulien sous-jacent, tel que défini dans le formulaire source.">
+				>
+				["at0174"] = <
+					text = <"Déplacement médial de la rotule">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"Déplacement latéral de la rotule">
+					description = <"">
+				>
+				["at0176"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0177"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0178"] = <
+					text = <"Commentaire">
+					description = <"">
+				>
+				["at0179"] = <
+					text = <"Projection radiographique">
+					description = <"Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.">
+					comment = <"Template : Skyline / Sunrise / Merchant.">
+				>
+				["at0180"] = <
+					text = <"Antéropostérieur">
+					description = <"">
+				>
+				["at0181"] = <
+					text = <"Latéral">
+					description = <"">
+				>
+				["at0182"] = <
+					text = <"Skyline">
+					description = <"">
+				>
+				["at0183"] = <
+					text = <"Sunrise">
+					description = <"">
+				>
+				["at0184"] = <
+					text = <"Merchant">
+					description = <"">
+				>
+				["at0185"] = <
+					text = <"Tunnel">
+					description = <"">
+				>
+				["at0186"] = <
+					text = <"Rosenberg">
+					description = <"">
+				>
+				["at0187"] = <
+					text = <"Antéropostérieur du membre inférieur entier">
+					description = <"">
+				>
+				["at0188"] = <
+					text = <"Autre">
+					description = <"">
+				>
+				["at0189"] = <
+					text = <"Inconnu">
 					description = <"">
 				>
 			>

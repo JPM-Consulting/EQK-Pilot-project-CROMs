@@ -1,9 +1,9 @@
 {
   "templateId" : "croms_hip_arthroplasty_follow_up.v0",
-  "semVer" : "0.8.0",
+  "semVer" : "0.9.5",
   "version" : "2.3",
   "defaultLanguage" : "en",
-  "languages" : [ "en" ],
+  "languages" : [ "fr", "en" ],
   "tree" : {
     "id" : "croms_hip_arthroplasty_follow_up",
     "name" : "CROMS hip arthroplasty follow up",
@@ -13,9 +13,11 @@
     "min" : 1,
     "max" : 1,
     "localizedNames" : {
+      "fr" : "CROMS suivi hanche prothétique",
       "en" : "CROMS hip arthroplasty follow up"
     },
     "localizedDescriptions" : {
+      "fr" : "Document destiné à communiquer des informations à des tiers, généralement en réponse à une demande d’une autre partie.",
       "en" : "Document to communicate information to others, commonly in response to a request from another party."
     },
     "aqlPath" : "",
@@ -35,9 +37,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Identifiant du rapport",
           "en" : "Report ID"
         },
         "localizedDescriptions" : {
+          "fr" : "Informations d’identification du rapport.",
           "en" : "Identification information about the report."
         },
         "aqlPath" : "/context/other_context[at0001]/items[at0002]/value",
@@ -53,9 +57,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Statut",
           "en" : "Status"
         },
         "localizedDescriptions" : {
+          "fr" : "Statut du rapport dans son ensemble. Remarque : il ne s’agit pas du statut des différents composants du rapport.",
           "en" : "The status of the entire report. Note: This is not the status of any of the report components."
         },
         "aqlPath" : "/context/other_context[at0001]/items[at0005]/value",
@@ -98,9 +104,11 @@
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
+        "fr" : "Suivi clinique orthopédique de la hanche",
         "en" : "Hip clinical follow-up including HHS"
       },
       "localizedDescriptions" : {
+        "fr" : "Évaluation structurée, réalisée par un clinicien, de la fonction de la hanche et du résultat clinique avant ou après une arthroplastie ou une chirurgie de la hanche, incluant l’enregistrement facultatif des items du Harris Hip Score et du score total.",
         "en" : "A structured clinician-reported assessment of hip function and clinical outcome before or after hip arthroplasty or hip surgery, including optional recording of Harris Hip Score items and total score."
       },
       "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']",
@@ -113,9 +121,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Contexte de l’arthroplastie de la hanche",
           "en" : "Hip arthroplasty context"
         },
         "localizedDescriptions" : {
+          "fr" : "Informations contextuelles sur l’arthroplastie de la hanche ou la prothèse de hanche pertinentes pour cette évaluation clinique de suivi.",
           "en" : "Contextual information about the hip arthroplasty or hip prosthesis relevant to this clinical follow-up assessment."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0015]",
@@ -128,9 +138,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Résumé de la prothèse",
             "en" : "Prosthesis summary"
           },
           "localizedDescriptions" : {
+            "fr" : "Informations résumées sur les composants de la prothèse de hanche pertinents pour l’évaluation de suivi. Cet élément n’est pas destiné à servir de registre primaire d’implants ou de documentation principale du dispositif.",
             "en" : "Summary information about the hip prosthesis components relevant to the follow-up assessment. This is not intended as the primary implant registry or device documentation."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0015]/items[at0031]",
@@ -143,9 +155,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Cupule / composant acétabulaire",
               "en" : "Cup / acetabular component"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0015]/items[at0031]/items[at0032]/value",
@@ -161,9 +175,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Tête",
               "en" : "Head"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0015]/items[at0031]/items[at0033]/value",
@@ -179,9 +195,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Tige",
               "en" : "Stem"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0015]/items[at0031]/items[at0034]/value",
@@ -198,9 +216,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Côté opéré ou à opérer",
             "en" : "Side operated or to be operated"
           },
           "localizedDescriptions" : {
+            "fr" : "Latéralité de la hanche évaluée, y compris la hanche qui a été opérée ou dont l’opération est prévue.",
             "en" : "Laterality of the hip being assessed, including the hip that has been operated on or is planned for operation."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0015]/items[at0028]/value",
@@ -211,18 +231,22 @@
               "value" : "at0029",
               "label" : "Right",
               "localizedLabels" : {
+                "fr" : "Droit",
                 "en" : "Right"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0030",
               "label" : "Left",
               "localizedLabels" : {
+                "fr" : "Gauche",
                 "en" : "Left"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -237,9 +261,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Évaluation de la douleur",
           "en" : "Pain assessment"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation de la sévérité et de la localisation de la douleur liée à la hanche évaluée.",
           "en" : "Assessment of pain severity and pain location related to the assessed hip."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0036]",
@@ -252,9 +278,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Douleur",
             "en" : "Pain"
           },
           "localizedDescriptions" : {
+            "fr" : "Sévérité ou retentissement de la douleur liée à la hanche évaluée.",
             "en" : "Severity or impact of pain related to the assessed hip."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0036]/items[at0043]/value",
@@ -264,9 +292,11 @@
               "value" : "at0044",
               "label" : "None, or ignores it",
               "localizedLabels" : {
+                "fr" : "Aucune, ou douleur ignorée",
                 "en" : "None, or ignores it"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 44
@@ -274,9 +304,11 @@
               "value" : "at0045",
               "label" : "Slight, occasional, no compromise in activity",
               "localizedLabels" : {
+                "fr" : "Légère, occasionnelle, sans limitation de l’activité",
                 "en" : "Slight, occasional, no compromise in activity"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 40
@@ -284,9 +316,11 @@
               "value" : "at0046",
               "label" : "Mild pain, no effect on average activities, rarely moderate pain with unusual activity, may take aspirin",
               "localizedLabels" : {
+                "fr" : "Douleur légère, sans effet sur les activités habituelles ; rarement douleur modérée lors d’une activité inhabituelle ; prise possible d’aspirine",
                 "en" : "Mild pain, no effect on average activities, rarely moderate pain with unusual activity, may take aspirin"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 30
@@ -294,9 +328,11 @@
               "value" : "at0047",
               "label" : "Moderate pain, tolerable but makes concessions to pain. Some limitations of ordinary activity or work. May require occasional pain medication stronger than aspirin",
               "localizedLabels" : {
+                "fr" : "Douleur modérée, tolérable mais nécessitant des concessions. Certaines limitations des activités ordinaires ou du travail. Peut nécessiter occasionnellement un antalgique plus fort que l’aspirine",
                 "en" : "Moderate pain, tolerable but makes concessions to pain. Some limitations of ordinary activity or work. May require occasional pain medication stronger than aspirin"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 20
@@ -304,9 +340,11 @@
               "value" : "at0048",
               "label" : "Marked pain, serious limitation of activities",
               "localizedLabels" : {
+                "fr" : "Douleur marquée, limitation importante des activités",
                 "en" : "Marked pain, serious limitation of activities"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 10
@@ -314,9 +352,11 @@
               "value" : "at0049",
               "label" : "Totally disabled, crippled, pain in bed, bedridden",
               "localizedLabels" : {
+                "fr" : "Invalidante, douleur au lit, patient alité",
                 "en" : "Totally disabled, crippled, pain in bed, bedridden"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -331,9 +371,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Topographie de la douleur",
             "en" : "Pain location"
           },
           "localizedDescriptions" : {
+            "fr" : "Localisation anatomique de la douleur liée à la hanche évaluée. Plusieurs localisations peuvent être enregistrées.",
             "en" : "Anatomical location of pain related to the assessed hip. Multiple locations may be recorded."
           },
           "annotations" : {
@@ -347,72 +389,88 @@
               "value" : "at0051",
               "label" : "Groin",
               "localizedLabels" : {
+                "fr" : "Aine",
                 "en" : "Groin"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0052",
               "label" : "Anterior thigh",
               "localizedLabels" : {
+                "fr" : "Cuisse antérieure",
                 "en" : "Anterior thigh"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0053",
               "label" : "Lateral thigh",
               "localizedLabels" : {
+                "fr" : "Cuisse latérale",
                 "en" : "Lateral thigh"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0054",
               "label" : "Trochanter",
               "localizedLabels" : {
+                "fr" : "Trochanter",
                 "en" : "Trochanter"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0055",
               "label" : "Knee",
               "localizedLabels" : {
+                "fr" : "Genou",
                 "en" : "Knee"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0056",
               "label" : "Lumbar / lower back",
               "localizedLabels" : {
+                "fr" : "Lombaire / bas du dos",
                 "en" : "Lumbar / lower back"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0057",
               "label" : "Sacroiliac",
               "localizedLabels" : {
+                "fr" : "Sacro-iliaque",
                 "en" : "Sacroiliac"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0058",
               "label" : "Other",
               "localizedLabels" : {
+                "fr" : "Autre",
                 "en" : "Other"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -426,9 +484,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Autre localisation de la douleur",
             "en" : "Other pain location"
           },
           "localizedDescriptions" : {
+            "fr" : "Description narrative d’une autre localisation de la douleur, utilisée lorsque « Autre » est sélectionné.",
             "en" : "Narrative description of another pain location, used when 'Other' is selected."
           },
           "annotations" : {
@@ -448,9 +508,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Évaluation fonctionnelle",
           "en" : "Functional assessment"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation des limitations fonctionnelles liées à la hanche évaluée, incluant la marche, l’utilisation d’aides à la marche, le périmètre de marche, les escaliers, la position assise, l’utilisation des transports publics et certaines activités de la vie quotidienne.",
           "en" : "Assessment of functional limitations related to the assessed hip, including gait, use of walking aids, walking distance, stair climbing, sitting, use of public transport and selected activities of daily living."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]",
@@ -463,9 +525,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Boiterie",
             "en" : "Limp"
           },
           "localizedDescriptions" : {
+            "fr" : "Degré de boiterie lors de la marche.",
             "en" : "Degree of limping during walking."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0060]/value",
@@ -475,9 +539,11 @@
               "value" : "at0061",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 11
@@ -485,9 +551,11 @@
               "value" : "at0062",
               "label" : "Slight",
               "localizedLabels" : {
+                "fr" : "Occasionnelle",
                 "en" : "Slight"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 8
@@ -495,9 +563,11 @@
               "value" : "at0063",
               "label" : "Moderate",
               "localizedLabels" : {
+                "fr" : "Modérée",
                 "en" : "Moderate"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 5
@@ -505,9 +575,11 @@
               "value" : "at0064",
               "label" : "Severe",
               "localizedLabels" : {
+                "fr" : "Sévère",
                 "en" : "Severe"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -522,9 +594,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Aide à la marche",
             "en" : "Support devices"
           },
           "localizedDescriptions" : {
+            "fr" : "Utilisation d’aides à la marche ou de dispositifs d’appui pour la marche.",
             "en" : "Use of walking aids or support devices for ambulation."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0065]/value",
@@ -534,9 +608,11 @@
               "value" : "at0066",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 11
@@ -544,9 +620,11 @@
               "value" : "at0067",
               "label" : "Cane/walking stick for long walks",
               "localizedLabels" : {
+                "fr" : "Canne pour les longues marches",
                 "en" : "Cane/walking stick for long walks"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 7
@@ -554,9 +632,11 @@
               "value" : "at0068",
               "label" : "Cane/walking stick most of the time",
               "localizedLabels" : {
+                "fr" : "Canne la plupart du temps",
                 "en" : "Cane/walking stick most of the time"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 5
@@ -564,9 +644,11 @@
               "value" : "at0069",
               "label" : "One crutch",
               "localizedLabels" : {
+                "fr" : "Une canne anglaise / béquille",
                 "en" : "One crutch"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 3
@@ -574,9 +656,11 @@
               "value" : "at0070",
               "label" : "Two canes/walking sticks",
               "localizedLabels" : {
+                "fr" : "Deux cannes",
                 "en" : "Two canes/walking sticks"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -584,9 +668,11 @@
               "value" : "at0071",
               "label" : "Two crutches or not able to walk",
               "localizedLabels" : {
+                "fr" : "Deux cannes anglaises / béquilles, ou marche impossible",
                 "en" : "Two crutches or not able to walk"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -601,9 +687,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Périmètre de marche",
             "en" : "Distance walked"
           },
           "localizedDescriptions" : {
+            "fr" : "Distance maximale de marche ou capacité de marche.",
             "en" : "Maximum walking distance or walking capacity."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0072]/value",
@@ -613,9 +701,11 @@
               "value" : "at0073",
               "label" : "Unlimited",
               "localizedLabels" : {
+                "fr" : "Illimité > 1 h",
                 "en" : "Unlimited"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 11
@@ -623,9 +713,11 @@
               "value" : "at0074",
               "label" : "Six blocks",
               "localizedLabels" : {
+                "fr" : "Plus de 500 m / plus de 30 min",
                 "en" : "Six blocks"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 8
@@ -633,9 +725,11 @@
               "value" : "at0075",
               "label" : "Two or three blocks",
               "localizedLabels" : {
+                "fr" : "Moins de 500 m / plus de 15 min",
                 "en" : "Two or three blocks"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 5
@@ -643,9 +737,11 @@
               "value" : "at0076",
               "label" : "Indoors only",
               "localizedLabels" : {
+                "fr" : "Domicile uniquement",
                 "en" : "Indoors only"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -653,9 +749,11 @@
               "value" : "at0077",
               "label" : "Bed and chair only",
               "localizedLabels" : {
+                "fr" : "Fauteuil / lit uniquement",
                 "en" : "Bed and chair only"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -670,9 +768,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Escaliers",
             "en" : "Stairs"
           },
           "localizedDescriptions" : {
+            "fr" : "Capacité à monter ou descendre les escaliers.",
             "en" : "Ability to climb or descend stairs."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0078]/value",
@@ -682,9 +782,11 @@
               "value" : "at0079",
               "label" : "Normally without using a railing",
               "localizedLabels" : {
+                "fr" : "Alternés sans rampe",
                 "en" : "Normally without using a railing"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 4
@@ -692,9 +794,11 @@
               "value" : "at0080",
               "label" : "Normally using a railing",
               "localizedLabels" : {
+                "fr" : "Alternés avec rampe",
                 "en" : "Normally using a railing"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -702,9 +806,11 @@
               "value" : "at0081",
               "label" : "In any manner",
               "localizedLabels" : {
+                "fr" : "Autres méthodes",
                 "en" : "In any manner"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 1
@@ -712,9 +818,11 @@
               "value" : "at0082",
               "label" : "Unable to do stairs",
               "localizedLabels" : {
+                "fr" : "Impossible",
                 "en" : "Unable to do stairs"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -729,9 +837,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Chaussage",
             "en" : "Shoes and socks"
           },
           "localizedDescriptions" : {
+            "fr" : "Capacité à mettre ses chaussures et chaussettes.",
             "en" : "Ability to put on shoes and socks."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0083]/value",
@@ -741,9 +851,11 @@
               "value" : "at0084",
               "label" : "With ease",
               "localizedLabels" : {
+                "fr" : "Facile",
                 "en" : "With ease"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 4
@@ -751,9 +863,11 @@
               "value" : "at0085",
               "label" : "With difficulty",
               "localizedLabels" : {
+                "fr" : "Difficile",
                 "en" : "With difficulty"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -761,9 +875,11 @@
               "value" : "at0086",
               "label" : "Unable",
               "localizedLabels" : {
+                "fr" : "Impossible",
                 "en" : "Unable"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -778,9 +894,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Siège",
             "en" : "Sitting"
           },
           "localizedDescriptions" : {
+            "fr" : "Capacité à s’asseoir confortablement sur une chaise pendant une durée définie.",
             "en" : "Ability to sit comfortably on a chair for a defined duration."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0087]/value",
@@ -790,9 +908,11 @@
               "value" : "at0088",
               "label" : "Comfortably in ordinary chair for one hour",
               "localizedLabels" : {
+                "fr" : "Tous les sièges > 1 h",
                 "en" : "Comfortably in ordinary chair for one hour"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 5
@@ -800,9 +920,11 @@
               "value" : "at0089",
               "label" : "On a high chair for 30 minutes",
               "localizedLabels" : {
+                "fr" : "Chaise surélevée",
                 "en" : "On a high chair for 30 minutes"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 3
@@ -810,9 +932,11 @@
               "value" : "at0090",
               "label" : "Unable to sit comfortably in any chair",
               "localizedLabels" : {
+                "fr" : "Impossible > ½ h",
                 "en" : "Unable to sit comfortably in any chair"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -827,9 +951,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Transports publics",
             "en" : "Public transportation"
           },
           "localizedDescriptions" : {
+            "fr" : "Capacité à utiliser les transports publics.",
             "en" : "Ability to use public transportation."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0037]/items[at0091]/value",
@@ -839,9 +965,11 @@
               "value" : "at0092",
               "label" : "Able to use transportation (bus)",
               "localizedLabels" : {
+                "fr" : "Possible",
                 "en" : "Able to use transportation (bus)"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 1
@@ -849,9 +977,11 @@
               "value" : "at0093",
               "label" : "Unable to use public transportation (bus)",
               "localizedLabels" : {
+                "fr" : "Impossible",
                 "en" : "Unable to use public transportation (bus)"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -866,9 +996,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Stabilisation monopodale",
             "en" : "Single-leg stance"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation complémentaire de la capacité du patient à se tenir debout sur le membre évalué.",
             "en" : "Supplementary assessment of the patient's ability to stand on the assessed leg."
           },
           "annotations" : {
@@ -881,9 +1013,11 @@
               "value" : "at0095",
               "label" : "No difficulty",
               "localizedLabels" : {
+                "fr" : "Pas de difficulté",
                 "en" : "No difficulty"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 4
@@ -891,9 +1025,11 @@
               "value" : "at0096",
               "label" : "Minor difficulty",
               "localizedLabels" : {
+                "fr" : "Difficultés mineures",
                 "en" : "Minor difficulty"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 3
@@ -901,9 +1037,11 @@
               "value" : "at0097",
               "label" : "Major difficulty",
               "localizedLabels" : {
+                "fr" : "Difficultés majeures",
                 "en" : "Major difficulty"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -911,9 +1049,11 @@
               "value" : "at0098",
               "label" : "Impossible",
               "localizedLabels" : {
+                "fr" : "Impossible",
                 "en" : "Impossible"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 1
@@ -928,9 +1068,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Activité",
             "en" : "Activity"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation complémentaire du niveau d’activité ou de l’autonomie du patient dans les activités, enregistrée en plus des items du Harris Hip Score.",
             "en" : "Supplementary assessment of the patient's activity level or independence in activity, recorded in addition to the Harris Hip Score items."
           },
           "annotations" : {
@@ -943,9 +1085,11 @@
               "value" : "at0132",
               "label" : "Significant / high",
               "localizedLabels" : {
+                "fr" : "Importante",
                 "en" : "Significant / high"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 4
@@ -953,9 +1097,11 @@
               "value" : "at0133",
               "label" : "Daily",
               "localizedLabels" : {
+                "fr" : "Quotidienne",
                 "en" : "Daily"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 3
@@ -963,9 +1109,11 @@
               "value" : "at0134",
               "label" : "Independent",
               "localizedLabels" : {
+                "fr" : "Autonome",
                 "en" : "Independent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -973,9 +1121,11 @@
               "value" : "at0135",
               "label" : "Not independent",
               "localizedLabels" : {
+                "fr" : "Non autonome",
                 "en" : "Not independent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 1
@@ -991,9 +1141,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Évaluation de la déformation",
           "en" : "Deformity assessment"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation des critères de déformation de la hanche évaluée pertinents pour le Harris Hip Score, incluant les déformations fixées et l’inégalité de longueur des membres.",
           "en" : "Assessment of deformity criteria of the assessed hip relevant to the Harris Hip Score, including fixed deformities and limb length discrepancy."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0038]",
@@ -1006,9 +1158,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Aucune adduction fixée ≥ 10°",
             "en" : "No fixed adduction ≥ 10°"
           },
           "localizedDescriptions" : {
+            "fr" : "Indique s’il n’existe pas de déformation en adduction fixée de 10 degrés ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.",
             "en" : "Indicates whether there is no fixed adduction deformity of 10 degrees or more. A value of true means that this criterion for absence of deformity is met."
           },
           "annotations" : {
@@ -1027,9 +1181,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Aucune rotation interne fixée ≥ 10°",
             "en" : "No fixed internal rotation ≥ 10°"
           },
           "localizedDescriptions" : {
+            "fr" : "Indique s’il n’existe pas de déformation en rotation interne fixée de 10 degrés ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.",
             "en" : "Indicates whether there is no fixed internal rotation deformity of 10 degrees or more. A value of true means that this criterion for absence of deformity is met."
           },
           "annotations" : {
@@ -1048,9 +1204,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Aucune différence de longueur ≥ 3,2 cm",
             "en" : "No limb length difference ≥ 3.2 cm"
           },
           "localizedDescriptions" : {
+            "fr" : "Indique s’il n’existe pas de différence de longueur des membres de 3,2 cm ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.",
             "en" : "Indicates whether there is no limb length difference of 3.2 cm or more. A value of true means that this criterion for absence of deformity is met."
           },
           "annotations" : {
@@ -1069,9 +1227,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Aucune contracture en flexion fixée ≥ 30°",
             "en" : "No fixed flexion contracture ≥ 30°"
           },
           "localizedDescriptions" : {
+            "fr" : "Indique s’il n’existe pas de contracture en flexion fixée de 30 degrés ou plus. Une valeur vraie signifie que ce critère d’absence de déformation est rempli.",
             "en" : "Indicates whether there is no fixed flexion contracture of 30 degrees or more. A value of true means that this criterion for absence of deformity is met."
           },
           "annotations" : {
@@ -1090,9 +1250,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Absence de déformation",
             "en" : "Absence of deformity"
           },
           "localizedDescriptions" : {
+            "fr" : "Composant du score indiquant si tous les critères d’absence de déformation sont remplis : contracture en flexion fixée inférieure à 30 degrés, rotation interne fixée en extension inférieure à 10 degrés, adduction fixée inférieure à 10 degrés et inégalité de longueur des membres inférieure à 3,2 cm.",
             "en" : "Score component indicating whether all criteria for absence of deformity are met: less than 30 degrees of fixed flexion contracture, less than 10 degrees of fixed internal rotation in extension, less than 10 degrees of fixed adduction, and limb length discrepancy less than 3.2 cm."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0038]/items[at0128]/value",
@@ -1102,9 +1264,11 @@
               "value" : "at0129",
               "label" : "One or more criteria are not met.",
               "localizedLabels" : {
+                "fr" : "Un ou plusieurs critères ne sont pas remplis",
                 "en" : "One or more criteria are not met."
               },
               "localizedDescriptions" : {
+                "fr" : "Un ou plusieurs critères d’absence de déformation ne sont pas remplis.",
                 "en" : "One or more criteria for absence of deformity are not met."
               },
               "ordinal" : 0
@@ -1112,9 +1276,11 @@
               "value" : "at0130",
               "label" : "All four criteria are met.",
               "localizedLabels" : {
+                "fr" : "Les quatre critères sont remplis",
                 "en" : "All four criteria are met."
               },
               "localizedDescriptions" : {
+                "fr" : "Les quatre critères d’absence de déformation sont remplis.",
                 "en" : "All four criteria for absence of deformity are met."
               },
               "ordinal" : 4
@@ -1130,9 +1296,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Amplitude de mouvement",
           "en" : "Range of motion"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation de l’amplitude de mouvement de la hanche évaluée, incluant la flexion, l’extension, l’abduction, l’adduction, la rotation externe et la rotation interne.",
           "en" : "Assessment of the range of motion of the assessed hip, including flexion, extension, abduction, adduction, external rotation and internal rotation."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]",
@@ -1145,9 +1313,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Flexion",
             "en" : "Flexion"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude de flexion de la hanche mesurée en degrés.",
             "en" : "Range of hip flexion measured in degrees."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0104]/value",
@@ -1161,6 +1331,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -1174,9 +1345,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Extension",
             "en" : "Extension"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude d’extension de la hanche mesurée en degrés.",
             "en" : "Range of hip extension measured in degrees."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0105]/value",
@@ -1190,6 +1363,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -1203,9 +1377,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Abduction",
             "en" : "Abduction"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude d’abduction de la hanche mesurée en degrés.",
             "en" : "Range of hip abduction measured in degrees."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0106]/value",
@@ -1219,6 +1395,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -1232,9 +1409,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Adduction",
             "en" : "Adduction"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude d’adduction de la hanche mesurée en degrés.",
             "en" : "Range of hip adduction measured in degrees."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0107]/value",
@@ -1248,6 +1427,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -1261,9 +1441,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Rotation externe",
             "en" : "External rotation"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude de rotation externe de la hanche mesurée en degrés.",
             "en" : "Range of hip external rotation measured in degrees."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0108]/value",
@@ -1277,6 +1459,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -1290,9 +1473,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Rotation interne",
             "en" : "Internal rotation"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude de rotation interne de la hanche mesurée en degrés.",
             "en" : "Range of hip internal rotation measured in degrees."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0109]/value",
@@ -1306,6 +1491,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -1319,9 +1505,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Score total d’amplitude de mouvement",
             "en" : "Total range of motion score"
           },
           "localizedDescriptions" : {
+            "fr" : "Composant ordinal du score dérivé de l’amplitude totale de mouvement catégorisée de la hanche évaluée.",
             "en" : "Ordinal score component derived from the categorised total range of motion of the assessed hip."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0039]/items[at0140]/value",
@@ -1331,9 +1519,11 @@
               "value" : "at0141",
               "label" : "211°–300°",
               "localizedLabels" : {
+                "fr" : "211°–300°",
                 "en" : "211°–300°"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 5
@@ -1341,9 +1531,11 @@
               "value" : "at0142",
               "label" : "161°–210°",
               "localizedLabels" : {
+                "fr" : "161°–210°",
                 "en" : "161°–210°"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 4
@@ -1351,9 +1543,11 @@
               "value" : "at0143",
               "label" : "101°–160°",
               "localizedLabels" : {
+                "fr" : "101°–160°",
                 "en" : "101°–160°"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 3
@@ -1361,9 +1555,11 @@
               "value" : "at0144",
               "label" : "61°–100°",
               "localizedLabels" : {
+                "fr" : "61°–100°",
                 "en" : "61°–100°"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 2
@@ -1371,9 +1567,11 @@
               "value" : "at0145",
               "label" : "31°–60°",
               "localizedLabels" : {
+                "fr" : "31°–60°",
                 "en" : "31°–60°"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 1
@@ -1381,9 +1579,11 @@
               "value" : "at0146",
               "label" : "0°–30°",
               "localizedLabels" : {
+                "fr" : "0°–30°",
                 "en" : "0°–30°"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               },
               "ordinal" : 0
@@ -1399,9 +1599,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Évaluation de la longueur du membre",
           "en" : "Limb length assessment"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation de la longueur du membre opéré ou évalué par rapport au membre controlatéral.",
           "en" : "Assessment of the length of the operated or assessed limb compared with the contralateral limb."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0040]",
@@ -1414,9 +1616,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Longueur du membre opéré par rapport à l’autre",
             "en" : "Operated limb length compared with the other limb"
           },
           "localizedDescriptions" : {
+            "fr" : "Comparaison qualitative de la longueur du membre opéré ou évalué avec celle du membre controlatéral.",
             "en" : "Qualitative comparison of the length of the operated or assessed limb with the contralateral limb."
           },
           "annotations" : {
@@ -1430,27 +1634,33 @@
               "value" : "at0111",
               "label" : "Same",
               "localizedLabels" : {
+                "fr" : "Identique",
                 "en" : "Same"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0112",
               "label" : "Longer",
               "localizedLabels" : {
+                "fr" : "Plus long",
                 "en" : "Longer"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0113",
               "label" : "Shorter",
               "localizedLabels" : {
+                "fr" : "Plus court",
                 "en" : "Shorter"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -1464,9 +1674,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Différence de longueur du membre (mm)",
             "en" : "Limb length difference (mm)"
           },
           "localizedDescriptions" : {
+            "fr" : "Différence de longueur mesurée ou estimée entre le membre opéré ou évalué et le membre controlatéral, enregistrée en millimètres.",
             "en" : "Measured or estimated difference in length between the operated or assessed limb and the contralateral limb, recorded in millimetres."
           },
           "annotations" : {
@@ -1494,9 +1706,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Condition physique",
           "en" : "Physical condition"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation clinique de la condition physique globale du patient par rapport à son âge.",
           "en" : "Clinical assessment of the patient's overall physical condition in relation to age."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0041]",
@@ -1509,9 +1723,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Condition physique du patient selon l’âge",
             "en" : "Physical condition relative to age"
           },
           "localizedDescriptions" : {
+            "fr" : "Condition physique globale du patient comparée à la condition physique attendue pour son âge. Il s’agit d’un item complémentaire enregistré en plus du Harris Hip Score.",
             "en" : "Overall physical condition of the patient compared with the expected physical condition for their age. This is a supplementary item recorded in addition to the Harris Hip Score."
           },
           "annotations" : {
@@ -1525,36 +1741,44 @@
               "value" : "at0116",
               "label" : "Excellent",
               "localizedLabels" : {
+                "fr" : "Excellente",
                 "en" : "Excellent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0117",
               "label" : "Good",
               "localizedLabels" : {
+                "fr" : "Bonne",
                 "en" : "Good"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0118",
               "label" : "Average",
               "localizedLabels" : {
+                "fr" : "Moyenne",
                 "en" : "Average"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0119",
               "label" : "Poor",
               "localizedLabels" : {
+                "fr" : "Faible",
                 "en" : "Poor"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -1569,9 +1793,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Résumé des scores",
           "en" : "Score summary"
         },
         "localizedDescriptions" : {
+          "fr" : "Résumé des scores calculés ou enregistrés pour l’évaluation clinique de suivi de la hanche, incluant le Harris Hip Score et, le cas échéant, les scores totaux du Harris Hip Score modifié ainsi que le classement.",
           "en" : "Summary of calculated or recorded score results for the hip clinical follow-up assessment, including Harris Hip Score and, where applicable, modified Harris Hip Score totals and grading."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0042]",
@@ -1584,9 +1810,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Score HHS total",
             "en" : "HHS total"
           },
           "localizedDescriptions" : {
+            "fr" : "Score total du Harris Hip Score, enregistré comme la somme des points de l’évaluation.",
             "en" : "Total Harris Hip Score, recorded as the sum of points from the assessment."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0042]/items[at0120]/value",
@@ -1638,9 +1866,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Score brut mHHS total",
             "en" : "mHHS raw total"
           },
           "localizedDescriptions" : {
+            "fr" : "Score brut total du Harris Hip Score modifié, enregistré comme la somme des points de l’évaluation modifiée.",
             "en" : "Raw total score for the modified Harris Hip Score, recorded as the sum of points from the modified assessment."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0042]/items[at0121]/value",
@@ -1692,9 +1922,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Score mHHS normalisé total",
             "en" : "mHHS normalised total"
           },
           "localizedDescriptions" : {
+            "fr" : "Score normalisé du Harris Hip Score modifié, représentant le score brut exprimé sur une échelle de 0 à 100 afin de permettre la comparaison avec le Harris Hip Score original.",
             "en" : "Normalised modified Harris Hip Score, representing the raw score expressed on a 0–100 scale for comparability with the original Harris Hip Score."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0042]/items[at0122]/value",
@@ -1746,9 +1978,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Classement",
             "en" : "Grading"
           },
           "localizedDescriptions" : {
+            "fr" : "Classement catégoriel dérivé du score total du Harris Hip Score.",
             "en" : "Categorical grading derived from the Harris Hip Score total."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0042]/items[at0123]/value",
@@ -1759,36 +1993,44 @@
               "value" : "at0124",
               "label" : "Poor",
               "localizedLabels" : {
+                "fr" : "Faible",
                 "en" : "Poor"
               },
               "localizedDescriptions" : {
+                "fr" : "Inférieur à 70.",
                 "en" : "Less than 70."
               }
             }, {
               "value" : "at0125",
               "label" : "Fair",
               "localizedLabels" : {
+                "fr" : "Moyen",
                 "en" : "Fair"
               },
               "localizedDescriptions" : {
+                "fr" : "70–79.",
                 "en" : "70-79."
               }
             }, {
               "value" : "at0126",
               "label" : "Good",
               "localizedLabels" : {
+                "fr" : "Bon",
                 "en" : "Good"
               },
               "localizedDescriptions" : {
+                "fr" : "80–89.",
                 "en" : "80-89."
               }
             }, {
               "value" : "at0127",
               "label" : "Excellent",
               "localizedLabels" : {
+                "fr" : "Excellent",
                 "en" : "Excellent"
               },
               "localizedDescriptions" : {
+                "fr" : "90–100.",
                 "en" : "90-100."
               }
             } ]
@@ -1815,9 +2057,11 @@
         "max" : 1,
         "dependsOn" : [ "functional_assessment", "deformity_assessment", "hip_arthroplasty_context", "physical_condition", "pain_assessment", "range_of_motion", "score_summary", "limb_length_assessment" ],
         "localizedNames" : {
+          "fr" : "Nom du clinicien consultant",
           "en" : "Consulting clinician name"
         },
         "localizedDescriptions" : {
+          "fr" : "Nom du clinicien responsable de l’évaluation clinique de suivi, ou l’ayant réalisée, tel qu’il est documenté dans le formulaire.",
           "en" : "Name of the clinician responsible for, or performing, the clinical follow-up assessment, as recorded on the form."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/protocol[at0004]/items[at0005]/value",
@@ -1834,9 +2078,11 @@
         "max" : 1,
         "dependsOn" : [ "functional_assessment", "deformity_assessment", "hip_arthroplasty_context", "physical_condition", "pain_assessment", "range_of_motion", "score_summary", "limb_length_assessment" ],
         "localizedNames" : {
+          "fr" : "Moment du suivi",
           "en" : "Follow-up timing"
         },
         "localizedDescriptions" : {
+          "fr" : "Moment de l’évaluation de suivi par rapport à l’intervention chirurgicale, à l’évaluation de référence ou au calendrier de suivi prévu.",
           "en" : "Timing of the follow-up assessment in relation to surgery, baseline assessment or the planned follow-up schedule."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/protocol[at0004]/items[at0006]/value",
@@ -1847,63 +2093,77 @@
             "value" : "at0007",
             "label" : "Preoperative",
             "localizedLabels" : {
+              "fr" : "Préopératoire",
               "en" : "Preoperative"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0008",
             "label" : "6 weeks",
             "localizedLabels" : {
+              "fr" : "6 semaines",
               "en" : "6 weeks"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0009",
             "label" : "3 months",
             "localizedLabels" : {
+              "fr" : "3 mois",
               "en" : "3 months"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0010",
             "label" : "6 months",
             "localizedLabels" : {
+              "fr" : "6 mois",
               "en" : "6 months"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0011",
             "label" : "1 year",
             "localizedLabels" : {
+              "fr" : "1 an",
               "en" : "1 year"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0012",
             "label" : "2 years",
             "localizedLabels" : {
+              "fr" : "2 ans",
               "en" : "2 years"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0013",
             "label" : "Other number of years",
             "localizedLabels" : {
+              "fr" : "Autre nombre d’années",
               "en" : "Other number of years"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           } ]
@@ -1918,9 +2178,11 @@
         "max" : 1,
         "dependsOn" : [ "functional_assessment", "deformity_assessment", "hip_arthroplasty_context", "physical_condition", "pain_assessment", "range_of_motion", "score_summary", "limb_length_assessment" ],
         "localizedNames" : {
+          "fr" : "Autre intervalle de suivi en années",
           "en" : "Other follow-up interval in years"
         },
         "localizedDescriptions" : {
+          "fr" : "Nombre d’années après l’intervention chirurgicale ou l’évaluation de référence pour le moment du suivi, utilisé lorsque « Autre nombre d’années » est sélectionné.",
           "en" : "Number of years after surgery or baseline assessment for the follow-up timing, used when 'Other number of years' is selected."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.orthopaedic_hip_clinical_follow_up.v0,'Hip clinical follow-up including HHS']/protocol[at0004]/items[at0014]/value",
@@ -1974,9 +2236,11 @@
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
+        "fr" : "Suivi clinique orthopédique",
         "en" : "Orthopaedic clinical background and follow-up"
       },
       "localizedDescriptions" : {
+        "fr" : "Évaluation structurée des informations de suivi clinique orthopédique, incluant les pathologies connues, les complications et les pathologies orthopédiques associées.",
         "en" : "Structured assessment of orthopaedic clinical follow-up information, including known conditions, complications and associated orthopaedic conditions."
       },
       "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']",
@@ -1989,9 +2253,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Autres pathologies connues",
           "en" : "Other known conditions"
         },
         "localizedDescriptions" : {
+          "fr" : "Autres pathologies connues, comorbidités ou affections liées à un système corporel, enregistrées lors du suivi clinique.",
           "en" : "Other known pathologies, comorbidities or body system-related conditions recorded at clinical follow-up."
         },
         "annotations" : {
@@ -2007,9 +2273,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des autres pathologies connues",
             "en" : "Other known condition status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si d’autres pathologies connues sont enregistrées lors de ce suivi.",
             "en" : "Status indicating whether other known conditions are recorded at this follow-up."
           },
           "annotations" : {
@@ -2023,27 +2291,33 @@
               "value" : "at0015",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune autre pathologie connue n’est enregistrée lors de ce suivi.",
                 "en" : "No other known conditions are recorded at this follow-up."
               }
             }, {
               "value" : "at0016",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs autres pathologies connues sont enregistrées.",
                 "en" : "One or more other known conditions are recorded."
               }
             }, {
               "value" : "at0017",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "La présence d’autres pathologies est inconnue ou n’a pas été évaluée.",
                 "en" : "It is unknown or was not assessed whether other conditions are present."
               }
             } ]
@@ -2057,9 +2331,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Autre pathologie connue",
             "en" : "Other known condition"
           },
           "localizedDescriptions" : {
+            "fr" : "Catégorie ou type spécifique d’autre pathologie connue enregistrée lors du suivi clinique.",
             "en" : "Category or specific type of other known condition recorded at clinical follow-up."
           },
           "annotations" : {
@@ -2073,81 +2349,99 @@
               "value" : "at0018",
               "label" : "Nervous system",
               "localizedLabels" : {
+                "fr" : "Système nerveux",
                 "en" : "Nervous system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système nerveux.",
                 "en" : "Known condition related to the nervous system."
               }
             }, {
               "value" : "at0019",
               "label" : "Gastrointestinal system",
               "localizedLabels" : {
+                "fr" : "Système gastro-intestinal",
                 "en" : "Gastrointestinal system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système gastro-intestinal.",
                 "en" : "Known condition related to the gastrointestinal system."
               }
             }, {
               "value" : "at0020",
               "label" : "Osteoporosis",
               "localizedLabels" : {
+                "fr" : "Ostéoporose",
                 "en" : "Osteoporosis"
               },
               "localizedDescriptions" : {
+                "fr" : "Ostéoporose connue.",
                 "en" : "Known osteoporosis."
               }
             }, {
               "value" : "at0021",
               "label" : "Respiratory tract",
               "localizedLabels" : {
+                "fr" : "Voies respiratoires",
                 "en" : "Respiratory tract"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée aux voies respiratoires.",
                 "en" : "Known condition related to the respiratory tract."
               }
             }, {
               "value" : "at0022",
               "label" : "Urogenital system",
               "localizedLabels" : {
+                "fr" : "Système uro-génital",
                 "en" : "Urogenital system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système uro-génital.",
                 "en" : "Known condition related to the urogenital system."
               }
             }, {
               "value" : "at0023",
               "label" : "Endocrine system",
               "localizedLabels" : {
+                "fr" : "Système endocrinien",
                 "en" : "Endocrine system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système endocrinien.",
                 "en" : "Known condition related to the endocrine system."
               }
             }, {
               "value" : "at0024",
               "label" : "Cardiovascular system",
               "localizedLabels" : {
+                "fr" : "Système cardio-vasculaire",
                 "en" : "Cardiovascular system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système cardio-vasculaire.",
                 "en" : "Known condition related to the cardiovascular system."
               }
             }, {
               "value" : "at0025",
               "label" : "Diabetes",
               "localizedLabels" : {
+                "fr" : "Diabète",
                 "en" : "Diabetes"
               },
               "localizedDescriptions" : {
+                "fr" : "Diabète sucré connu.",
                 "en" : "Known diabetes mellitus."
               }
             }, {
               "value" : "at0026",
               "label" : "Other",
               "localizedLabels" : {
+                "fr" : "Autre",
                 "en" : "Other"
               },
               "localizedDescriptions" : {
+                "fr" : "Autre pathologie connue non représentée par les options listées.",
                 "en" : "Other known condition not represented by the listed options."
               }
             } ]
@@ -2161,9 +2455,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Description d’une autre pathologie connue",
             "en" : "Other known condition description"
           },
           "localizedDescriptions" : {
+            "fr" : "Description en texte libre d’une autre pathologie connue non représentée par les options codées.",
             "en" : "Free-text description of another known condition not represented by the coded options."
           },
           "annotations" : {
@@ -2183,9 +2479,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Complications systémiques",
           "en" : "Systemic complications"
         },
         "localizedDescriptions" : {
+          "fr" : "Complications systémiques survenues depuis la mise en place de cette prothèse.",
           "en" : "Systemic complications occurring since implantation of this prosthesis."
         },
         "annotations" : {
@@ -2201,9 +2499,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des complications systémiques",
             "en" : "Systemic complication status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si des complications systémiques sont enregistrées depuis la mise en place de la prothèse.",
             "en" : "Status indicating whether systemic complications are recorded since prosthesis implantation."
           },
           "annotations" : {
@@ -2217,27 +2517,33 @@
               "value" : "at0028",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune complication systémique n’est enregistrée depuis la mise en place de la prothèse.",
                 "en" : "No systemic complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0029",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs complications systémiques sont enregistrées depuis la mise en place de la prothèse.",
                 "en" : "One or more systemic complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0030",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "Il est inconnu ou non évalué si des complications systémiques sont survenues.",
                 "en" : "It is unknown or was not assessed whether systemic complications occurred."
               }
             } ]
@@ -2251,9 +2557,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Complication systémique",
             "en" : "Systemic complication"
           },
           "localizedDescriptions" : {
+            "fr" : "Complication systémique unique enregistrée depuis la mise en place de cette prothèse.",
             "en" : "Single systemic complication recorded since implantation of this prosthesis."
           },
           "annotations" : {
@@ -2269,9 +2577,11 @@
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Type de complication systémique",
               "en" : "Systemic complication type"
             },
             "localizedDescriptions" : {
+              "fr" : "Catégorie ou type spécifique de complication systémique enregistrée depuis la mise en place de la prothèse.",
               "en" : "Category or specific type of systemic complication recorded since prosthesis implantation."
             },
             "annotations" : {
@@ -2285,72 +2595,88 @@
                 "value" : "at0035",
                 "label" : "Pulmonary embolism",
                 "localizedLabels" : {
+                  "fr" : "Embolie pulmonaire",
                   "en" : "Pulmonary embolism"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Embolie pulmonaire survenue depuis la mise en place de la prothèse.",
                   "en" : "Pulmonary embolism occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0036",
                 "label" : "Thrombophlebitis",
                 "localizedLabels" : {
+                  "fr" : "Thrombophlébite",
                   "en" : "Thrombophlebitis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Thrombophlébite survenue depuis la mise en place de la prothèse.",
                   "en" : "Thrombophlebitis occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0037",
                 "label" : "Central nervous system",
                 "localizedLabels" : {
+                  "fr" : "Système nerveux central",
                   "en" : "Central nervous system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système nerveux central.",
                   "en" : "Systemic complication related to the central nervous system."
                 }
               }, {
                 "value" : "at0038",
                 "label" : "Respiratory tract",
                 "localizedLabels" : {
+                  "fr" : "Voies respiratoires",
                   "en" : "Respiratory tract"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée aux voies respiratoires.",
                   "en" : "Systemic complication related to the respiratory tract."
                 }
               }, {
                 "value" : "at0039",
                 "label" : "Cardiovascular system",
                 "localizedLabels" : {
+                  "fr" : "Système cardio-vasculaire",
                   "en" : "Cardiovascular system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système cardio-vasculaire.",
                   "en" : "Systemic complication related to the cardiovascular system."
                 }
               }, {
                 "value" : "at0040",
                 "label" : "Urological system",
                 "localizedLabels" : {
+                  "fr" : "Urologie",
                   "en" : "Urological system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système urinaire ou urologique.",
                   "en" : "Systemic complication related to the urinary or urological system."
                 }
               }, {
                 "value" : "at0041",
                 "label" : "Gastrointestinal system",
                 "localizedLabels" : {
+                  "fr" : "Système gastro-intestinal",
                   "en" : "Gastrointestinal system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système gastro-intestinal.",
                   "en" : "Systemic complication related to the gastrointestinal system."
                 }
               }, {
                 "value" : "at0042",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Autre complication systémique non représentée par les options listées.",
                   "en" : "Other systemic complication not represented by the listed options."
                 }
               } ]
@@ -2364,9 +2690,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Date de la complication",
               "en" : "Complication date"
             },
             "localizedDescriptions" : {
+              "fr" : "Date à laquelle la complication systémique est survenue ou a été identifiée.",
               "en" : "Date when the systemic complication occurred or was identified."
             },
             "annotations" : {
@@ -2385,9 +2713,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Description d’une autre complication systémique",
               "en" : "Other systemic complication description"
             },
             "localizedDescriptions" : {
+              "fr" : "Description en texte libre d’une complication systémique non représentée par les options codées.",
               "en" : "Free-text description of a systemic complication not represented by the coded options."
             },
             "annotations" : {
@@ -2408,9 +2738,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Complications locales",
           "en" : "Local complications"
         },
         "localizedDescriptions" : {
+          "fr" : "Complications locales survenues depuis la mise en place de cette prothèse.",
           "en" : "Local complications occurring since implantation of this prosthesis."
         },
         "annotations" : {
@@ -2426,9 +2758,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des complications locales",
             "en" : "Local complication status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si des complications locales sont enregistrées depuis la mise en place de la prothèse.",
             "en" : "Status indicating whether local complications are recorded since prosthesis implantation."
           },
           "annotations" : {
@@ -2442,27 +2776,33 @@
               "value" : "at0047",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune complication locale n’est enregistrée depuis la mise en place de la prothèse.",
                 "en" : "No local complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0048",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs complications locales sont enregistrées depuis la mise en place de la prothèse.",
                 "en" : "One or more local complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0049",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "Il est inconnu ou non évalué si des complications locales sont survenues.",
                 "en" : "It is unknown or was not assessed whether local complications occurred."
               }
             } ]
@@ -2476,9 +2816,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Complication locale",
             "en" : "Local complication"
           },
           "localizedDescriptions" : {
+            "fr" : "Complication locale unique enregistrée depuis la mise en place de cette prothèse.",
             "en" : "Single local complication recorded since implantation of this prosthesis."
           },
           "annotations" : {
@@ -2494,9 +2836,11 @@
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Type de complication locale",
               "en" : "Local complication type"
             },
             "localizedDescriptions" : {
+              "fr" : "Catégorie ou type spécifique de complication locale enregistrée depuis la mise en place de la prothèse.",
               "en" : "Category or specific type of local complication recorded since prosthesis implantation."
             },
             "annotations" : {
@@ -2510,81 +2854,99 @@
                 "value" : "at0052",
                 "label" : "Dislocation",
                 "localizedLabels" : {
+                  "fr" : "Luxation",
                   "en" : "Dislocation"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Luxation locale survenue depuis la mise en place de la prothèse.",
                   "en" : "Local dislocation occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0053",
                 "label" : "Haematoma / seroma",
                 "localizedLabels" : {
+                  "fr" : "Hématome / sérome",
                   "en" : "Haematoma / seroma"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Hématome ou sérome local survenu depuis la mise en place de la prothèse.",
                   "en" : "Local haematoma or seroma occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0054",
                 "label" : "Persistent drainage",
                 "localizedLabels" : {
+                  "fr" : "Drainage persistant",
                   "en" : "Persistent drainage"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Drainage persistant de la plaie survenu depuis la mise en place de la prothèse.",
                   "en" : "Persistent wound drainage occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0055",
                 "label" : "Dehiscence",
                 "localizedLabels" : {
+                  "fr" : "Déhiscence",
                   "en" : "Dehiscence"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Déhiscence de la plaie survenue depuis la mise en place de la prothèse.",
                   "en" : "Wound dehiscence occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0056",
                 "label" : "Neuropraxia",
                 "localizedLabels" : {
+                  "fr" : "Neurapraxie",
                   "en" : "Neuropraxia"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Neuro-praxie locale survenue depuis la mise en place de la prothèse.",
                   "en" : "Local neuropraxia occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0057",
                 "label" : "Loosening",
                 "localizedLabels" : {
+                  "fr" : "Descellement",
                   "en" : "Loosening"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Descellement de la prothèse survenu depuis sa mise en place.",
                   "en" : "Prosthesis loosening occurring since implantation."
                 }
               }, {
                 "value" : "at0058",
                 "label" : "Deep sepsis",
                 "localizedLabels" : {
+                  "fr" : "Sepsis profond",
                   "en" : "Deep sepsis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Sepsis profond ou infection profonde survenu depuis la mise en place de la prothèse.",
                   "en" : "Deep sepsis or deep infection occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0059",
                 "label" : "Superficial sepsis",
                 "localizedLabels" : {
+                  "fr" : "Sepsis superficiel",
                   "en" : "Superficial sepsis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Sepsis superficiel ou infection superficielle survenu depuis la mise en place de la prothèse.",
                   "en" : "Superficial sepsis or superficial infection occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0060",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Autre complication locale non représentée par les options listées.",
                   "en" : "Other local complication not represented by the listed options."
                 }
               } ]
@@ -2598,9 +2960,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Date de la complication",
               "en" : "Complication date"
             },
             "localizedDescriptions" : {
+              "fr" : "Date ou année à laquelle la complication locale est survenue ou a été identifiée.",
               "en" : "Date or year when the local complication occurred or was identified."
             },
             "annotations" : {
@@ -2619,9 +2983,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Description d’une autre complication locale",
               "en" : "Other local complication description"
             },
             "localizedDescriptions" : {
+              "fr" : "Description en texte libre d’une complication locale non représentée par les options codées.",
               "en" : "Free-text description of a local complication not represented by the coded options."
             },
             "annotations" : {
@@ -2642,9 +3008,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Autres pathologies orthopédiques associées",
           "en" : "Other associated orthopaedic conditions"
         },
         "localizedDescriptions" : {
+          "fr" : "Autres pathologies orthopédiques associées pertinentes pour ce suivi clinique.",
           "en" : "Other associated orthopaedic pathologies or conditions relevant to this clinical follow-up."
         },
         "annotations" : {
@@ -2660,9 +3028,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des autres pathologies orthopédiques associées",
             "en" : "Other associated orthopaedic condition status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si d’autres pathologies orthopédiques associées sont enregistrées lors de ce suivi.",
             "en" : "Status indicating whether other associated orthopaedic conditions are recorded at this follow-up."
           },
           "annotations" : {
@@ -2676,27 +3046,33 @@
               "value" : "at0064",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune autre pathologie orthopédique associée n’est enregistrée lors de ce suivi.",
                 "en" : "No other associated orthopaedic conditions are recorded at this follow-up."
               }
             }, {
               "value" : "at0065",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs autres pathologies orthopédiques associées sont enregistrées lors de ce suivi.",
                 "en" : "One or more other associated orthopaedic conditions are recorded at this follow-up."
               }
             }, {
               "value" : "at0066",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "La présence d’autres pathologies orthopédiques associées est inconnue ou n’a pas été évaluée.",
                 "en" : "It is unknown or was not assessed whether other associated orthopaedic conditions are present."
               }
             } ]
@@ -2710,9 +3086,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Autre pathologie orthopédique associée",
             "en" : "Other associated orthopaedic condition"
           },
           "localizedDescriptions" : {
+            "fr" : "Autre pathologie orthopédique associée unique enregistrée lors de ce suivi.",
             "en" : "Single other associated orthopaedic condition recorded at this follow-up."
           },
           "annotations" : {
@@ -2728,9 +3106,11 @@
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Type d’autre pathologie orthopédique associée",
               "en" : "Other associated orthopaedic condition type"
             },
             "localizedDescriptions" : {
+              "fr" : "Catégorie ou type spécifique d’autre pathologie orthopédique associée enregistrée lors du suivi clinique.",
               "en" : "Category or specific type of other associated orthopaedic condition recorded at clinical follow-up."
             },
             "annotations" : {
@@ -2744,81 +3124,99 @@
                 "value" : "at0070",
                 "label" : "Contralateral knee",
                 "localizedLabels" : {
+                  "fr" : "Genou controlatéral",
                   "en" : "Contralateral knee"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant le genou controlatéral.",
                   "en" : "Associated condition affecting the contralateral knee."
                 }
               }, {
                 "value" : "at0071",
                 "label" : "Ankle / foot",
                 "localizedLabels" : {
+                  "fr" : "Cheville / pied",
                   "en" : "Ankle / foot"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant la cheville ou le pied.",
                   "en" : "Associated condition affecting the ankle or foot."
                 }
               }, {
                 "value" : "at0072",
                 "label" : "Wrist / hand",
                 "localizedLabels" : {
+                  "fr" : "Poignet / main",
                   "en" : "Wrist / hand"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant le poignet ou la main.",
                   "en" : "Associated condition affecting the wrist or hand."
                 }
               }, {
                 "value" : "at0073",
                 "label" : "Opposite hip",
                 "localizedLabels" : {
+                  "fr" : "Hanche opposée",
                   "en" : "Opposite hip"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant la hanche opposée.",
                   "en" : "Associated condition affecting the opposite hip."
                 }
               }, {
                 "value" : "at0074",
                 "label" : "Shoulder",
                 "localizedLabels" : {
+                  "fr" : "Épaule",
                   "en" : "Shoulder"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant l’épaule.",
                   "en" : "Associated condition affecting the shoulder."
                 }
               }, {
                 "value" : "at0075",
                 "label" : "Trauma",
                 "localizedLabels" : {
+                  "fr" : "Trauma",
                   "en" : "Trauma"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie orthopédique associée liée à un traumatisme.",
                   "en" : "Associated orthopaedic condition related to trauma."
                 }
               }, {
                 "value" : "at0076",
                 "label" : "Spine",
                 "localizedLabels" : {
+                  "fr" : "Colonne vertébrale",
                   "en" : "Spine"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant la colonne vertébrale.",
                   "en" : "Associated condition affecting the spine."
                 }
               }, {
                 "value" : "at0077",
                 "label" : "Elbow",
                 "localizedLabels" : {
+                  "fr" : "Coude",
                   "en" : "Elbow"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant le coude.",
                   "en" : "Associated condition affecting the elbow."
                 }
               }, {
                 "value" : "at0078",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Autre pathologie orthopédique associée non représentée par les options listées.",
                   "en" : "Other associated orthopaedic condition not represented by the listed options."
                 }
               } ]
@@ -2832,9 +3230,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Date de la pathologie",
               "en" : "Condition date"
             },
             "localizedDescriptions" : {
+              "fr" : "Date ou année à laquelle la pathologie orthopédique associée est survenue ou a été identifiée.",
               "en" : "Date or year when the associated orthopaedic condition occurred or was identified."
             },
             "annotations" : {
@@ -2853,9 +3253,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Latéralité de la pathologie",
               "en" : "Condition laterality"
             },
             "localizedDescriptions" : {
+              "fr" : "Latéralité de la pathologie orthopédique associée, le cas échéant.",
               "en" : "Laterality of the associated orthopaedic condition, where applicable."
             },
             "annotations" : {
@@ -2869,36 +3271,44 @@
                 "value" : "at0081",
                 "label" : "Left",
                 "localizedLabels" : {
+                  "fr" : "Gauche",
                   "en" : "Left"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Côté gauche.",
                   "en" : "Left side."
                 }
               }, {
                 "value" : "at0082",
                 "label" : "Right",
                 "localizedLabels" : {
+                  "fr" : "Droit",
                   "en" : "Right"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Côté droit.",
                   "en" : "Right side."
                 }
               }, {
                 "value" : "at0084",
                 "label" : "Bilateral",
                 "localizedLabels" : {
+                  "fr" : "Bilatérale",
                   "en" : "Bilateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Côtés gauche et droit.",
                   "en" : "Both left and right sides."
                 }
               }, {
                 "value" : "at0086",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnue",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La latéralité est inconnue.",
                   "en" : "Laterality is unknown."
                 }
               } ]
@@ -2912,9 +3322,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Description d’une autre pathologie orthopédique associée",
               "en" : "Other associated orthopaedic condition description"
             },
             "localizedDescriptions" : {
+              "fr" : "Description en texte libre de la pathologie orthopédique associée.",
               "en" : "Free-text description of the associated orthopaedic condition."
             },
             "annotations" : {
@@ -2935,9 +3347,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Commentaire",
           "en" : "Comment"
         },
         "localizedDescriptions" : {
+          "fr" : "Commentaire complémentaire en texte libre concernant le suivi clinique orthopédique.",
           "en" : "Additional free-text comment about the orthopaedic clinical follow-up."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0011]/value",
@@ -2991,9 +3405,11 @@
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
+        "fr" : "Suivi radiographique de prothèse de hanche",
         "en" : "Hip prosthesis X-ray follow-up"
       },
       "localizedDescriptions" : {
+        "fr" : "Constatations radiographiques structurées de suivi d’une prothèse de hanche, incluant le cotyle, la tige, les lignes radiotransparentes, l’ossification et les mesures angulaires.",
         "en" : "Structured radiographic follow-up findings for a hip prosthesis, including cup, stem, radiolucency, ossification and angular measurements."
       },
       "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]",
@@ -3006,9 +3422,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Site de la prothèse",
           "en" : "Prosthesis site"
         },
         "localizedDescriptions" : {
+          "fr" : "Site anatomique et côté auxquels s’appliquent les constatations du suivi radiographique de la prothèse de hanche.",
           "en" : "Anatomical site and side to which the hip prosthesis X-ray follow-up findings apply."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]",
@@ -3021,9 +3439,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Site anatomique",
             "en" : "Body site"
           },
           "localizedDescriptions" : {
+            "fr" : "Région de la hanche ou articulation de la hanche à laquelle s’appliquent les constatations de suivi de la prothèse.",
             "en" : "Hip region or hip joint to which the prosthesis follow-up findings apply."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/items[at0006]/value",
@@ -3034,9 +3454,11 @@
               "value" : "at0007",
               "label" : "Hip",
               "localizedLabels" : {
+                "fr" : "Hanche",
                 "en" : "Hip"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ],
@@ -3051,9 +3473,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Latéralité",
             "en" : "Laterality"
           },
           "localizedDescriptions" : {
+            "fr" : "Côté de la prothèse de hanche auquel s’appliquent les constatations du suivi radiographique.",
             "en" : "Side of the hip prosthesis to which the X-ray follow-up findings apply."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/items[at0008]/value",
@@ -3064,18 +3488,22 @@
               "value" : "at0009",
               "label" : "Left",
               "localizedLabels" : {
+                "fr" : "Gauche",
                 "en" : "Left"
               },
               "localizedDescriptions" : {
+                "fr" : "Côté gauche.",
                 "en" : "Left side."
               }
             }, {
               "value" : "at0010",
               "label" : "Right",
               "localizedLabels" : {
+                "fr" : "Droit",
                 "en" : "Right"
               },
               "localizedDescriptions" : {
+                "fr" : "Côté droit.",
                 "en" : "Right side."
               }
             } ]
@@ -3090,9 +3518,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Constatations du suivi radiographique de la prothèse de hanche",
           "en" : "Hip prosthesis X-ray follow-up findings"
         },
         "localizedDescriptions" : {
+          "fr" : "Constatations radiographiques structurées issues du suivi radiographique d’une prothèse de hanche.",
           "en" : "Structured radiographic findings from hip prosthesis X-ray follow-up."
         },
         "annotations" : {
@@ -3108,9 +3538,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Date de mesure",
             "en" : "X-ray examination date"
           },
           "localizedDescriptions" : {
+            "fr" : "Date à laquelle l’examen radiographique a été réalisé.",
             "en" : "Date on which the X-ray examination was performed."
           },
           "annotations" : {
@@ -3129,9 +3561,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Marque de la cupule",
             "en" : "Cup brand name"
           },
           "localizedDescriptions" : {
+            "fr" : "Nom commercial de la cupule acétabulaire, s’il est documenté.",
             "en" : "Brand name of the acetabular cup component, if recorded."
           },
           "annotations" : {
@@ -3150,9 +3584,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Migration du cotyle",
             "en" : "Cup migration"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique de la migration du cotyle.",
             "en" : "Radiographic assessment of acetabular cup migration."
           },
           "annotations" : {
@@ -3168,9 +3604,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut de la migration du cotyle",
               "en" : "Cup migration status"
             },
             "localizedDescriptions" : {
+              "fr" : "Statut indiquant si une migration du cotyle est présente.",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0018]/items[at0027]/value",
@@ -3181,27 +3619,33 @@
                 "value" : "at0028",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0029",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0030",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -3215,9 +3659,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Migration de plus de 3 mm",
               "en" : "Migration distance more than 3 mm"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0018]/items[at0031]/value",
@@ -3228,27 +3674,33 @@
                 "value" : "at0032",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0033",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0034",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -3262,9 +3714,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Migration angulaire de plus de 3°",
               "en" : "Migration angle more than 3 degrees"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0018]/items[at0035]/value",
@@ -3275,27 +3729,33 @@
                 "value" : "at0036",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Le critère n’est pas rempli.",
                   "en" : "Criterion is not met."
                 }
               }, {
                 "value" : "at0037",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Le critère est rempli.",
                   "en" : "Criterion is met."
                 }
               }, {
                 "value" : "at0038",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si le critère est rempli.",
                   "en" : "It is unknown or was not assessed whether the criterion is met."
                 }
               } ]
@@ -3310,9 +3770,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Position asymétrique de la tête",
             "en" : "Asymmetric head position"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique de la position asymétrique de la tête fémorale dans la cupule acétabulaire.",
             "en" : "Radiographic assessment of asymmetric femoral head position within the acetabular cup."
           },
           "annotations" : {
@@ -3328,9 +3790,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut de la position asymétrique de la tête",
               "en" : "Asymmetric head position status"
             },
             "localizedDescriptions" : {
+              "fr" : "Évaluation radiographique de la position asymétrique de la tête fémorale dans la cupule acétabulaire.",
               "en" : "Radiographic assessment of asymmetric femoral head position within the acetabular cup."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0019]/items[at0039]/value",
@@ -3341,27 +3805,33 @@
                 "value" : "at0040",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0041",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0042",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -3375,9 +3845,11 @@
             "min" : 0,
             "max" : -1,
             "localizedNames" : {
+              "fr" : "Zone du cotyle",
               "en" : "Cup zone"
             },
             "localizedDescriptions" : {
+              "fr" : "Zone acétabulaire de DeLee-Charnley concernée par la position asymétrique de la tête.",
               "en" : "DeLee-Charnley acetabular zone affected by asymmetric head position."
             },
             "annotations" : {
@@ -3391,27 +3863,33 @@
                 "value" : "at0044",
                 "label" : "DeLee-Charnley zone 1",
                 "localizedLabels" : {
+                  "fr" : "Zone DeLee-Charnley 1",
                   "en" : "DeLee-Charnley zone 1"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0045",
                 "label" : "DeLee-Charnley zone 2",
                 "localizedLabels" : {
+                  "fr" : "Zone DeLee-Charnley 2",
                   "en" : "DeLee-Charnley zone 2"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0046",
                 "label" : "DeLee-Charnley zone 3",
                 "localizedLabels" : {
+                  "fr" : "Zone DeLee-Charnley 3",
                   "en" : "DeLee-Charnley zone 3"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -3426,9 +3904,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Lignes radiotransparentes",
             "en" : "Radiolucent lines"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique des lignes radiotransparentes autour de la cupule acétabulaire ou de la tige fémorale.",
             "en" : "Radiographic assessment of radiolucent lines around the acetabular cup or femoral stem."
           },
           "annotations" : {
@@ -3444,9 +3924,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut des lignes radiotransparentes",
               "en" : "Radiolucent line status"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0020]/items[at0047]/value",
@@ -3457,27 +3939,33 @@
                 "value" : "at0048",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0049",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0050",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -3491,9 +3979,11 @@
             "min" : 0,
             "max" : -1,
             "localizedNames" : {
+              "fr" : "Zone radiotransparente du cotyle",
               "en" : "Cup radiolucent zone"
             },
             "localizedDescriptions" : {
+              "fr" : "Zone acétabulaire de DeLee-Charnley présentant des lignes radiotransparentes.",
               "en" : "DeLee-Charnley acetabular zone with radiolucent lines."
             },
             "annotations" : {
@@ -3507,27 +3997,33 @@
                 "value" : "at0052",
                 "label" : "DeLee-Charnley zone 1",
                 "localizedLabels" : {
+                  "fr" : "Zone DeLee-Charnley 1",
                   "en" : "DeLee-Charnley zone 1"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0053",
                 "label" : "DeLee-Charnley zone 2",
                 "localizedLabels" : {
+                  "fr" : "Zone DeLee-Charnley 2",
                   "en" : "DeLee-Charnley zone 2"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0054",
                 "label" : "DeLee-Charnley zone 3",
                 "localizedLabels" : {
+                  "fr" : "Zone DeLee-Charnley 3",
                   "en" : "DeLee-Charnley zone 3"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -3541,10 +4037,12 @@
             "min" : 0,
             "max" : -1,
             "localizedNames" : {
+              "fr" : "Zone radiotransparente de la tige",
               "en" : "Stem radiolucent zone"
             },
             "localizedDescriptions" : {
-              "en" : "Gruen femoral stem zone affected by cortical hypertrophy."
+              "fr" : "Zone de Gruen de la tige fémorale présentant des lignes radiotransparentes.",
+              "en" : "Gruen femoral stem zone with radiolucent lines."
             },
             "annotations" : {
               "comment" : "Repeatable element for multiselect use. Record each selected Gruen zone as a separate instance."
@@ -3557,63 +4055,77 @@
                 "value" : "at0056",
                 "label" : "Gruen zone 1",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 1",
                   "en" : "Gruen zone 1"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0057",
                 "label" : "Gruen zone 2",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 2",
                   "en" : "Gruen zone 2"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0058",
                 "label" : "Gruen zone 3",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 3",
                   "en" : "Gruen zone 3"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0059",
                 "label" : "Gruen zone 4",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 4",
                   "en" : "Gruen zone 4"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0060",
                 "label" : "Gruen zone 5",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 5",
                   "en" : "Gruen zone 5"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0061",
                 "label" : "Gruen zone 6",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 6",
                   "en" : "Gruen zone 6"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0062",
                 "label" : "Gruen zone 7",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 7",
                   "en" : "Gruen zone 7"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -3628,9 +4140,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Enfoncement de la tige",
             "en" : "Stem subsidence"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique de l’enfoncement de la tige fémorale après implantation.",
             "en" : "Radiographic assessment of femoral stem subsidence after implantation."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0021]",
@@ -3643,9 +4157,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut de l’enfoncement de la tige",
               "en" : "Stem subsidence status"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0021]/items[at0063]/value",
@@ -3656,27 +4172,33 @@
                 "value" : "at0064",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0065",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0066",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -3690,9 +4212,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Enfoncement postopératoire de plus de 3 mm",
               "en" : "Subsidence more than 3 mm postoperatively"
             },
             "localizedDescriptions" : {
+              "fr" : "Évaluation radiographique de l’enfoncement de la tige fémorale après implantation.",
               "en" : "Radiographic assessment of femoral stem subsidence after implantation."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0021]/items[at0067]/value",
@@ -3703,27 +4227,33 @@
                 "value" : "at0068",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0069",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0070",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -3738,9 +4268,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Résorption du calcar",
             "en" : "Calcar resorption"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique de la résorption du calcar.",
             "en" : "Radiographic assessment of calcar resorption."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0022]",
@@ -3753,9 +4285,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut de la résorption du calcar",
               "en" : "Calcar resorption status"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0022]/items[at0071]/value",
@@ -3766,27 +4300,33 @@
                 "value" : "at0072",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0073",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0074",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -3801,9 +4341,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Hypertrophie corticale",
             "en" : "Cortical hypertrophy"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique de l’hypertrophie corticale autour de la tige fémorale.",
             "en" : "Radiographic assessment of cortical hypertrophy around the femoral stem."
           },
           "annotations" : {
@@ -3819,9 +4361,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut de l’hypertrophie corticale",
               "en" : "Cortical hypertrophy status"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0023]/items[at0075]/value",
@@ -3832,27 +4376,33 @@
                 "value" : "at0076",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0077",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0078",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -3866,9 +4416,11 @@
             "min" : 0,
             "max" : -1,
             "localizedNames" : {
+              "fr" : "Zone de Gruen",
               "en" : "Gruen zone"
             },
             "localizedDescriptions" : {
+              "fr" : "Zone de Gruen de la tige fémorale concernée par l’hypertrophie corticale.",
               "en" : "Gruen femoral stem zone affected by cortical hypertrophy."
             },
             "annotations" : {
@@ -3882,63 +4434,77 @@
                 "value" : "at0080",
                 "label" : "Gruen zone 1",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 1",
                   "en" : "Gruen zone 1"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0081",
                 "label" : "Gruen zone 2",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 2",
                   "en" : "Gruen zone 2"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0082",
                 "label" : "Gruen zone 3",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 3",
                   "en" : "Gruen zone 3"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0083",
                 "label" : "Gruen zone 4",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 4",
                   "en" : "Gruen zone 4"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0084",
                 "label" : "Gruen zone 5",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 5",
                   "en" : "Gruen zone 5"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0085",
                 "label" : "Gruen zone 6",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 6",
                   "en" : "Gruen zone 6"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0086",
                 "label" : "Gruen zone 7",
                 "localizedLabels" : {
+                  "fr" : "Zone de Gruen 7",
                   "en" : "Gruen zone 7"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -3953,9 +4519,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Ossification hétérotopique",
             "en" : "Heterotopic ossification"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation radiographique de l’ossification hétérotopique autour de la hanche.",
             "en" : "Radiographic assessment of heterotopic ossification around the hip."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0024]",
@@ -3968,9 +4536,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Statut de l’ossification hétérotopique",
               "en" : "Heterotopic ossification status"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0024]/items[at0087]/value",
@@ -3981,27 +4551,33 @@
                 "value" : "at0088",
                 "label" : "No",
                 "localizedLabels" : {
+                  "fr" : "Non",
                   "en" : "No"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation n’est pas présente.",
                   "en" : "Finding is not present."
                 }
               }, {
                 "value" : "at0089",
                 "label" : "Yes",
                 "localizedLabels" : {
+                  "fr" : "Oui",
                   "en" : "Yes"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La constatation est présente.",
                   "en" : "Finding is present."
                 }
               }, {
                 "value" : "at0090",
                 "label" : "Unknown or not assessed",
                 "localizedLabels" : {
+                  "fr" : "Inconnu ou non évalué",
                   "en" : "Unknown or not assessed"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Il est inconnu ou non évalué si la constatation est présente.",
                   "en" : "It is unknown or was not assessed whether the finding is present."
                 }
               } ]
@@ -4015,9 +4591,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Grade de Brooker",
               "en" : "Brooker grade"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0024]/items[at0096]/value",
@@ -4027,9 +4605,11 @@
                 "value" : "at0097",
                 "label" : "Islands",
                 "localizedLabels" : {
+                  "fr" : "Îlots osseux",
                   "en" : "Islands"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 },
                 "ordinal" : 1
@@ -4037,9 +4617,11 @@
                 "value" : "at0098",
                 "label" : "> 1 cm between",
                 "localizedLabels" : {
+                  "fr" : "> 1 cm entre les îlots osseux",
                   "en" : "> 1 cm between"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 },
                 "ordinal" : 2
@@ -4047,9 +4629,11 @@
                 "value" : "at0099",
                 "label" : "< 1 cm between",
                 "localizedLabels" : {
+                  "fr" : "< 1 cm entre les îlots osseux",
                   "en" : "< 1 cm between"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 },
                 "ordinal" : 3
@@ -4057,9 +4641,11 @@
                 "value" : "at0100",
                 "label" : "Apparent bone ankylosis",
                 "localizedLabels" : {
+                  "fr" : "Ankylose osseuse apparente",
                   "en" : "Apparent bone ankylosis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 },
                 "ordinal" : 4
@@ -4075,9 +4661,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Mesures du cotyle",
             "en" : "Cotyle measurements"
           },
           "localizedDescriptions" : {
+            "fr" : "Mesures angulaires de la cupule acétabulaire.",
             "en" : "Angular measurements of the acetabular cup component."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0025]",
@@ -4090,9 +4678,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Inclinaison du cotyle",
               "en" : "Cotyle inclination"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle d’inclinaison de la cupule acétabulaire.",
               "en" : "Inclination angle of the acetabular cup component."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0025]/items[at0101]/value",
@@ -4106,6 +4696,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "Degré",
                   "en" : "Degree"
                 }
               } ]
@@ -4119,9 +4710,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Antéversion du cotyle",
               "en" : "Cotyle anteversion"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle d’antéversion de la cupule acétabulaire.",
               "en" : "Anteversion angle of the acetabular cup component."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0025]/items[at0102]/value",
@@ -4135,6 +4728,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "Degré",
                   "en" : "Degree"
                 }
               } ]
@@ -4149,9 +4743,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Mesures du col fémoral",
             "en" : "Femoral neck measurements"
           },
           "localizedDescriptions" : {
+            "fr" : "Mesures angulaires relatives au col fémoral ou au composant fémoral.",
             "en" : "Angular measurements related to the femoral neck or femoral component."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0026]",
@@ -4164,9 +4760,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle CCD",
               "en" : "CCD angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle caput-collum-diaphysaire.",
               "en" : "Caput-collum-diaphyseal angle."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0026]/items[at0103]/value",
@@ -4180,6 +4778,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "Degré",
                   "en" : "Degree"
                 }
               } ]
@@ -4193,9 +4792,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Antéversion fémorale",
               "en" : "Femoral anteversion"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle d’antéversion fémorale.",
               "en" : "Femoral anteversion angle."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0013]/items[at0026]/items[at0104]/value",
@@ -4209,6 +4810,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "Degré",
                   "en" : "Degree"
                 }
               } ]
@@ -4224,9 +4826,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Commentaire",
           "en" : "Comment"
         },
         "localizedDescriptions" : {
+          "fr" : "Commentaire complémentaire en texte libre concernant les constatations du suivi radiographique de la prothèse de hanche.",
           "en" : "Additional free-text comment about the hip prosthesis X-ray follow-up findings."
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hip_prosthesis_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0105]/value",
@@ -4296,6 +4900,7 @@
           "value" : "433",
           "label" : "event",
           "localizedLabels" : {
+            "fr" : "",
             "en" : "event"
           }
         } ],

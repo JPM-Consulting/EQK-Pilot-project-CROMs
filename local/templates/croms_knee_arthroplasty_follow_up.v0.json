@@ -1,9 +1,9 @@
 {
   "templateId" : "croms_knee_arthroplasty_follow_up.v0",
-  "semVer" : "0.8.0",
+  "semVer" : "0.9.3",
   "version" : "2.3",
   "defaultLanguage" : "en",
-  "languages" : [ "en" ],
+  "languages" : [ "fr", "en" ],
   "tree" : {
     "id" : "croms_knee_arthroplasty_follow_up",
     "name" : "CROMS knee arthroplasty follow up",
@@ -13,9 +13,11 @@
     "min" : 1,
     "max" : 1,
     "localizedNames" : {
+      "fr" : "CROMS suivi genou prothétique",
       "en" : "CROMS knee arthroplasty follow up"
     },
     "localizedDescriptions" : {
+      "fr" : "Document destiné à communiquer des informations à des tiers, généralement en réponse à une demande d’une autre partie.",
       "en" : "Document to communicate information to others, commonly in response to a request from another party."
     },
     "aqlPath" : "",
@@ -35,9 +37,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Identifiant du rapport",
           "en" : "Report ID"
         },
         "localizedDescriptions" : {
+          "fr" : "Informations d’identification du rapport.",
           "en" : "Identification information about the report."
         },
         "aqlPath" : "/context/other_context[at0001]/items[at0002]/value",
@@ -53,9 +57,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Statut",
           "en" : "Status"
         },
         "localizedDescriptions" : {
+          "fr" : "Statut du rapport dans son ensemble. Remarque : il ne s’agit pas du statut des différents composants du rapport.",
           "en" : "The status of the entire report. Note: This is not the status of any of the report components."
         },
         "aqlPath" : "/context/other_context[at0001]/items[at0005]/value",
@@ -98,9 +104,11 @@
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
+        "fr" : "Suivi clinique orthopédique du genou",
         "en" : "Knee clinical follow-up"
       },
       "localizedDescriptions" : {
+        "fr" : "Évaluation structurée, rapportée par un clinicien, pour le suivi orthopédique du genou, incluant le contexte de l’arthroplastie du genou, la douleur, l’amplitude de mouvement, la stabilité, le flexum passif, le déficit d’extension active, l’alignement clinique, la capacité fonctionnelle et la condition physique du patient en fonction de l’âge.",
         "en" : "A structured clinician-reported assessment for orthopaedic knee follow-up, including knee arthroplasty context, pain, range of motion, stability, flexion contracture, extension lag, clinical alignment, functional ability and the patient's physical condition in relation to age."
       },
       "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']",
@@ -113,9 +121,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Contexte de l’arthroplastie du genou",
           "en" : "Knee arthroplasty context"
         },
         "localizedDescriptions" : {
+          "fr" : "Informations contextuelles relatives à l’arthroplastie du genou ou à la prothèse du genou, pertinentes pour cette évaluation clinique de suivi.",
           "en" : "Contextual information about the knee arthroplasty or knee prosthesis relevant to this clinical follow-up assessment."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]",
@@ -128,9 +138,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Type de prothèse",
             "en" : "Type of prosthesis"
           },
           "localizedDescriptions" : {
+            "fr" : "Type ou famille de produit de la prothèse du genou pertinente pour cette évaluation de suivi.",
             "en" : "Type or product family of the knee prosthesis relevant to this follow-up assessment."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]/items[at0018]/value",
@@ -141,90 +153,110 @@
               "value" : "at0019",
               "label" : "First",
               "localizedLabels" : {
+                "fr" : "First",
                 "en" : "First"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0020",
               "label" : "First Evolution",
               "localizedLabels" : {
+                "fr" : "First Evolution",
                 "en" : "First Evolution"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0021",
               "label" : "First Sensitive",
               "localizedLabels" : {
+                "fr" : "First Sensitive",
                 "en" : "First Sensitive"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0022",
               "label" : "Origin",
               "localizedLabels" : {
+                "fr" : "Origin",
                 "en" : "Origin"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0023",
               "label" : "NexGen LCCK",
               "localizedLabels" : {
+                "fr" : "NexGen LCCK",
                 "en" : "NexGen LCCK"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0024",
               "label" : "NexGen standard",
               "localizedLabels" : {
+                "fr" : "NexGen standard",
                 "en" : "NexGen standard"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0025",
               "label" : "Triathlon",
               "localizedLabels" : {
+                "fr" : "Triathlon",
                 "en" : "Triathlon"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0026",
               "label" : "PUC",
               "localizedLabels" : {
+                "fr" : "PUC",
                 "en" : "PUC"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0027",
               "label" : "PFJ",
               "localizedLabels" : {
+                "fr" : "PFJ",
                 "en" : "PFJ"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0028",
               "label" : "Other",
               "localizedLabels" : {
+                "fr" : "Autre",
                 "en" : "Other"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -238,9 +270,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Autre type de prothèse",
             "en" : "Other prosthesis type"
           },
           "localizedDescriptions" : {
+            "fr" : "Description en texte libre du type de prothèse lorsque la valeur codée « Autre » est sélectionnée.",
             "en" : "Free-text description of the prosthesis type when the coded value \"Other\" is selected."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]/items[at0029]/value",
@@ -256,9 +290,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Côté opéré ou à opérer",
             "en" : "Side operated or to be operated"
           },
           "localizedDescriptions" : {
+            "fr" : "Latéralité du genou qui a été opéré ou pour lequel une intervention est prévue.",
             "en" : "Laterality of the knee that has been operated on or is planned for operation."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0005]/items[at0030]/value",
@@ -269,18 +305,22 @@
               "value" : "at0031",
               "label" : "Right",
               "localizedLabels" : {
+                "fr" : "Droit",
                 "en" : "Right"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0032",
               "label" : "Left",
               "localizedLabels" : {
+                "fr" : "Gauche",
                 "en" : "Left"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -295,9 +335,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Score genou",
           "en" : "Knee score"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation rapportée par un clinicien de la douleur, de la mobilité, de la stabilité, du flexum passif, du déficit d’extension active et de l’alignement clinique du genou opéré ou évalué.",
           "en" : "Clinician-reported assessment of pain, mobility, stability, flexion contracture, extension lag and clinical alignment of the operated or assessed knee."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]",
@@ -310,9 +352,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Douleur à la marche",
             "en" : "Pain while walking"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation rapportée par un clinicien de la douleur du genou ressentie à la marche.",
             "en" : "Clinician-reported assessment of knee pain experienced while walking."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0033]/value",
@@ -323,36 +367,44 @@
               "value" : "at0034",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0035",
               "label" : "Mild or occasional",
               "localizedLabels" : {
+                "fr" : "Légère ou occasionnelle",
                 "en" : "Mild or occasional"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0036",
               "label" : "Moderate",
               "localizedLabels" : {
+                "fr" : "Modérée",
                 "en" : "Moderate"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0037",
               "label" : "Severe",
               "localizedLabels" : {
+                "fr" : "Sévère",
                 "en" : "Severe"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -366,9 +418,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Douleur dans les escaliers",
             "en" : "Pain on stairs"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation rapportée par un clinicien de la douleur du genou ressentie lors de l’utilisation des escaliers.",
             "en" : "Clinician-reported assessment of knee pain experienced when using stairs."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0038]/value",
@@ -379,36 +433,44 @@
               "value" : "at0039",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0040",
               "label" : "Mild or occasional",
               "localizedLabels" : {
+                "fr" : "Légère ou occasionnelle",
                 "en" : "Mild or occasional"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0041",
               "label" : "Moderate",
               "localizedLabels" : {
+                "fr" : "Modérée",
                 "en" : "Moderate"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0042",
               "label" : "Severe",
               "localizedLabels" : {
+                "fr" : "Sévère",
                 "en" : "Severe"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -422,9 +484,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Douleur au repos",
             "en" : "Pain at rest"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation rapportée par un clinicien de la douleur du genou ressentie au repos.",
             "en" : "Clinician-reported assessment of knee pain experienced at rest."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0043]/value",
@@ -435,36 +499,44 @@
               "value" : "at0044",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0045",
               "label" : "Mild",
               "localizedLabels" : {
+                "fr" : "Légère",
                 "en" : "Mild"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0046",
               "label" : "Moderate",
               "localizedLabels" : {
+                "fr" : "Modérée",
                 "en" : "Moderate"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0047",
               "label" : "Severe",
               "localizedLabels" : {
+                "fr" : "Sévère",
                 "en" : "Severe"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -478,9 +550,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Mobilité",
             "en" : "Flexion-neutral-extension range of motion"
           },
           "localizedDescriptions" : {
+            "fr" : "Amplitude de mouvement du genou documentée selon la méthode neutre-zéro.",
             "en" : "Range of motion of the knee documented using the neutral-zero method."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]",
@@ -493,9 +567,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle maximal de flexion",
               "en" : "Maximum flexion angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle maximal de flexion du genou évalué, exprimé en degrés.",
               "en" : "Maximum flexion angle of the assessed knee, expressed in degrees."
             },
             "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]/items[at0049]/value",
@@ -509,6 +585,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -522,9 +599,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle en position neutre",
               "en" : "Neutral position angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Position de référence neutre-zéro du genou évalué, généralement documentée comme 0 degré.",
               "en" : "Neutral-zero reference position of the assessed knee, usually documented as 0 degrees."
             },
             "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]/items[at0050]/value",
@@ -538,6 +617,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -551,9 +631,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle maximal d’extension",
               "en" : "Maximum extension angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle maximal d’extension ou déficit d’extension du genou évalué, exprimé en degrés.",
               "en" : "Maximum extension angle or extension deficit of the assessed knee, expressed in degrees."
             },
             "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0048]/items[at0051]/value",
@@ -567,6 +649,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -581,9 +664,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Stabilité en valgus/varus",
             "en" : "Medial-lateral stability in valgus/varus"
           },
           "localizedDescriptions" : {
+            "fr" : "Stabilité médio-latérale du genou évaluée par le clinicien lors des tests de stress en valgus et en varus.",
             "en" : "Clinician-assessed medial-lateral stability of the knee during valgus and varus stress testing."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0052]/value",
@@ -594,27 +679,33 @@
               "value" : "at0053",
               "label" : "5 degrees or less",
               "localizedLabels" : {
+                "fr" : "5 degrés ou moins",
                 "en" : "5 degrees or less"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0054",
               "label" : "6 to 10 degrees",
               "localizedLabels" : {
+                "fr" : "6 à 10 degrés",
                 "en" : "6 to 10 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0055",
               "label" : "More than 10 degrees",
               "localizedLabels" : {
+                "fr" : "Plus de 10 degrés",
                 "en" : "More than 10 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -628,9 +719,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Stabilité A/P",
             "en" : "Anterior-posterior stability"
           },
           "localizedDescriptions" : {
+            "fr" : "Stabilité antéro-postérieure du genou évaluée par le clinicien, exprimée sous forme de catégorie en millimètres.",
             "en" : "Clinician-assessed anterior-posterior stability of the knee, expressed as a categorical range in millimetres."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0056]/value",
@@ -641,27 +734,33 @@
               "value" : "at0057",
               "label" : "0 to 5 mm",
               "localizedLabels" : {
+                "fr" : "0 à 5 mm",
                 "en" : "0 to 5 mm"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0058",
               "label" : "6 to 10 mm",
               "localizedLabels" : {
+                "fr" : "6 à 10 mm",
                 "en" : "6 to 10 mm"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0059",
               "label" : "More than 10 mm",
               "localizedLabels" : {
+                "fr" : "Plus de 10 mm",
                 "en" : "More than 10 mm"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -675,9 +774,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Flexum passif",
             "en" : "Passive flexion contracture"
           },
           "localizedDescriptions" : {
+            "fr" : "Flexum passif du genou évalué par le clinicien, exprimé sous forme de catégorie angulaire.",
             "en" : "Clinician-assessed passive flexion contracture of the knee, expressed as a categorical angular range."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0060]/value",
@@ -688,36 +789,44 @@
               "value" : "at0061",
               "label" : "5 degrees or less",
               "localizedLabels" : {
+                "fr" : "5 degrés ou moins",
                 "en" : "5 degrees or less"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0062",
               "label" : "6 to 10 degrees",
               "localizedLabels" : {
+                "fr" : "6 à 10 degrés",
                 "en" : "6 to 10 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0063",
               "label" : "11 to 20 degrees",
               "localizedLabels" : {
+                "fr" : "11 à 20 degrés",
                 "en" : "11 to 20 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0064",
               "label" : "More than 20 degrees",
               "localizedLabels" : {
+                "fr" : "Plus de 20 degrés",
                 "en" : "More than 20 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -731,9 +840,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Flexum actif",
             "en" : "Active extension lag"
           },
           "localizedDescriptions" : {
+            "fr" : "Différence entre l’extension passive et l’extension active du genou, évaluée par le clinicien et exprimée sous forme de catégorie angulaire.",
             "en" : "Clinician-assessed difference between passive and active knee extension, expressed as a categorical angular range."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0065]/value",
@@ -744,36 +855,44 @@
               "value" : "at0066",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucun",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0067",
               "label" : "Less than 4 degrees",
               "localizedLabels" : {
+                "fr" : "Moins de 4 degrés",
                 "en" : "Less than 4 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0068",
               "label" : "5 to 10 degrees",
               "localizedLabels" : {
+                "fr" : "5 à 10 degrés",
                 "en" : "5 to 10 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0069",
               "label" : "More than 11 degrees",
               "localizedLabels" : {
+                "fr" : "Plus de 11 degrés",
                 "en" : "More than 11 degrees"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -787,9 +906,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Alignement clinique",
             "en" : "Clinical alignment"
           },
           "localizedDescriptions" : {
+            "fr" : "Alignement clinique dans le plan coronal du genou évalué, documenté comme angle en valgus ou en varus.",
             "en" : "Clinician-reported coronal plane alignment of the assessed knee, documented as valgus or varus angle."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0070]",
@@ -802,9 +923,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle de valgus",
               "en" : "Valgus angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle d’alignement clinique en valgus du genou évalué, exprimé en degrés.",
               "en" : "Clinical valgus alignment angle of the assessed knee, expressed in degrees."
             },
             "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0070]/items[at0071]/value",
@@ -818,6 +941,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -831,9 +955,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle de varus",
               "en" : "Varus angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle d’alignement clinique en varus du genou évalué, exprimé en degrés.",
               "en" : "Clinical varus alignment angle of the assessed knee, expressed in degrees."
             },
             "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0006]/items[at0070]/items[at0072]/value",
@@ -847,6 +973,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -861,9 +988,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Score genou total",
             "en" : "Knee score total"
           },
           "localizedDescriptions" : {
+            "fr" : "Score genou total calculé à partir des items du score genou selon l’algorithme de cotation configuré.",
             "en" : "Calculated total knee score derived from the knee score items according to the configured scoring algorithm."
           },
           "annotations" : {
@@ -883,9 +1012,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Score fonction",
           "en" : "Function score"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation rapportée par un clinicien de la capacité fonctionnelle liée à la marche, à l’utilisation des escaliers, aux moyens auxiliaires et au niveau d’activité.",
           "en" : "Clinician-reported assessment of functional ability related to walking, stair use, assistive device use and activity level."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]",
@@ -898,9 +1029,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Marche",
             "en" : "Walking ability"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation rapportée par un clinicien de la capacité de marche du patient, basée sur la distance ou la durée.",
             "en" : "Clinician-reported assessment of the patient's walking capacity, based on distance or duration."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0078]/value",
@@ -911,54 +1044,66 @@
               "value" : "at0079",
               "label" : "Unlimited or more than 1 hour",
               "localizedLabels" : {
+                "fr" : "Illimitée ou plus de 1 h",
                 "en" : "Unlimited or more than 1 hour"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0080",
               "label" : "More than 1000 m",
               "localizedLabels" : {
+                "fr" : "Plus de 1000 m",
                 "en" : "More than 1000 m"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0081",
               "label" : "500 to 1000 m or more than 30 minutes",
               "localizedLabels" : {
+                "fr" : "500 à 1000 m ou plus de 30 min",
                 "en" : "500 to 1000 m or more than 30 minutes"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0082",
               "label" : "Less than 500 m or 15 minutes or less",
               "localizedLabels" : {
+                "fr" : "Moins de 500 m ou 15 min ou moins",
                 "en" : "Less than 500 m or 15 minutes or less"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0083",
               "label" : "At home only",
               "localizedLabels" : {
+                "fr" : "Au domicile",
                 "en" : "At home only"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0084",
               "label" : "Impossible",
               "localizedLabels" : {
+                "fr" : "Impossible",
                 "en" : "Impossible"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -972,9 +1117,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Escaliers",
             "en" : "Stairs"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation rapportée par un clinicien de la capacité du patient à monter et descendre les escaliers.",
             "en" : "Clinician-reported assessment of the patient's ability to ascend and descend stairs."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0085]/value",
@@ -985,36 +1132,44 @@
               "value" : "at0086",
               "label" : "Up and down stairs normally",
               "localizedLabels" : {
+                "fr" : "Montée et descente sans rampe",
                 "en" : "Up and down stairs normally"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0087",
               "label" : "Up normally, down with handrail",
               "localizedLabels" : {
+                "fr" : "Montée sans rampe, descente avec rampe",
                 "en" : "Up normally, down with handrail"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0088",
               "label" : "Up and down with handrail",
               "localizedLabels" : {
+                "fr" : "Montée et descente avec rampe",
                 "en" : "Up and down with handrail"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0089",
               "label" : "Up with handrail, down impossible",
               "localizedLabels" : {
+                "fr" : "Montée avec rampe, descente impossible",
                 "en" : "Up with handrail, down impossible"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -1028,9 +1183,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Moyens auxiliaires",
             "en" : "Assistive devices"
           },
           "localizedDescriptions" : {
+            "fr" : "Moyens auxiliaires de marche utilisés par le patient pour la mobilité.",
             "en" : "Assistive walking devices used by the patient for mobility."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0090]/value",
@@ -1041,36 +1198,44 @@
               "value" : "at0091",
               "label" : "None",
               "localizedLabels" : {
+                "fr" : "Aucun",
                 "en" : "None"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0092",
               "label" : "One cane",
               "localizedLabels" : {
+                "fr" : "1 canne basse",
                 "en" : "One cane"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0093",
               "label" : "Two canes",
               "localizedLabels" : {
+                "fr" : "2 cannes basses",
                 "en" : "Two canes"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0094",
               "label" : "Two Canadian crutches or walker",
               "localizedLabels" : {
+                "fr" : "2 cannes anglaises ou tintébin",
                 "en" : "Two Canadian crutches or walker"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -1084,9 +1249,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Activité",
             "en" : "Activity level"
           },
           "localizedDescriptions" : {
+            "fr" : "Évaluation rapportée par un clinicien du niveau général d’activité et d’autonomie du patient.",
             "en" : "Clinician-reported assessment of the patient's general activity and independence level."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0007]/items[at0095]/value",
@@ -1097,36 +1264,44 @@
               "value" : "at0096",
               "label" : "High",
               "localizedLabels" : {
+                "fr" : "Importante",
                 "en" : "High"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0097",
               "label" : "Daily activity",
               "localizedLabels" : {
+                "fr" : "Activité quotidienne",
                 "en" : "Daily activity"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0098",
               "label" : "Independent",
               "localizedLabels" : {
+                "fr" : "Autonome",
                 "en" : "Independent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0099",
               "label" : "Not independent",
               "localizedLabels" : {
+                "fr" : "Non autonome",
                 "en" : "Not independent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -1140,9 +1315,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Score fonction total",
             "en" : "Function score total"
           },
           "localizedDescriptions" : {
+            "fr" : "Score fonction total calculé à partir des items du score fonction selon l’algorithme de cotation configuré.",
             "en" : "Calculated total function score derived from the function score items according to the configured scoring algorithm."
           },
           "annotations" : {
@@ -1162,9 +1339,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Condition physique du patient",
           "en" : "Patient physical condition"
         },
         "localizedDescriptions" : {
+          "fr" : "Évaluation rapportée par un clinicien de la condition physique globale du patient en relation avec l’âge.",
           "en" : "Clinician-reported assessment of the patient's overall physical condition in relation to age."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0100]",
@@ -1177,9 +1356,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Condition physique du patient selon l’âge",
             "en" : "Condition depending on age"
           },
           "localizedDescriptions" : {
+            "fr" : "Condition physique globale évaluée en relation avec l’âge du patient.",
             "en" : "Overall physical condition assessed in relation to the patient's age."
           },
           "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/data[at0001]/items[at0100]/items[at0073]/value",
@@ -1190,36 +1371,44 @@
               "value" : "at0074",
               "label" : "Excellent",
               "localizedLabels" : {
+                "fr" : "Excellente",
                 "en" : "Excellent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0075",
               "label" : "Good",
               "localizedLabels" : {
+                "fr" : "Bonne",
                 "en" : "Good"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0076",
               "label" : "Average",
               "localizedLabels" : {
+                "fr" : "Moyenne",
                 "en" : "Average"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0077",
               "label" : "Poor",
               "localizedLabels" : {
+                "fr" : "Faible",
                 "en" : "Poor"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -1235,9 +1424,11 @@
         "max" : 1,
         "dependsOn" : [ "knee_score", "function_score", "patient_physical_condition", "knee_arthroplasty_context" ],
         "localizedNames" : {
+          "fr" : "Nom du clinicien qui consulte",
           "en" : "Consulting clinician name"
         },
         "localizedDescriptions" : {
+          "fr" : "Nom du clinicien responsable de l’évaluation clinique de suivi ou qui la réalise.",
           "en" : "Name of the clinician responsible for, or performing, the clinical follow-up assessment."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/protocol[at0003]/items[at0004]/value",
@@ -1254,9 +1445,11 @@
         "max" : 1,
         "dependsOn" : [ "knee_score", "function_score", "patient_physical_condition", "knee_arthroplasty_context" ],
         "localizedNames" : {
+          "fr" : "Contrôle",
           "en" : "Follow-up timing"
         },
         "localizedDescriptions" : {
+          "fr" : "Moment de l’évaluation de suivi par rapport à l’intervention, à l’évaluation de référence ou au calendrier de suivi prévu.",
           "en" : "Timing of the follow-up assessment in relation to surgery, baseline assessment or the planned follow-up schedule."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/protocol[at0003]/items[at0009]/value",
@@ -1267,63 +1460,77 @@
             "value" : "at0010",
             "label" : "Preoperative",
             "localizedLabels" : {
+              "fr" : "Préopératoire",
               "en" : "Preoperative"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0011",
             "label" : "6 weeks",
             "localizedLabels" : {
+              "fr" : "6 semaines",
               "en" : "6 weeks"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0012",
             "label" : "3 months",
             "localizedLabels" : {
+              "fr" : "3 mois",
               "en" : "3 months"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0013",
             "label" : "6 months",
             "localizedLabels" : {
+              "fr" : "6 mois",
               "en" : "6 months"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0014",
             "label" : "1 year",
             "localizedLabels" : {
+              "fr" : "1 an",
               "en" : "1 year"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0015",
             "label" : "2 years",
             "localizedLabels" : {
+              "fr" : "2 ans",
               "en" : "2 years"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           }, {
             "value" : "at0016",
             "label" : "Other number of years",
             "localizedLabels" : {
+              "fr" : "Autre nombre d’années",
               "en" : "Other number of years"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             }
           } ]
@@ -1338,9 +1545,11 @@
         "max" : 1,
         "dependsOn" : [ "knee_score", "function_score", "patient_physical_condition", "knee_arthroplasty_context" ],
         "localizedNames" : {
+          "fr" : "Autre intervalle de suivi en années",
           "en" : "Other follow-up interval in years"
         },
         "localizedDescriptions" : {
+          "fr" : "Nombre d’années après l’intervention ou l’évaluation de référence pour le moment du suivi, utilisé lorsque « Autre nombre d’années » est sélectionné.",
           "en" : "Number of years after surgery or baseline assessment for follow-up timing, used when \"Other number of years\" is selected."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_knee_clinical_follow_up.v0,'Knee clinical follow-up']/protocol[at0003]/items[at0017]/value",
@@ -1394,9 +1603,11 @@
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
+        "fr" : "Suivi clinique orthopédique",
         "en" : "Orthopaedic clinical background and follow-up"
       },
       "localizedDescriptions" : {
+        "fr" : "Évaluation structurée des informations de suivi clinique orthopédique, incluant les pathologies connues, les complications et les pathologies orthopédiques associées.",
         "en" : "Structured assessment of orthopaedic clinical follow-up information, including known conditions, complications and associated orthopaedic conditions."
       },
       "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']",
@@ -1409,9 +1620,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Autres pathologies connues",
           "en" : "Other known conditions"
         },
         "localizedDescriptions" : {
+          "fr" : "Autres pathologies connues, comorbidités ou affections liées à un système corporel, enregistrées lors du suivi clinique.",
           "en" : "Other known pathologies, comorbidities or body system-related conditions recorded at clinical follow-up."
         },
         "annotations" : {
@@ -1427,9 +1640,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des autres pathologies connues",
             "en" : "Other known condition status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si d’autres pathologies connues sont enregistrées lors de ce suivi.",
             "en" : "Status indicating whether other known conditions are recorded at this follow-up."
           },
           "annotations" : {
@@ -1443,27 +1658,33 @@
               "value" : "at0015",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune autre pathologie connue n’est enregistrée lors de ce suivi.",
                 "en" : "No other known conditions are recorded at this follow-up."
               }
             }, {
               "value" : "at0016",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs autres pathologies connues sont enregistrées.",
                 "en" : "One or more other known conditions are recorded."
               }
             }, {
               "value" : "at0017",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "La présence d’autres pathologies est inconnue ou n’a pas été évaluée.",
                 "en" : "It is unknown or was not assessed whether other conditions are present."
               }
             } ]
@@ -1477,9 +1698,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Autre pathologie connue",
             "en" : "Other known condition"
           },
           "localizedDescriptions" : {
+            "fr" : "Catégorie ou type spécifique d’autre pathologie connue enregistrée lors du suivi clinique.",
             "en" : "Category or specific type of other known condition recorded at clinical follow-up."
           },
           "annotations" : {
@@ -1493,81 +1716,99 @@
               "value" : "at0018",
               "label" : "Nervous system",
               "localizedLabels" : {
+                "fr" : "Système nerveux",
                 "en" : "Nervous system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système nerveux.",
                 "en" : "Known condition related to the nervous system."
               }
             }, {
               "value" : "at0019",
               "label" : "Gastrointestinal system",
               "localizedLabels" : {
+                "fr" : "Système gastro-intestinal",
                 "en" : "Gastrointestinal system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système gastro-intestinal.",
                 "en" : "Known condition related to the gastrointestinal system."
               }
             }, {
               "value" : "at0020",
               "label" : "Osteoporosis",
               "localizedLabels" : {
+                "fr" : "Ostéoporose",
                 "en" : "Osteoporosis"
               },
               "localizedDescriptions" : {
+                "fr" : "Ostéoporose connue.",
                 "en" : "Known osteoporosis."
               }
             }, {
               "value" : "at0021",
               "label" : "Respiratory tract",
               "localizedLabels" : {
+                "fr" : "Voies respiratoires",
                 "en" : "Respiratory tract"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée aux voies respiratoires.",
                 "en" : "Known condition related to the respiratory tract."
               }
             }, {
               "value" : "at0022",
               "label" : "Urogenital system",
               "localizedLabels" : {
+                "fr" : "Système uro-génital",
                 "en" : "Urogenital system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système uro-génital.",
                 "en" : "Known condition related to the urogenital system."
               }
             }, {
               "value" : "at0023",
               "label" : "Endocrine system",
               "localizedLabels" : {
+                "fr" : "Système endocrinien",
                 "en" : "Endocrine system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système endocrinien.",
                 "en" : "Known condition related to the endocrine system."
               }
             }, {
               "value" : "at0024",
               "label" : "Cardiovascular system",
               "localizedLabels" : {
+                "fr" : "Système cardio-vasculaire",
                 "en" : "Cardiovascular system"
               },
               "localizedDescriptions" : {
+                "fr" : "Pathologie connue liée au système cardio-vasculaire.",
                 "en" : "Known condition related to the cardiovascular system."
               }
             }, {
               "value" : "at0025",
               "label" : "Diabetes",
               "localizedLabels" : {
+                "fr" : "Diabète",
                 "en" : "Diabetes"
               },
               "localizedDescriptions" : {
+                "fr" : "Diabète sucré connu.",
                 "en" : "Known diabetes mellitus."
               }
             }, {
               "value" : "at0026",
               "label" : "Other",
               "localizedLabels" : {
+                "fr" : "Autre",
                 "en" : "Other"
               },
               "localizedDescriptions" : {
+                "fr" : "Autre pathologie connue non représentée par les options listées.",
                 "en" : "Other known condition not represented by the listed options."
               }
             } ]
@@ -1581,9 +1822,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Description d’une autre pathologie connue",
             "en" : "Other known condition description"
           },
           "localizedDescriptions" : {
+            "fr" : "Description en texte libre d’une autre pathologie connue non représentée par les options codées.",
             "en" : "Free-text description of another known condition not represented by the coded options."
           },
           "annotations" : {
@@ -1603,9 +1846,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Complications systémiques",
           "en" : "Systemic complications"
         },
         "localizedDescriptions" : {
+          "fr" : "Complications systémiques survenues depuis la mise en place de cette prothèse.",
           "en" : "Systemic complications occurring since implantation of this prosthesis."
         },
         "annotations" : {
@@ -1621,9 +1866,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des complications systémiques",
             "en" : "Systemic complication status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si des complications systémiques sont enregistrées depuis la mise en place de la prothèse.",
             "en" : "Status indicating whether systemic complications are recorded since prosthesis implantation."
           },
           "annotations" : {
@@ -1637,27 +1884,33 @@
               "value" : "at0028",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune complication systémique n’est enregistrée depuis la mise en place de la prothèse.",
                 "en" : "No systemic complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0029",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs complications systémiques sont enregistrées depuis la mise en place de la prothèse.",
                 "en" : "One or more systemic complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0030",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "Il est inconnu ou non évalué si des complications systémiques sont survenues.",
                 "en" : "It is unknown or was not assessed whether systemic complications occurred."
               }
             } ]
@@ -1671,9 +1924,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Complication systémique",
             "en" : "Systemic complication"
           },
           "localizedDescriptions" : {
+            "fr" : "Complication systémique unique enregistrée depuis la mise en place de cette prothèse.",
             "en" : "Single systemic complication recorded since implantation of this prosthesis."
           },
           "annotations" : {
@@ -1689,9 +1944,11 @@
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Type de complication systémique",
               "en" : "Systemic complication type"
             },
             "localizedDescriptions" : {
+              "fr" : "Catégorie ou type spécifique de complication systémique enregistrée depuis la mise en place de la prothèse.",
               "en" : "Category or specific type of systemic complication recorded since prosthesis implantation."
             },
             "annotations" : {
@@ -1705,72 +1962,88 @@
                 "value" : "at0035",
                 "label" : "Pulmonary embolism",
                 "localizedLabels" : {
+                  "fr" : "Embolie pulmonaire",
                   "en" : "Pulmonary embolism"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Embolie pulmonaire survenue depuis la mise en place de la prothèse.",
                   "en" : "Pulmonary embolism occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0036",
                 "label" : "Thrombophlebitis",
                 "localizedLabels" : {
+                  "fr" : "Thrombophlébite",
                   "en" : "Thrombophlebitis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Thrombophlébite survenue depuis la mise en place de la prothèse.",
                   "en" : "Thrombophlebitis occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0037",
                 "label" : "Central nervous system",
                 "localizedLabels" : {
+                  "fr" : "Système nerveux central",
                   "en" : "Central nervous system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système nerveux central.",
                   "en" : "Systemic complication related to the central nervous system."
                 }
               }, {
                 "value" : "at0038",
                 "label" : "Respiratory tract",
                 "localizedLabels" : {
+                  "fr" : "Voies respiratoires",
                   "en" : "Respiratory tract"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée aux voies respiratoires.",
                   "en" : "Systemic complication related to the respiratory tract."
                 }
               }, {
                 "value" : "at0039",
                 "label" : "Cardiovascular system",
                 "localizedLabels" : {
+                  "fr" : "Système cardio-vasculaire",
                   "en" : "Cardiovascular system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système cardio-vasculaire.",
                   "en" : "Systemic complication related to the cardiovascular system."
                 }
               }, {
                 "value" : "at0040",
                 "label" : "Urological system",
                 "localizedLabels" : {
+                  "fr" : "Urologie",
                   "en" : "Urological system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système urinaire ou urologique.",
                   "en" : "Systemic complication related to the urinary or urological system."
                 }
               }, {
                 "value" : "at0041",
                 "label" : "Gastrointestinal system",
                 "localizedLabels" : {
+                  "fr" : "Système gastro-intestinal",
                   "en" : "Gastrointestinal system"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Complication systémique liée au système gastro-intestinal.",
                   "en" : "Systemic complication related to the gastrointestinal system."
                 }
               }, {
                 "value" : "at0042",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Autre complication systémique non représentée par les options listées.",
                   "en" : "Other systemic complication not represented by the listed options."
                 }
               } ]
@@ -1784,9 +2057,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Date de la complication",
               "en" : "Complication date"
             },
             "localizedDescriptions" : {
+              "fr" : "Date à laquelle la complication systémique est survenue ou a été identifiée.",
               "en" : "Date when the systemic complication occurred or was identified."
             },
             "annotations" : {
@@ -1805,9 +2080,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Description d’une autre complication systémique",
               "en" : "Other systemic complication description"
             },
             "localizedDescriptions" : {
+              "fr" : "Description en texte libre d’une complication systémique non représentée par les options codées.",
               "en" : "Free-text description of a systemic complication not represented by the coded options."
             },
             "annotations" : {
@@ -1828,9 +2105,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Complications locales",
           "en" : "Local complications"
         },
         "localizedDescriptions" : {
+          "fr" : "Complications locales survenues depuis la mise en place de cette prothèse.",
           "en" : "Local complications occurring since implantation of this prosthesis."
         },
         "annotations" : {
@@ -1846,9 +2125,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des complications locales",
             "en" : "Local complication status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si des complications locales sont enregistrées depuis la mise en place de la prothèse.",
             "en" : "Status indicating whether local complications are recorded since prosthesis implantation."
           },
           "annotations" : {
@@ -1862,27 +2143,33 @@
               "value" : "at0047",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune complication locale n’est enregistrée depuis la mise en place de la prothèse.",
                 "en" : "No local complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0048",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs complications locales sont enregistrées depuis la mise en place de la prothèse.",
                 "en" : "One or more local complications are recorded since prosthesis implantation."
               }
             }, {
               "value" : "at0049",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "Il est inconnu ou non évalué si des complications locales sont survenues.",
                 "en" : "It is unknown or was not assessed whether local complications occurred."
               }
             } ]
@@ -1896,9 +2183,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Complication locale",
             "en" : "Local complication"
           },
           "localizedDescriptions" : {
+            "fr" : "Complication locale unique enregistrée depuis la mise en place de cette prothèse.",
             "en" : "Single local complication recorded since implantation of this prosthesis."
           },
           "annotations" : {
@@ -1914,9 +2203,11 @@
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Type de complication locale",
               "en" : "Local complication type"
             },
             "localizedDescriptions" : {
+              "fr" : "Catégorie ou type spécifique de complication locale enregistrée depuis la mise en place de la prothèse.",
               "en" : "Category or specific type of local complication recorded since prosthesis implantation."
             },
             "annotations" : {
@@ -1930,81 +2221,99 @@
                 "value" : "at0052",
                 "label" : "Dislocation",
                 "localizedLabels" : {
+                  "fr" : "Luxation",
                   "en" : "Dislocation"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Luxation locale survenue depuis la mise en place de la prothèse.",
                   "en" : "Local dislocation occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0053",
                 "label" : "Haematoma / seroma",
                 "localizedLabels" : {
+                  "fr" : "Hématome / sérome",
                   "en" : "Haematoma / seroma"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Hématome ou sérome local survenu depuis la mise en place de la prothèse.",
                   "en" : "Local haematoma or seroma occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0054",
                 "label" : "Persistent drainage",
                 "localizedLabels" : {
+                  "fr" : "Drainage persistant",
                   "en" : "Persistent drainage"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Drainage persistant de la plaie survenu depuis la mise en place de la prothèse.",
                   "en" : "Persistent wound drainage occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0055",
                 "label" : "Dehiscence",
                 "localizedLabels" : {
+                  "fr" : "Déhiscence",
                   "en" : "Dehiscence"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Déhiscence de la plaie survenue depuis la mise en place de la prothèse.",
                   "en" : "Wound dehiscence occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0056",
                 "label" : "Neuropraxia",
                 "localizedLabels" : {
+                  "fr" : "Neurapraxie",
                   "en" : "Neuropraxia"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Neuro-praxie locale survenue depuis la mise en place de la prothèse.",
                   "en" : "Local neuropraxia occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0057",
                 "label" : "Loosening",
                 "localizedLabels" : {
+                  "fr" : "Descellement",
                   "en" : "Loosening"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Descellement de la prothèse survenu depuis sa mise en place.",
                   "en" : "Prosthesis loosening occurring since implantation."
                 }
               }, {
                 "value" : "at0058",
                 "label" : "Deep sepsis",
                 "localizedLabels" : {
+                  "fr" : "Sepsis profond",
                   "en" : "Deep sepsis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Sepsis profond ou infection profonde survenu depuis la mise en place de la prothèse.",
                   "en" : "Deep sepsis or deep infection occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0059",
                 "label" : "Superficial sepsis",
                 "localizedLabels" : {
+                  "fr" : "Sepsis superficiel",
                   "en" : "Superficial sepsis"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Sepsis superficiel ou infection superficielle survenu depuis la mise en place de la prothèse.",
                   "en" : "Superficial sepsis or superficial infection occurring since prosthesis implantation."
                 }
               }, {
                 "value" : "at0060",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Autre complication locale non représentée par les options listées.",
                   "en" : "Other local complication not represented by the listed options."
                 }
               } ]
@@ -2018,9 +2327,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Date de la complication",
               "en" : "Complication date"
             },
             "localizedDescriptions" : {
+              "fr" : "Date ou année à laquelle la complication locale est survenue ou a été identifiée.",
               "en" : "Date or year when the local complication occurred or was identified."
             },
             "annotations" : {
@@ -2039,9 +2350,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Description d’une autre complication locale",
               "en" : "Other local complication description"
             },
             "localizedDescriptions" : {
+              "fr" : "Description en texte libre d’une complication locale non représentée par les options codées.",
               "en" : "Free-text description of a local complication not represented by the coded options."
             },
             "annotations" : {
@@ -2062,9 +2375,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Autres pathologies orthopédiques associées",
           "en" : "Other associated orthopaedic conditions"
         },
         "localizedDescriptions" : {
+          "fr" : "Autres pathologies orthopédiques associées pertinentes pour ce suivi clinique.",
           "en" : "Other associated orthopaedic pathologies or conditions relevant to this clinical follow-up."
         },
         "annotations" : {
@@ -2080,9 +2395,11 @@
           "min" : 1,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des autres pathologies orthopédiques associées",
             "en" : "Other associated orthopaedic condition status"
           },
           "localizedDescriptions" : {
+            "fr" : "Statut indiquant si d’autres pathologies orthopédiques associées sont enregistrées lors de ce suivi.",
             "en" : "Status indicating whether other associated orthopaedic conditions are recorded at this follow-up."
           },
           "annotations" : {
@@ -2096,27 +2413,33 @@
               "value" : "at0064",
               "label" : "None known",
               "localizedLabels" : {
+                "fr" : "Aucune",
                 "en" : "None known"
               },
               "localizedDescriptions" : {
+                "fr" : "Aucune autre pathologie orthopédique associée n’est enregistrée lors de ce suivi.",
                 "en" : "No other associated orthopaedic conditions are recorded at this follow-up."
               }
             }, {
               "value" : "at0065",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présente",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "Une ou plusieurs autres pathologies orthopédiques associées sont enregistrées lors de ce suivi.",
                 "en" : "One or more other associated orthopaedic conditions are recorded at this follow-up."
               }
             }, {
               "value" : "at0066",
               "label" : "Unknown or not assessed",
               "localizedLabels" : {
+                "fr" : "Inconnue ou non évaluée",
                 "en" : "Unknown or not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "La présence d’autres pathologies orthopédiques associées est inconnue ou n’a pas été évaluée.",
                 "en" : "It is unknown or was not assessed whether other associated orthopaedic conditions are present."
               }
             } ]
@@ -2130,9 +2453,11 @@
           "min" : 0,
           "max" : -1,
           "localizedNames" : {
+            "fr" : "Autre pathologie orthopédique associée",
             "en" : "Other associated orthopaedic condition"
           },
           "localizedDescriptions" : {
+            "fr" : "Autre pathologie orthopédique associée unique enregistrée lors de ce suivi.",
             "en" : "Single other associated orthopaedic condition recorded at this follow-up."
           },
           "annotations" : {
@@ -2148,9 +2473,11 @@
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Type d’autre pathologie orthopédique associée",
               "en" : "Other associated orthopaedic condition type"
             },
             "localizedDescriptions" : {
+              "fr" : "Catégorie ou type spécifique d’autre pathologie orthopédique associée enregistrée lors du suivi clinique.",
               "en" : "Category or specific type of other associated orthopaedic condition recorded at clinical follow-up."
             },
             "annotations" : {
@@ -2164,81 +2491,99 @@
                 "value" : "at0070",
                 "label" : "Contralateral knee",
                 "localizedLabels" : {
+                  "fr" : "Genou controlatéral",
                   "en" : "Contralateral knee"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant le genou controlatéral.",
                   "en" : "Associated condition affecting the contralateral knee."
                 }
               }, {
                 "value" : "at0071",
                 "label" : "Ankle / foot",
                 "localizedLabels" : {
+                  "fr" : "Cheville / pied",
                   "en" : "Ankle / foot"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant la cheville ou le pied.",
                   "en" : "Associated condition affecting the ankle or foot."
                 }
               }, {
                 "value" : "at0072",
                 "label" : "Wrist / hand",
                 "localizedLabels" : {
+                  "fr" : "Poignet / main",
                   "en" : "Wrist / hand"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant le poignet ou la main.",
                   "en" : "Associated condition affecting the wrist or hand."
                 }
               }, {
                 "value" : "at0073",
                 "label" : "Opposite hip",
                 "localizedLabels" : {
+                  "fr" : "Hanche opposée",
                   "en" : "Opposite hip"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant la hanche opposée.",
                   "en" : "Associated condition affecting the opposite hip."
                 }
               }, {
                 "value" : "at0074",
                 "label" : "Shoulder",
                 "localizedLabels" : {
+                  "fr" : "Épaule",
                   "en" : "Shoulder"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant l’épaule.",
                   "en" : "Associated condition affecting the shoulder."
                 }
               }, {
                 "value" : "at0075",
                 "label" : "Trauma",
                 "localizedLabels" : {
+                  "fr" : "Trauma",
                   "en" : "Trauma"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie orthopédique associée liée à un traumatisme.",
                   "en" : "Associated orthopaedic condition related to trauma."
                 }
               }, {
                 "value" : "at0076",
                 "label" : "Spine",
                 "localizedLabels" : {
+                  "fr" : "Colonne vertébrale",
                   "en" : "Spine"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant la colonne vertébrale.",
                   "en" : "Associated condition affecting the spine."
                 }
               }, {
                 "value" : "at0077",
                 "label" : "Elbow",
                 "localizedLabels" : {
+                  "fr" : "Coude",
                   "en" : "Elbow"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Pathologie associée touchant le coude.",
                   "en" : "Associated condition affecting the elbow."
                 }
               }, {
                 "value" : "at0078",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Autre pathologie orthopédique associée non représentée par les options listées.",
                   "en" : "Other associated orthopaedic condition not represented by the listed options."
                 }
               } ]
@@ -2252,9 +2597,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Date de la pathologie",
               "en" : "Condition date"
             },
             "localizedDescriptions" : {
+              "fr" : "Date ou année à laquelle la pathologie orthopédique associée est survenue ou a été identifiée.",
               "en" : "Date or year when the associated orthopaedic condition occurred or was identified."
             },
             "annotations" : {
@@ -2273,9 +2620,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Latéralité de la pathologie",
               "en" : "Condition laterality"
             },
             "localizedDescriptions" : {
+              "fr" : "Latéralité de la pathologie orthopédique associée, le cas échéant.",
               "en" : "Laterality of the associated orthopaedic condition, where applicable."
             },
             "annotations" : {
@@ -2289,36 +2638,44 @@
                 "value" : "at0081",
                 "label" : "Left",
                 "localizedLabels" : {
+                  "fr" : "Gauche",
                   "en" : "Left"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Côté gauche.",
                   "en" : "Left side."
                 }
               }, {
                 "value" : "at0082",
                 "label" : "Right",
                 "localizedLabels" : {
+                  "fr" : "Droit",
                   "en" : "Right"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Côté droit.",
                   "en" : "Right side."
                 }
               }, {
                 "value" : "at0084",
                 "label" : "Bilateral",
                 "localizedLabels" : {
+                  "fr" : "Bilatérale",
                   "en" : "Bilateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Côtés gauche et droit.",
                   "en" : "Both left and right sides."
                 }
               }, {
                 "value" : "at0086",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnue",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "La latéralité est inconnue.",
                   "en" : "Laterality is unknown."
                 }
               } ]
@@ -2332,9 +2689,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Description d’une autre pathologie orthopédique associée",
               "en" : "Other associated orthopaedic condition description"
             },
             "localizedDescriptions" : {
+              "fr" : "Description en texte libre de la pathologie orthopédique associée.",
               "en" : "Free-text description of the associated orthopaedic condition."
             },
             "annotations" : {
@@ -2355,9 +2714,11 @@
         "min" : 0,
         "max" : 1,
         "localizedNames" : {
+          "fr" : "Commentaire",
           "en" : "Comment"
         },
         "localizedDescriptions" : {
+          "fr" : "Commentaire complémentaire en texte libre concernant le suivi clinique orthopédique.",
           "en" : "Additional free-text comment about the orthopaedic clinical follow-up."
         },
         "aqlPath" : "/content[openEHR-EHR-EVALUATION.orthopaedic_clinical_follow_up.v0,'Orthopaedic clinical background and follow-up']/data[at0003]/items[at0011]/value",
@@ -2411,9 +2772,11 @@
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
+        "fr" : "Suivi radiographique d’arthroplastie du genou",
         "en" : "Knee arthroplasty X-ray follow-up"
       },
       "localizedDescriptions" : {
+        "fr" : "Évaluation radiographique de suivi après arthroplastie du genou, incluant l’alignement de l’implant, les mesures des lignes radiotransparentes propres à chaque composant, les zones du composant rotulien ainsi que les mesures du centrage et de la morphologie rotuliens.",
         "en" : "Radiographic follow-up assessment after knee arthroplasty, including implant alignment, component-specific radiolucent line measurements, patellar component zones, and patellar tracking and morphology measurements."
       },
       "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]",
@@ -2426,9 +2789,11 @@
         "min" : 0,
         "max" : -1,
         "localizedNames" : {
+          "fr" : "Tout événement",
           "en" : "Point in time"
         },
         "localizedDescriptions" : {
+          "fr" : "@ internal @",
           "en" : "@ internal @"
         },
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']",
@@ -2441,9 +2806,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Date de radiographie",
             "en" : "X-ray date"
           },
           "localizedDescriptions" : {
+            "fr" : "Date à laquelle l’examen radiographique a été réalisé, si elle est enregistrée séparément de l’heure de l’événement d’observation.",
             "en" : "Date on which the X-ray examination was performed, if recorded separately from the observation event time."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/value",
@@ -2459,9 +2826,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Statut des implants antérieurs",
             "en" : "Prior implant status"
           },
           "localizedDescriptions" : {
+            "fr" : "Présence ou absence d’implants antérieurs pertinents pour le suivi radiographique de l’arthroplastie du genou.",
             "en" : "Presence or absence of prior implants relevant to the knee arthroplasty radiographic follow-up."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0012]/value",
@@ -2472,36 +2841,44 @@
               "value" : "at0013",
               "label" : "Present",
               "localizedLabels" : {
+                "fr" : "Présent",
                 "en" : "Present"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0014",
               "label" : "Absent",
               "localizedLabels" : {
+                "fr" : "Absent",
                 "en" : "Absent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0015",
               "label" : "Unknown",
               "localizedLabels" : {
+                "fr" : "Inconnu",
                 "en" : "Unknown"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0016",
               "label" : "Not assessed",
               "localizedLabels" : {
+                "fr" : "Non évalué",
                 "en" : "Not assessed"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -2515,9 +2892,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Détails des implants antérieurs",
             "en" : "Prior implant details"
           },
           "localizedDescriptions" : {
+            "fr" : "Informations supplémentaires sur les implants antérieurs, telles que le type, la localisation anatomique, la latéralité, la date ou le statut de retrait.",
             "en" : "Additional details about prior implants, such as type, anatomical location, laterality, date or removal status."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0017]/value",
@@ -2533,9 +2912,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Côté du genou",
             "en" : "Knee side"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/value",
@@ -2546,18 +2927,22 @@
               "value" : "at0006",
               "label" : "Left",
               "localizedLabels" : {
+                "fr" : "Gauche",
                 "en" : "Left"
               },
               "localizedDescriptions" : {
+                "fr" : "Genou gauche.",
                 "en" : "Left knee."
               }
             }, {
               "value" : "at0007",
               "label" : "Right",
               "localizedLabels" : {
+                "fr" : "Droit",
                 "en" : "Right"
               },
               "localizedDescriptions" : {
+                "fr" : "Genou droit.",
                 "en" : "Right knee."
               }
             } ]
@@ -2571,9 +2956,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Position du patient lors de l’imagerie",
             "en" : "Patient position during imaging"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0008]/value",
@@ -2584,18 +2971,22 @@
               "value" : "at0009",
               "label" : "Recumbent",
               "localizedLabels" : {
+                "fr" : "Couché",
                 "en" : "Recumbent"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             }, {
               "value" : "at0010",
               "label" : "Standing",
               "localizedLabels" : {
+                "fr" : "Debout",
                 "en" : "Standing"
               },
               "localizedDescriptions" : {
+                "fr" : "",
                 "en" : ""
               }
             } ]
@@ -2609,9 +3000,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Angle HKA",
             "en" : "HKA angle"
           },
           "localizedDescriptions" : {
+            "fr" : "Angle hanche-genou-cheville mesuré sur une radiographie du membre inférieur entier en charge.",
             "en" : "Hip-knee-ankle angle measured on a weight-bearing full-length lower limb radiograph."
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0011]/value",
@@ -2625,6 +3018,7 @@
               "value" : "deg",
               "label" : "deg",
               "localizedLabels" : {
+                "fr" : "°",
                 "en" : "°"
               }
             } ]
@@ -2638,9 +3032,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Alignement coronal de l’arthroplastie du genou",
             "en" : "Coronal knee arthroplasty alignment"
           },
           "localizedDescriptions" : {
+            "fr" : "Mesures de l’alignement de l’implant en projection AP.",
             "en" : "AP implant alignment measurements."
           },
           "annotations" : {
@@ -2656,9 +3052,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -2672,90 +3070,110 @@
                 "value" : "at0035",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0036",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0037",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0038",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0039",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0040",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0041",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0042",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0043",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0044",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ],
@@ -2770,9 +3188,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle fémoral alpha",
               "en" : "Femoral angle alpha"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle alpha d’alignement du composant fémoral tel que défini dans le formulaire source de cotation radiographique.",
               "en" : "Femoral component alignment angle alpha as defined in the source radiographic scoring form."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0019]/value",
@@ -2786,6 +3206,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -2799,9 +3220,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle tibial bêta",
               "en" : "Tibial angle beta"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle bêta d’alignement du composant tibial tel que défini dans le formulaire source de cotation radiographique.",
               "en" : "Tibial component alignment angle beta as defined in the source radiographic scoring form."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0020]/value",
@@ -2815,6 +3238,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -2828,9 +3252,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle de valgus total",
               "en" : "Total valgus angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle global d’alignement en valgus dérivé des mesures d’alignement des composants fémoral et tibial.",
               "en" : "Overall valgus alignment angle derived from the femoral and tibial component alignment measurements."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0021]/value",
@@ -2844,6 +3270,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -2857,9 +3284,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Référence du film AP",
               "en" : "AP film reference"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0022]/value",
@@ -2870,18 +3299,22 @@
                 "value" : "at0023",
                 "label" : "18-inch film",
                 "localizedLabels" : {
+                  "fr" : "Film 18 pouces",
                   "en" : "18-inch film"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0024",
                 "label" : "3-foot film",
                 "localizedLabels" : {
+                  "fr" : "Film 3 pieds",
                   "en" : "3-foot film"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -2895,9 +3328,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0018]/items[at0077]/value",
@@ -2914,9 +3349,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Alignement sagittal de l’arthroplastie du genou",
             "en" : "Sagittal knee arthroplasty alignment"
           },
           "localizedDescriptions" : {
+            "fr" : "Mesures de l’alignement de l’implant en projection latérale.",
             "en" : "Lateral implant alignment measurements."
           },
           "annotations" : {
@@ -2932,9 +3369,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -2948,90 +3387,110 @@
                 "value" : "at0045",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0046",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0047",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0048",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0049",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0050",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0051",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0052",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0053",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0054",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ],
@@ -3046,9 +3505,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle de flexion fémorale",
               "en" : "Femoral flexion angle"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0026]/value",
@@ -3062,6 +3523,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -3075,9 +3537,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle de pente tibiale",
               "en" : "Tibial slope angle"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0027]/value",
@@ -3091,6 +3555,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -3104,9 +3569,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0025]/items[at0078]/value",
@@ -3123,9 +3590,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Zones de radiotransparence du composant fémoral",
             "en" : "Femoral component radiolucency zones"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "annotations" : {
@@ -3141,9 +3610,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -3157,90 +3628,110 @@
                 "value" : "at0090",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0091",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0092",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0093",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0094",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0095",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0096",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0097",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0098",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0099",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ],
@@ -3255,9 +3746,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1",
               "en" : "Zone 1 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1.",
               "en" : "Zone 1 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0059]/value",
@@ -3281,9 +3774,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2",
               "en" : "Zone 2 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2.",
               "en" : "Zone 2 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0060]/value",
@@ -3307,9 +3802,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3",
               "en" : "Zone 3 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3.",
               "en" : "Zone 3 radiolucent line width"
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0061]/value",
@@ -3333,9 +3830,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 4",
               "en" : "Zone 4 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 4.",
               "en" : "Zone 4 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0062]/value",
@@ -3359,9 +3858,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 5",
               "en" : "Zone 5 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 5.",
               "en" : "Zone 5 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0063]/value",
@@ -3385,9 +3886,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 6",
               "en" : "Zone 6 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 6.",
               "en" : "Zone 6 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0064]/value",
@@ -3411,9 +3914,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 7",
               "en" : "Zone 7 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 7.",
               "en" : "Zone 7 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0065]/value",
@@ -3437,9 +3942,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur totale des lignes radiotransparentes",
               "en" : "Total radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.",
               "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0075]/value",
@@ -3463,9 +3970,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0058]/items[at0076]/value",
@@ -3482,9 +3991,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Zones de radiotransparence AP du composant tibial",
             "en" : "Tibial component AP radiolucency zones"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "annotations" : {
@@ -3500,9 +4011,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -3516,90 +4029,110 @@
                 "value" : "at0101",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0102",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0103",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0104",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0105",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0106",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0107",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0108",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0109",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0110",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ],
@@ -3614,9 +4147,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1",
               "en" : "Zone 1 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1.",
               "en" : "Zone 1 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0080]/value",
@@ -3640,9 +4175,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2",
               "en" : "Zone 2 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2.",
               "en" : "Zone 2 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0081]/value",
@@ -3666,9 +4203,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3",
               "en" : "Zone 3 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3.",
               "en" : "Zone 3 radiolucent line width"
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0082]/value",
@@ -3692,9 +4231,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 4",
               "en" : "Zone 4 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 4.",
               "en" : "Zone 4 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0083]/value",
@@ -3718,9 +4259,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 5",
               "en" : "Zone 5 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 5.",
               "en" : "Zone 5 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0084]/value",
@@ -3744,9 +4287,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 6",
               "en" : "Zone 6 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 6.",
               "en" : "Zone 6 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0085]/value",
@@ -3770,9 +4315,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 7",
               "en" : "Zone 7 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 7.",
               "en" : "Zone 7 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0086]/value",
@@ -3796,9 +4343,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur totale des lignes radiotransparentes",
               "en" : "Total radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.",
               "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0087]/value",
@@ -3822,9 +4371,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0079]/items[at0088]/value",
@@ -3841,9 +4392,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Zones de radiotransparence latérales du composant tibial",
             "en" : "Tibial component lateral radiolucency zones"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "annotations" : {
@@ -3859,9 +4412,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -3875,90 +4430,110 @@
                 "value" : "at0113",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0114",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0115",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0116",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0117",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0118",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0119",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0120",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0121",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0122",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ],
@@ -3973,9 +4548,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1",
               "en" : "Zone 1 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1.",
               "en" : "Zone 1 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0123]/value",
@@ -3999,9 +4576,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2",
               "en" : "Zone 2 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2.",
               "en" : "Zone 2 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0124]/value",
@@ -4025,9 +4604,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3",
               "en" : "Zone 3 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3.",
               "en" : "Zone 3 radiolucent line width"
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0125]/value",
@@ -4051,9 +4632,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur totale des lignes radiotransparentes",
               "en" : "Total radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.",
               "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0130]/value",
@@ -4077,9 +4660,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0111]/items[at0131]/value",
@@ -4096,9 +4681,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Zones de radiotransparence du composant rotulien",
             "en" : "Patellar component radiolucency zones"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "annotations" : {
@@ -4114,9 +4701,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -4130,90 +4719,110 @@
                 "value" : "at0180",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0181",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0182",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0183",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0184",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0185",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0186",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0187",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0188",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0189",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -4227,9 +4836,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Schéma des zones rotuliennes",
               "en" : "Patellar zone scheme"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0153]/value",
@@ -4240,18 +4851,22 @@
                 "value" : "at0154",
                 "label" : "Patellar component standard zone scheme",
                 "localizedLabels" : {
+                  "fr" : "Schéma standard des zones du composant rotulien",
                   "en" : "Patellar component standard zone scheme"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Zones 1 à 5.",
                   "en" : "Zone 1-5"
                 }
               }, {
                 "value" : "at0155",
                 "label" : "Patellar component alternative zone scheme",
                 "localizedLabels" : {
+                  "fr" : "Schéma alternatif des zones du composant rotulien",
                   "en" : "Patellar component alternative zone scheme"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "Zones 1 à 3.",
                   "en" : "Zone 1-3"
                 }
               } ]
@@ -4265,9 +4880,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1",
               "en" : "Zone 1 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 1.",
               "en" : "Zone 1 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0144]/value",
@@ -4291,9 +4908,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2",
               "en" : "Zone 2 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 2.",
               "en" : "Zone 2 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0145]/value",
@@ -4317,9 +4936,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3",
               "en" : "Zone 3 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 3.",
               "en" : "Zone 3 radiolucent line width"
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0146]/value",
@@ -4343,9 +4964,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 4",
               "en" : "Zone 4 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 4.",
               "en" : "Zone 4 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0147]/value",
@@ -4369,9 +4992,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 5",
               "en" : "Zone 5 radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la ligne radiotransparente en zone 5.",
               "en" : "Zone 5 radiolucent line width."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0148]/value",
@@ -4395,9 +5020,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur totale des lignes radiotransparentes",
               "en" : "Total radiolucent line width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur cumulée des lignes radiotransparentes dans les zones évaluées, exprimée en millimètres.",
               "en" : "Cumulative width of radiolucent lines across the assessed zones, expressed in millimetres."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0151]/value",
@@ -4421,9 +5048,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0132]/items[at0152]/value",
@@ -4440,9 +5069,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Mesures du centrage et de la morphologie rotuliens",
             "en" : "Patellar tracking and morphology measurements"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "annotations" : {
@@ -4458,9 +5089,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Projection radiographique",
               "en" : "Radiographic projection"
             },
             "localizedDescriptions" : {
+              "fr" : "Projection ou incidence radiographique utilisée pour l’évaluation ou la mesure.",
               "en" : "Radiographic projection or view used for the assessment or measurement."
             },
             "annotations" : {
@@ -4474,90 +5107,110 @@
                 "value" : "at0158",
                 "label" : "Anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur",
                   "en" : "Anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0159",
                 "label" : "Lateral",
                 "localizedLabels" : {
+                  "fr" : "Latéral",
                   "en" : "Lateral"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0160",
                 "label" : "Skyline",
                 "localizedLabels" : {
+                  "fr" : "Skyline",
                   "en" : "Skyline"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0161",
                 "label" : "Sunrise",
                 "localizedLabels" : {
+                  "fr" : "Sunrise",
                   "en" : "Sunrise"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0162",
                 "label" : "Merchant",
                 "localizedLabels" : {
+                  "fr" : "Merchant",
                   "en" : "Merchant"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0163",
                 "label" : "Tunnel",
                 "localizedLabels" : {
+                  "fr" : "Tunnel",
                   "en" : "Tunnel"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0164",
                 "label" : "Rosenberg",
                 "localizedLabels" : {
+                  "fr" : "Rosenberg",
                   "en" : "Rosenberg"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0165",
                 "label" : "Long-leg anteroposterior",
                 "localizedLabels" : {
+                  "fr" : "Antéropostérieur du membre inférieur entier",
                   "en" : "Long-leg anteroposterior"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0166",
                 "label" : "Other",
                 "localizedLabels" : {
+                  "fr" : "Autre",
                   "en" : "Other"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               }, {
                 "value" : "at0167",
                 "label" : "Unknown",
                 "localizedLabels" : {
+                  "fr" : "Inconnu",
                   "en" : "Unknown"
                 },
                 "localizedDescriptions" : {
+                  "fr" : "",
                   "en" : ""
                 }
               } ]
@@ -4571,9 +5224,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Largeur rotulienne",
               "en" : "Patellar width"
             },
             "localizedDescriptions" : {
+              "fr" : "Largeur de la rotule mesurée sur l’incidence radiographique axiale ou tangentielle correspondante.",
               "en" : "Width of the patella measured on the corresponding axial/tangential radiographic view."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0168]/value",
@@ -4597,9 +5252,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle d’inclinaison rotulienne alpha",
               "en" : "Patellar tilt angle alpha"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle alpha d’inclinaison rotulienne tel que défini dans le formulaire source de cotation radiographique.",
               "en" : "Patellar tilt angle alpha as defined in the source radiographic scoring form."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0169]/value",
@@ -4613,6 +5270,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -4626,9 +5284,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle d’inclinaison rotulienne bêta",
               "en" : "Patellar tilt angle beta"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle bêta d’inclinaison rotulienne tel que défini dans le formulaire source de cotation radiographique.",
               "en" : "Patellar tilt angle beta as defined in the source radiographic scoring form."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0170]/value",
@@ -4642,6 +5302,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -4655,9 +5316,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Épaisseur rotulienne",
               "en" : "Patellar thickness"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0171]/value",
@@ -4681,9 +5344,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Angle prothèse-os",
               "en" : "Prosthesis-bone angle"
             },
             "localizedDescriptions" : {
+              "fr" : "Angle entre le composant prothétique rotulien et l’os rotulien sous-jacent, tel que défini dans le formulaire source.",
               "en" : "Angle between the patellar prosthetic component and the underlying patellar bone as defined in the source form."
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0173]/value",
@@ -4697,6 +5362,7 @@
                 "value" : "deg",
                 "label" : "deg",
                 "localizedLabels" : {
+                  "fr" : "°",
                   "en" : "°"
                 }
               } ]
@@ -4710,9 +5376,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Déplacement médial de la rotule",
               "en" : "Medial patellar displacement"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0174]/value",
@@ -4736,9 +5404,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Déplacement latéral de la rotule",
               "en" : "Lateral patellar displacement"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0175]/value",
@@ -4762,9 +5432,11 @@
             "min" : 0,
             "max" : 1,
             "localizedNames" : {
+              "fr" : "Commentaire",
               "en" : "Comment"
             },
             "localizedDescriptions" : {
+              "fr" : "",
               "en" : ""
             },
             "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0156]/items[at0176]/value",
@@ -4781,9 +5453,11 @@
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
+            "fr" : "Commentaire",
             "en" : "Comment"
           },
           "localizedDescriptions" : {
+            "fr" : "",
             "en" : ""
           },
           "aqlPath" : "/content[openEHR-EHR-OBSERVATION.knee_arthroplasty_xray_follow_up.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0178]/value",
@@ -4854,6 +5528,7 @@
           "value" : "433",
           "label" : "event",
           "localizedLabels" : {
+            "fr" : "",
             "en" : "event"
           }
         } ],
